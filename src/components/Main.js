@@ -9,13 +9,7 @@ import ProjectPage from './ProjectPage';
 
 import { TweenLite } from 'gsap';
 
-class SuperTransition extends Transition {
-  constructor(props, context) {
-    super(props, context);
-  }
-}
-
-class App extends React.Component {
+class Main extends React.Component {
   constructor (props) {
     super(props);
     this.handleEnter = this.handleEnter.bind(this);
@@ -95,7 +89,6 @@ class App extends React.Component {
               <Switch location={location}>
                 <Route path="/" exact component={WorkPage} />
                 <Route path="/profile" exact component={ProfilePage} />
-                <Route path="/projects/:id" exact component={ProjectPage} />
               </Switch>
             </main>
           </Transition>
@@ -107,4 +100,4 @@ class App extends React.Component {
 }
 
 
-export default App;
+export default Main;

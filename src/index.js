@@ -5,7 +5,9 @@ import App from './components/App';
 
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(
-    <App />,
+    <BrowserRouter>
+      <Route path="/" component={App} />
+    </BrowserRouter>,
     document.getElementById('mount')
   );
 });

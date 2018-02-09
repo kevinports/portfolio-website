@@ -17,6 +17,15 @@ class ProjectPage extends React.Component {
     super(props, context);
   }
 
+  componentWillAppear () {
+    console.log('project will appear')
+  }
+
+  componentWillLeave(cb) {
+    console.log('project componentWillLeave')
+    cb()
+  }
+
   componentDidMount () {
     document.body.scrollTop = 0;
   }
