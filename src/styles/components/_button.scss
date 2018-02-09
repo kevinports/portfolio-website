@@ -1,0 +1,19 @@
+.btn__link {
+  transition: opacity 0.3s, border 0.3s;
+  color: $c-text-dark;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($c-text-dark, 0.25);
+
+  &:hover {
+    border-bottom-color: rgba($c-text-dark, 0.9);
+  }
+}
+
+.btn__link--plain {
+  border-bottom: 0 solid rgba($c-text-dark, 0.25);
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}

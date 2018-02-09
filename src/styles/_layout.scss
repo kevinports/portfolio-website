@@ -1,0 +1,44 @@
+// general layout settings
+* {
+  box-sizing: border-box;
+}
+
+.dib {
+  display: inline-block;
+}
+
+// generate responsive classes
+$spacers-list: $spacer-0 $spacer-1 $spacer-2 $spacer-3 $spacer-4 $spacer-5 ;
+
+@mixin loop($breakpoint: '') {
+  // spacing classes
+  @each $spacer in $spacers-list {
+    $i: index($spacers-list,$spacer) - 1;
+
+    .ma-#{$i}#{$breakpoint} { margin: $spacer; }
+    .mt-#{$i}#{$breakpoint} { margin-top: $spacer; }
+    .mr-#{$i}#{$breakpoint} { margin-right: $spacer; }
+    .mb-#{$i}#{$breakpoint} { margin-bottom: $spacer; }
+    .ml-#{$i}#{$breakpoint} { margin-left: $spacer; }
+
+    .pa-#{$i}#{$breakpoint}{ padding: $spacer; }
+    .pt-#{$i}#{$breakpoint}{ padding-top: $spacer; }
+    .pr-#{$i}#{$breakpoint}{ padding-right: $spacer; }
+    .pb-#{$i}#{$breakpoint}{ padding-bottom: $spacer; }
+    .pl-#{$i}#{$breakpoint}{ padding-left: $spacer; }
+  }
+
+  // visibility classes
+  .show#{$breakpoint} {
+    display: block !important;
+  }
+  .hide#{$breakpoint} {
+    display: none !important;
+  }
+}
+
+@include loop();
+@include respond-to($bp-small) { @include loop("-sm"); }
+@include respond-to($bp-medium) { @include loop("-md"); }
+@include respond-to($bp-large) { @include loop("-lg"); }
+@include respond-to($bp-extralarge) { @include loop("-xl"); }

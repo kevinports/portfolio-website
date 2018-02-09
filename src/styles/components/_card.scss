@@ -1,0 +1,136 @@
+.card-list {
+  display: grid;
+	grid-auto-rows: 1fr;
+  grid-row-gap: $spacer-2;
+}
+
+.card {
+  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  text-decoration: none;
+  color: #fff;
+
+
+  &__header {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__header h4 {
+    transition: opacity 0.3s, border 0.3s;
+    opacity: 1;
+    border-bottom: 1px solid rgba(#fff, 1);
+  }
+
+  &__footer {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+  }
+
+  &__fore-img {
+    transition: transform 0.6s;
+    transform-origin: bottom center;
+    width: 100%;
+    max-width: 808px;
+    position: relative;
+    bottom: -4px;
+  }
+
+  // backgrounds
+  &:after {
+    transition: transform 0.6s;
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
+  &:hover:after,
+  &:hover &__fore-img {
+    backface-visibility: hidden;
+    transform: scale3D(1.025, 1.025, 1);
+  }
+
+  &--cnn:after {
+    background-image: url('/img/cnn-card-back@2x.jpg');
+    background-position: bottom right;
+  }
+
+  &--facebook:after {
+    background-image: url('/img/f8-card-back@2x.jpg');
+    background-position: top right;
+    transform-origin: center right;
+  }
+
+  &--farmlogs:after {
+    background-image: url('/img/farmlogs-card-back@2x.jpg');
+    background-position: center right;
+  }
+
+  &--gcs:after {
+    background-image: url('/img/gcs-card-back@2x.jpg');
+    background-position: top right;
+  }
+
+  &--isaac:after {
+    background-image: url('/img/isaac-card-back@2x.jpg');
+    background-position: top right;
+    transform-origin: top right;
+  }
+
+  // responsive styles
+
+  @include respond-to($bp-small){
+    &__footer {
+      text-align: right;
+    }
+
+    &__fore-img {
+      bottom: -4px;
+      right: -90px;
+    }
+
+    &--hologram:after {
+      background-image: url('/img/hologram-card-back@2x.jpg');
+      background-position: top right;
+      transform-origin: top right;
+    }
+
+    &--searchparty:after {
+      background-image: url('/img/searchparty-card-back@2x.jpg');
+      background-position: right;
+      transform-origin: top right;
+    }
+  }
+
+  @include respond-to($bp-medium){
+    &:after {
+      opacity: 1;
+    }
+
+    &__header h4 {
+      opacity: 0.5;
+      border-bottom: 1px solid rgba(#fff, 0);
+    }
+
+    &:hover h4 {
+      opacity: 1;
+      border-bottom-color: rgba(#fff, 0.75);
+    }
+  }
+
+}

@@ -1,0 +1,69 @@
+@mixin loop($breakpoint: '') {
+  .flex#{$breakpoint} {
+    display: flex;
+  }
+
+  .flex--justify-start#{$breakpoint} {
+    justify-content: flex-start;
+  }
+  .flex--justify-end#{$breakpoint} {
+    justify-content: flex-end;
+  }
+  .flex--justify-center#{$breakpoint} {
+    justify-content: center;
+  }
+  .flex--justify-between#{$breakpoint} {
+    justify-content: space-between;
+  }
+  .flex--justify-around#{$breakpoint} {
+    justify-content: space-around;
+  }
+  .flex--justify-evenly#{$breakpoint} {
+    justify-content: space-evenly;
+  }
+
+  .flex--align-start#{$breakpoint} {
+    align-items: flex-start;
+  }
+  .flex--align-end#{$breakpoint} {
+    align-items: flex-end;
+  }
+  .flex--align-center#{$breakpoint} {
+    align-items: center;
+  }
+  .flex--align-baseline#{$breakpoint} {
+    align-items: baseline;
+  }
+  .flex--align-stretch#{$breakpoint} {
+    align-items: stretch;
+  }
+
+  .flex--direction-row#{$breakpoint} {
+    flex-direction: row;
+  }
+  .flex--direction-row-reverse#{$breakpoint} {
+    flex-direction: row-reverse;
+  }
+  .flex--direction-column#{$breakpoint} {
+    flex-direction: column;
+  }
+  .flex--direction-column-reverse#{$breakpoint} {
+    flex-direction: column-reverse;
+  }
+
+  .flex--wrap#{$breakpoint} {
+    flex-direction: wrap;
+  }
+  .flex--nowrap#{$breakpoint} {
+    flex-direction: row;
+  }
+  .flex--wrapreverse#{$breakpoint} {
+    flex-direction: wrap-reverse;
+  }
+}
+
+@include loop();
+@include respond-to($bp-small) { @include loop("-sm"); }
+@include respond-to($bp-medium) { @include loop("-md"); }
+@include respond-to($bp-large) { @include loop("-lg"); }
+@include respond-to($bp-extralarge) { @include loop("-xl"); }

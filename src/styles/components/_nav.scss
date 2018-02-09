@@ -1,0 +1,24 @@
+.nav {
+  &__link {
+    transition: color 0.3s;
+    color: rgba($c-text-dark, 0.5);
+    text-decoration: none;
+    padding-bottom: 1px;
+  }
+  &__link + &__link {
+    margin-left: $spacer-2;
+  }
+  &__link:hover {
+    color: rgba($c-text-dark, 1);
+  }
+  &__link--active {
+    color: rgba($c-text-dark, 1);
+    border-bottom: 1px solid $c-text-dark;
+  }
+}
+
+.nav__control {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
