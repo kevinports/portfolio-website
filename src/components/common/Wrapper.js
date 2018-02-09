@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Wrapper = (props) => {
-  const { children } = props;
+  const { name, children } = props;
+  const transitionName = name || "";
   return (
-    <div className="wrapper">
+    <div className={`wrapper ${transitionName}`}>
       {children}
     </div>
   )

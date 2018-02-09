@@ -20,7 +20,7 @@ class Card extends React.Component {
     return (
       <Link
         to={`/projects/${project.slug}`}
-        className={`card card--${project.slug}`}
+        className={`card card--${project.slug} transition-stagger`}
         style={{"backgroundColor": project.color, "borderColor": project.color}}
         ref={(el) => { this.el = el; }}>
 

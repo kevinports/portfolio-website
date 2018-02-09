@@ -4,6 +4,7 @@ import renderHTML from 'react-render-html';
 
 import Header from './common/Header';
 import Wrapper from './common/Wrapper';
+import TransitionRoot from './common/TransitionRoot';
 import NavControl from './project/NavControl';
 import SectionHeader from './project/SectionHeader';
 import Video from './project/Video';
@@ -17,21 +18,12 @@ class ProjectPage extends React.Component {
     super(props, context);
   }
 
-  componentWillAppear () {
-    console.log('project will appear')
-  }
-
-  componentWillLeave(cb) {
-    console.log('project componentWillLeave')
-    cb()
-  }
-
   componentDidMount () {
-    document.body.scrollTop = 0;
+    // document.body.scrollTop = 0;
   }
 
   componentDidUpdate () {
-    document.body.scrollTop = 0;
+    // document.body.scrollTop = 0;
   }
 
   render (){
@@ -72,50 +64,53 @@ class ProjectPage extends React.Component {
       })
     }
 
-    return(
-      <Wrapper>
-        <NavControl
-          next={nextProject}
-          last={lastProject}/>
+    return (
+      <TransitionRoot>
+        <Wrapper name="transition-header">
+          <NavControl
+            next={nextProject}
+            last={lastProject}/>
+        </Wrapper>
+        <Wrapper name="transition-body">
+          <section role="content" className="mb-5">
 
-        <section role="content" className="mb-5">
+            <div className="row mb-3">
+              <div className="col-12 col-6-md">
+                <div className="pr-3">
+                  <h1 className="f-4 f-medium measure-md" >{project.title}</h1>
+                </div>
+              </div>
+              <div className="col-12 col-6-md mt-1 mt-0-md">
+                {project.overview.map((text, i) =>
+                  <p className="f-3 measure-lg" key={i}>{renderHTML(text)}</p>
+                )}
 
-          <div className="row mb-3">
-            <div className="col-12 col-6-md">
-              <div className="pr-3">
-                <h1 className="f-4 f-medium measure-md" >{project.title}</h1>
+                <div className="flex mt-3">
+                  <ul className="list mr-3">
+                    <h5 className="f-1 f-medium">My role</h5>
+                    {project.roles.map((text, i) =>
+                      <li key={i}>{text}</li>
+                    )}
+                  </ul>
+                  <ul className="list list--unstyled">
+                    <h5 className="f-1 f-medium">When</h5>
+                    <li>{ project.when }</li>
+                  </ul>
+                </div>
+
               </div>
             </div>
-            <div className="col-12 col-6-md mt-1 mt-0-md">
-              {project.overview.map((text, i) =>
-                <p className="f-3 measure-lg" key={i}>{renderHTML(text)}</p>
-              )}
 
-              <div className="flex mt-3">
-                <ul className="list mr-3">
-                  <h5 className="f-1 f-medium">My role</h5>
-                  {project.roles.map((text, i) =>
-                    <li key={i}>{text}</li>
-                  )}
-                </ul>
-                <ul className="list list--unstyled">
-                  <h5 className="f-1 f-medium">When</h5>
-                  <li>{ project.when }</li>
-                </ul>
-              </div>
-
+            <div className="transition-stagger">
+              {projectContent}
             </div>
-          </div>
 
-          <div>
-            {projectContent}
-          </div>
-
-        </section>
-        <NavControl
-          next={nextProject}
-          last={lastProject}/>
-      </Wrapper>
+          </section>
+          <NavControl
+            next={nextProject}
+            last={lastProject}/>
+        </Wrapper>
+      </TransitionRoot>
     );
   }
 }

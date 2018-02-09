@@ -7,102 +7,112 @@ import WorkPage from './WorkPage';
 import ProfilePage from './ProfilePage';
 import ProjectPage from './ProjectPage';
 
-import { TweenLite } from 'gsap';
+import data from '../data';
+import transitions from '../base/transitions';
 
-class SuperTransition extends Transition {
-  constructor(props, context) {
-    super(props, context);
-  }
-}
+import { TweenLite } from 'gsap';
 
 class App extends React.Component {
   constructor (props) {
     super(props);
     this.handleEnter = this.handleEnter.bind(this);
-    this.handleExit = this.handleExit.bind(this);
     this.handleEntered = this.handleEntered.bind(this);
-    this.handleExited = this.handleExited.bind(this);
-    this.handleEntering = this.handleEntering.bind(this);
-    this.handleExiting = this.handleExiting.bind(this);
-    this.previousLocation = 'BOOT';
+    this.handleExit = this.handleExit.bind(this);
+
+    this.state = {
+      isTransitioning: false
+    }
+
+    this.transitionState = {
+      previous: 'BOOT',
+      next: ''
+    }
   }
 
   handleEnter (el) {
-    console.log('handle enter')
-    console.log(el)
-    TweenLite.set(el, {
-      y: 20,
-      alpha: 0
-    })
-    TweenLite.to(el, 0.4, {
-      y: 0,
-      alpha: 1,
-      delay: 0.4,
-      ease: Circ.easeOut
-    })
-  }
+    if (this.state.isTransitioning) return;
+    this.setState({isTransitioning: true})
 
-  handleEntering (el) {
-    console.log('handle entering')
+    const { previous, next, direction } = this.transitionState;
+
+    if (previous === 'BOOT') {
+      transitions[next.name].enter(el);
+    } else {
+      transitions[next.name][`onEnterFrom:${previous.name}`](el, direction);
+    }
   }
 
   handleEntered (el) {
-    console.log('handle entered')
+    this.setState({isTransitioning: false})
+    this.transitionState.previous = this.transitionState.next;
+    this.transitionState.direction = '';
   }
 
   handleExit (el) {
-    console.log('handle exit')
-    TweenLite.set(el, {
-      y: 0,
-      alpha: 1
-    })
-    TweenLite.to(el, 0.4, {
-      y: 20,
-      alpha: 0,
-      ease: Circ.easeInOut
-    })
+    const { previous, next, direction } = this.transitionState;
+
+    transitions[previous.name][`onExitTo:${next.name}`](el, direction);
   }
 
-  handleExiting () {
-    console.log('handle exiting')
-  }
+  updateTransitionState () {
+    const slugs = this.props.location.pathname.split('/')
+    const param = (slugs[2]) ? '/' + slugs[2] : '';
 
-  handleExited () {
-    console.log('handle exited')
+    this.transitionState.next = {
+      name: '/' + slugs[1],
+      param: param
+    }
+
+    // if prev and next routes are projects, determine the direction of the transition
+    if (slugs[2] && this.transitionState.previous.name === '/projects') {
+      const prevSlug = this.transitionState.previous.param.replace('/', '');
+      const nextSlug = slugs[2];
+      const prevId = data.find((o) => o.slug === prevSlug).id;
+      const nextId = data.find((o) => o.slug === nextSlug).id;
+      let direction = '';
+
+      if (prevId === 0 && nextId === data.length-1){
+        direction = 'left'
+      } else  if (nextId === 0 && prevId === data.length-1){
+        direction = 'right'
+      } else if (prevId > nextId) {
+        direction = 'left'
+      } else if (prevId < nextId) {
+        direction = 'right'
+      }
+
+      this.transitionState.direction = direction;
+    }
+
   }
 
   render () {
     const { location } = this.props
     const currentKey = location.key;
-    const timeout = { enter: 3000, exit: 2000 }
+    const timeout = { enter: 600, exit: 600 }
 
-    console.log(this.previousLocation + ' to '  +location.pathname)
-    this.previousLocation = location.pathname;
+    this.updateTransitionState();
 
     return (
-      <TransitionGroup>
+      <TransitionGroup
+        appear={true}
+        component="main">
         <Transition
           key={currentKey}
           timeout={timeout}
           mountOnEnter={true}
           unmountOnExit={true}
           onEnter={this.handleEnter}
-          onExit={this.handleExit}
           onEntered={this.handleEntered}
-          onExited={this.handleExited}onEntered={this.handleEntered}
-          onExited={this.handleExited} >
-            <main className="pl-2 pr-2 transition-wrapper">
+          onExit={this.handleExit} >
               <Switch location={location}>
                 <Route path="/" exact component={WorkPage} />
                 <Route path="/profile" exact component={ProfilePage} />
                 <Route path="/projects/:id" exact component={ProjectPage} />
               </Switch>
-            </main>
           </Transition>
       </TransitionGroup>
     )
-
-    ;
   }
 }
 
