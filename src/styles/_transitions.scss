@@ -24,6 +24,7 @@ main.animating .transition-root {
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
+  overflow-scrolling: touch;
   transform: translate3d(0,0,1px)
 }
 
