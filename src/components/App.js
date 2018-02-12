@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect, withRouter } from 'react-router
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Transition from "react-transition-group/Transition";
 import { TweenLite } from 'gsap';
+import ReactGA from 'react-ga';
 
 import WorkPage from './WorkPage';
 import ProfilePage from './ProfilePage';
@@ -11,6 +12,8 @@ import ProjectPage from './ProjectPage';
 import data from '../data';
 import transitions from '../base/transitions';
 import GlobalStore from '../base/GlobalStore';
+
+ReactGA.initialize('UA-111120088-1');
 
 class App extends React.Component {
   constructor (props) {
@@ -37,7 +40,11 @@ class App extends React.Component {
   handleEnter (el) {
     if (this.state.isTransitioning) return;
     this.setState({isTransitioning: true})
+
     const { previous, next, direction } = this.transitionState;
+    const { pathname } = this.props.location;
+
+    ReactGA.pageview(pathname);
 
     if (previous === 'BOOT') {
       transitions[next.name].enter(el);
