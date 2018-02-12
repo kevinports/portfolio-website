@@ -22,34 +22,6 @@
     transform: scale3d(0.99, 0.99, 1);
   }
 
-  &__header {
-    position: relative;
-    z-index: 1;
-  }
-
-  &__header h4 {
-    transition: opacity 0.3s, border 0.3s;
-    opacity: 1;
-    border-bottom: 1px solid rgba($c-white, 1);
-  }
-
-  &__footer {
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    flex: 1;
-  }
-
-  &__fore-img {
-    transition: transform 0.6s;
-    transform-origin: bottom center;
-    width: 100%;
-    max-width: 808px;
-    position: relative;
-    bottom: -4px;
-  }
-
-  // backgrounds
   &:after {
     transition: transform 0.6s;
     content: "";
@@ -69,73 +41,106 @@
     backface-visibility: hidden;
     transform: scale3D(1.025, 1.025, 1);
   }
+}
 
-  &--cnn:after {
-    background-image: url('/img/cnn-card-back@2x.jpg');
-    background-position: bottom right;
+
+// elements
+
+.card__header {
+  position: relative;
+  z-index: 1;
+}
+
+.card__header h4 {
+  transition: opacity 0.3s, border 0.3s;
+  opacity: 1;
+  border-bottom: 1px solid rgba($c-white, 1);
+}
+
+.card__footer {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.card__fore-img {
+  transition: transform 0.6s;
+  transform-origin: bottom center;
+  width: 100%;
+  max-width: 808px;
+  position: relative;
+  bottom: -4px;
+}
+
+
+// modifiers
+
+.card--cnn:after {
+  background-image: url('/img/cnn-card-back@2x.jpg');
+  background-position: bottom right;
+}
+
+.card--facebook:after {
+  background-image: url('/img/f8-card-back@2x.jpg');
+  background-position: top right;
+  transform-origin: center right;
+}
+
+.card--farmlogs:after {
+  background-image: url('/img/farmlogs-card-back@2x.jpg');
+  background-position: center right;
+}
+
+.card--gcs:after {
+  background-image: url('/img/gcs-card-back@2x.jpg');
+  background-position: top right;
+}
+
+.card--isaac:after {
+  background-image: url('/img/isaac-card-back@2x.jpg');
+  background-position: top right;
+  transform-origin: top right;
+}
+
+
+// responsive styles
+
+@include respond-to($bp-small){
+  .card__footer {
+    text-align: right;
   }
 
-  &--facebook:after {
-    background-image: url('/img/f8-card-back@2x.jpg');
-    background-position: top right;
-    transform-origin: center right;
+  .card__fore-img {
+    bottom: -4px;
+    right: -90px;
   }
 
-  &--farmlogs:after {
-    background-image: url('/img/farmlogs-card-back@2x.jpg');
-    background-position: center right;
-  }
-
-  &--gcs:after {
-    background-image: url('/img/gcs-card-back@2x.jpg');
-    background-position: top right;
-  }
-
-  &--isaac:after {
-    background-image: url('/img/isaac-card-back@2x.jpg');
+  .card--hologram:after {
+    background-image: url('/img/hologram-card-back@2x.jpg');
     background-position: top right;
     transform-origin: top right;
   }
 
-  // responsive styles
+  .card--searchparty:after {
+    background-image: url('/img/searchparty-card-back@2x.jpg');
+    background-position: right;
+    transform-origin: top right;
+  }
+}
 
-  @include respond-to($bp-small){
-    &__footer {
-      text-align: right;
-    }
-
-    &__fore-img {
-      bottom: -4px;
-      right: -90px;
-    }
-
-    &--hologram:after {
-      background-image: url('/img/hologram-card-back@2x.jpg');
-      background-position: top right;
-      transform-origin: top right;
-    }
-
-    &--searchparty:after {
-      background-image: url('/img/searchparty-card-back@2x.jpg');
-      background-position: right;
-      transform-origin: top right;
-    }
+@include respond-to($bp-medium){
+  .card:after {
+    opacity: 1;
   }
 
-  @include respond-to($bp-medium){
-    &:after {
-      opacity: 1;
-    }
-
-    &__header h4 {
-      opacity: 0.5;
-      border-bottom: 1px solid rgba($c-white, 0);
-    }
-
-    &:hover h4 {
-      opacity: 1;
-      border-bottom-color: rgba($c-white, 0.75);
-    }
+  .card__header h4 {
+    opacity: 0.5;
+    border-bottom: 1px solid rgba($c-white, 0);
   }
 
+  .card:hover h4 {
+    opacity: 1;
+    border-bottom-color: rgba($c-white, 0.75);
+  }
 }

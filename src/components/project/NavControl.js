@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const transitionName = name || "";
+
 const NavControl = (props) => {
   const { last, next, name } = props;
   const transitionName = name || "";
