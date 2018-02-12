@@ -5,5 +5,5 @@ To get running in development:
 - `npm start` to start the development server
 
 To get running in production:
-- `npm build` to build compressed asset bundles
+- `npm run build` to build compressed asset bundles
 - `NODE_ENV=production node server` to run the development server
