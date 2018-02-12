@@ -73,7 +73,7 @@ class ProjectPage extends React.Component {
               </div>
               <div className="col-12 col-6-md mt-1 mt-0-md">
                 {project.overview.map((text, i) =>
-                  <p className="f-3 measure-lg" key={i}>{renderHTML(text)}</p>
+                  <p className="f-2 f-3-sm measure-lg" key={i}>{renderHTML(text)}</p>
                 )}
 
                 <div className="flex mt-3">

@@ -12,7 +12,7 @@ class ProfilePage extends React.Component {
         </Wrapper>
         <Wrapper name="transition-body">
           <div className="flex-md flex--space-between-md">
-            <div className="measure-lg f-3 mr-3 transition-stagger">
+            <div className="measure-lg f-2 f-3-sm mr-3 transition-stagger">
               <p>I’m a designer and front-end developer interested in tools, technology and workmanship.</p>
               <p>Currently seeking my next adventure and accepting freelance design &amp; front-end development projects.</p>
               <p>Previously I’ve led product design at an IoT startup, was a technical design lead for Facebook, and worked as a designer and developer with a variety of digital design studios in Chicago.</p>
@@ -29,7 +29,7 @@ class ProfilePage extends React.Component {
             </div>
           </div>
           <div className="transition-stagger">
-            <p className="f-1 mt-3 t-light mb-4">This site was built with {'<3'} using React.js <a href="https://github.com/kevinports/portfolio-website" className="btn__link">View source</a></p>
+            <p className="f-1 mt-3 t-light mb-2 mb-4-sm">This site was built with {'<3'} using React.js <a href="https://github.com/kevinports/portfolio-website" className="btn__link">View source</a></p>
           </div>
         </Wrapper>
       </TransitionRoot>

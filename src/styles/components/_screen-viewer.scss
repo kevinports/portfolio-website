@@ -12,13 +12,17 @@
 }
 
 .screen-viewer__screen-inner {
-  height: 500px;
   overflow-y: hidden;
   border: 1px solid rgba($c-black, 0.1);
   cursor: ns-resize;
+  height: 55vw;
 
   img {
     width: 100%;
+  }
+
+  @include respond-to($bp-medium) {
+    height: 500px;
   }
 }
 
@@ -49,7 +53,16 @@
   list-style-type: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include respond-to($bp-medium) {
+    justify-content: center;
+  }
 }
 
 .screen-viewer__menu-item {

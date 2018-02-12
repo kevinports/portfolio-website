@@ -79,7 +79,7 @@ class ScreenViewer extends React.Component {
     return (
       <div className={"screen-viewer mb-4 transition-stagger " + (this.state.scrollable ? "screen-viewer--scrollable" : "")} ref="El">
 
-        <div className="screen-viewer__screen pa-3">
+        <div className="screen-viewer__screen pa-2 pa-3-md">
           <div className="screenViewer__help-text f-1 f-medium" ref="helpTextEl"><span>Scroll to preview page</span></div>
           <div className="screen-viewer__screen-inner" onScroll={this.handleScreenScroll} ref="screenEl">
             <img src={ src } srcSet={`${src} 1x, ${src2x} 2x`}/>
