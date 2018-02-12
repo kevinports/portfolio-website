@@ -1,17 +1,18 @@
-.nav {
-  &__link {
-    transition: color 0.3s;
-    color: rgba($c-text-dark, 0.5);
-    text-decoration: none;
-    padding-bottom: 1px;
-  }
-  &__link + &__link {
+.nav__link {
+  transition: color 0.3s;
+  color: rgba($c-text-dark, 0.5);
+  text-decoration: none;
+  padding-bottom: 1px;
+
+  & + .nav__link {
     margin-left: $spacer-2;
   }
-  &__link:hover {
+
+  &:hover {
     color: rgba($c-text-dark, 1);
   }
-  &__link--active {
+
+  &--active {
     color: rgba($c-text-dark, 1);
     border-bottom: 1px solid $c-text-dark;
     pointer-events: none;

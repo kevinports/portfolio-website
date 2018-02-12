@@ -3,9 +3,11 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
   margin: 0;
 }
+
 article,
 aside,
 details,
@@ -20,20 +22,25 @@ section,
 picture {
   display: block;
 }
+
 audio:not([controls]) {
   display: none;
   height: 0;
 }
+
 a {
   background-color: transparent;
 }
+
 a:active,
 a:hover {
   outline: 0;
 }
+
 img {
   border: 0;
 }
+
 svg:not(:root) {
   overflow: hidden;
 }

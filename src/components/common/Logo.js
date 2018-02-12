@@ -22,5 +22,4 @@ const Logo = () => (
   </NavLink>
 )
 
-
 export default Logo;
