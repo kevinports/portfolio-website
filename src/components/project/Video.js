@@ -11,26 +11,26 @@ class Video extends React.Component {
   }
 
   componentDidMount () {
-    this.player = plyr.setup(this.video)[0];
+    // this.player = plyr.setup(this.video)[0];
   }
 
   //not sure why react doesn't dispose of previous video when props change, but need to do it manually
   componentWillReceiveProps (nextProps) {
     const { srcMp4, srcWebM, poster } = nextProps;
 
-    this.player.pause();
-    this.player.source({
-      type: 'video',
-      sources: [{
-        src: srcMp4,
-        type: 'video/mp4'
-      },
-      {
-        src: srcWebM,
-        type: 'video/webm'
-      }],
-      poster: poster
-    })
+    // this.player.pause();
+    // this.player.source({
+    //   type: 'video',
+    //   sources: [{
+    //     src: srcMp4,
+    //     type: 'video/mp4'
+    //   },
+    //   {
+    //     src: srcWebM,
+    //     type: 'video/webm'
+    //   }],
+    //   poster: poster
+    // })
   }
 
   render () {

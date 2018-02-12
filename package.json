@@ -17,7 +17,8 @@
     "babel-preset-stage-3": "^6.24.1",
     "gsap": "^1.20.3",
     "react-plyr": "^1.7.0",
-    "react-transition-group": "^2.2.1"
+    "react-transition-group": "^2.2.1",
+    "shortid": "^2.2.8"
   },
   "devDependencies": {
     "animejs": "^2.2.0",

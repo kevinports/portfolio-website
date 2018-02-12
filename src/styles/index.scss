@@ -20,11 +20,3 @@
 @import 'components/caption';
 @import 'components/section-header';
 @import 'components/screen-viewer';
-
-body,
-#mount,
-main {
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
-}

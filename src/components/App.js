@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect, withRouter } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Transition from "react-transition-group/Transition";
+import { TweenLite } from 'gsap';
 
 import WorkPage from './WorkPage';
 import ProfilePage from './ProfilePage';
@@ -9,8 +10,7 @@ import ProjectPage from './ProjectPage';
 
 import data from '../data';
 import transitions from '../base/transitions';
-
-import { TweenLite } from 'gsap';
+import GlobalStore from '../base/GlobalStore';
 
 class App extends React.Component {
   constructor (props) {
@@ -25,14 +25,18 @@ class App extends React.Component {
 
     this.transitionState = {
       previous: 'BOOT',
-      next: ''
+      next: '',
+      direction: ''
     }
+  }
+
+  componentDidMount () {
+    GlobalStore.listen();
   }
 
   handleEnter (el) {
     if (this.state.isTransitioning) return;
     this.setState({isTransitioning: true})
-
     const { previous, next, direction } = this.transitionState;
 
     if (previous === 'BOOT') {
@@ -46,11 +50,11 @@ class App extends React.Component {
     this.setState({isTransitioning: false})
     this.transitionState.previous = this.transitionState.next;
     this.transitionState.direction = '';
+    GlobalStore.scrollRoot = el; // since this is the root of scroll, not the window
   }
 
   handleExit (el) {
     const { previous, next, direction } = this.transitionState;
-
     transitions[previous.name][`onExitTo:${next.name}`](el, direction);
   }
 
@@ -83,7 +87,6 @@ class App extends React.Component {
 
       this.transitionState.direction = direction;
     }
-
   }
 
   render () {
@@ -96,7 +99,8 @@ class App extends React.Component {
     return (
       <TransitionGroup
         appear={true}
-        component="main">
+        component="main"
+        className={this.state.isTransitioning ? ('animating') : ('') }>
         <Transition
           key={currentKey}
           timeout={timeout}

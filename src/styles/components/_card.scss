@@ -5,7 +5,7 @@
 }
 
 .card {
-  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+  transition: opacity 0.3s, transform 0.2s, box-shadow 0.3s;
   position: relative;
   border-radius: 5px;
   border-style: solid;
@@ -14,8 +14,13 @@
   overflow: hidden;
   height: auto;
   text-decoration: none;
-  color: #fff;
+  color: $c-white;
+  cursor: pointer;
 
+
+  &:active {
+    transform: scale3d(0.99, 0.99, 1);
+  }
 
   &__header {
     position: relative;
@@ -25,7 +30,7 @@
   &__header h4 {
     transition: opacity 0.3s, border 0.3s;
     opacity: 1;
-    border-bottom: 1px solid rgba(#fff, 1);
+    border-bottom: 1px solid rgba($c-white, 1);
   }
 
   &__footer {
@@ -124,12 +129,12 @@
 
     &__header h4 {
       opacity: 0.5;
-      border-bottom: 1px solid rgba(#fff, 0);
+      border-bottom: 1px solid rgba($c-white, 0);
     }
 
     &:hover h4 {
       opacity: 1;
-      border-bottom-color: rgba(#fff, 0.75);
+      border-bottom-color: rgba($c-white, 0.75);
     }
   }
 

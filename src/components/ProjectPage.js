@@ -18,14 +18,6 @@ class ProjectPage extends React.Component {
     super(props, context);
   }
 
-  componentDidMount () {
-    // document.body.scrollTop = 0;
-  }
-
-  componentDidUpdate () {
-    // document.body.scrollTop = 0;
-  }
-
   render (){
     const slug = this.props.match.params.id;
     const project = _.find(data, {'slug': slug})
@@ -74,7 +66,7 @@ class ProjectPage extends React.Component {
         <Wrapper name="transition-body">
           <section role="content" className="mb-5">
 
-            <div className="row mb-3">
+            <div className="row mb-3 transition-horiz">
               <div className="col-12 col-6-md">
                 <div className="pr-3">
                   <h1 className="f-4 f-medium measure-md" >{project.title}</h1>
@@ -101,12 +93,13 @@ class ProjectPage extends React.Component {
               </div>
             </div>
 
-            <div className="transition-stagger">
+            <div className="transition-stagger transition-fade">
               {projectContent}
             </div>
 
           </section>
           <NavControl
+            name="transition-fade"
             next={nextProject}
             last={lastProject}/>
         </Wrapper>

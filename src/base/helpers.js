@@ -1,4 +1,3 @@
-
 export function getOffset(element) {
   const body = document.body;
   const bodyRect = body.getBoundingClientRect();

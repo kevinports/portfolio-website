@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import anime from 'animejs';
 
 class Card extends React.Component {
   constructor (props, context) {

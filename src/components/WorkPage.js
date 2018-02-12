@@ -17,7 +17,7 @@ class WorkPage extends React.Component {
           <Header />
         </Wrapper>
         <Wrapper name="transition-body">
-          <div className="measure-lg pb-3 mb-1">
+          <div className="measure-lg pb-3 pb-4-md mb-1 transition-horiz">
             <h3 className="f-4 pr-3 f-medium">Kevin Ports is a designer, front-end developer and problem solver based in Madison, WI, USA</h3>
           </div>
           <div className="card-list">

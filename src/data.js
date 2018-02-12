@@ -12,8 +12,7 @@ const data = [
     ],
     roles: [
       "Brand design",
-      "UI design",
-      "UX design"
+      "Product design",
     ],
     when: "2016-2017",
     content: [
@@ -60,7 +59,7 @@ const data = [
         src2x: "/img/projects/holo-6@2x.jpg"
       },
       {
-        id: 6,
+        id: 7,
         type: "img",
         src: "/img/projects/holo-7.jpg",
         src2x: "/img/projects/holo-7@2x.jpg"
@@ -69,13 +68,13 @@ const data = [
 
 
       {
-        id: 7,
+        id: 8,
         type: "section-header",
         headline: "Marketing website",
         body: "I designed and helped develop a marketing site featuring product offerings, developer documentation and an e-commerce experience."
       },
       {
-        id: 3,
+        id: 9,
         type: "screenViewer",
         images: [{
           id: 1,
@@ -105,7 +104,7 @@ const data = [
         }]
       },
       {
-        id: 3,
+        id: 10,
         type: "video",
         srcMp4: "/video/holo_animation.mp4",
         srcWebM: "/video/holo_animation.webm",
@@ -113,63 +112,60 @@ const data = [
         caption: "Here's a video of a HTML Canvas animation I programmed for the marketing site."
       },
 
-
       {
-        id: 7,
+        id: 11,
         type: "section-header",
         headline: "Product design",
         body: "The web app helps developers manage fleets of cellular enabled devices and build middleware to route their sensor data to other apps."
       },
       {
-        id: 8,
+        id: 12,
         type: "img",
         src: "/img/projects/holo-14.jpg",
         src2x: "/img/projects/holo-14@2x.jpg"
       },
       {
-        id: 9,
+        id: 13,
         type: "img",
         src: "/img/projects/holo-15.jpg",
         src2x: "/img/projects/holo-15@2x.jpg"
       },
       {
-        id: 10,
+        id: 14,
         type: "img",
         src: "/img/projects/holo-16.jpg",
         src2x: "/img/projects/holo-16@2x.jpg"
       },
       {
-        id: 11,
+        id: 15,
         type: "img",
         src: "/img/projects/holo-17.jpg",
         src2x: "/img/projects/holo-17@2x.jpg"
       },
       {
-        id: 8,
+        id: 16,
         type: "img",
         src: "/img/projects/holo-18.jpg",
         src2x: "/img/projects/holo-18@2x.jpg"
       },
       {
-        id: 9,
+        id: 17,
         type: "img",
         src: "/img/projects/holo-19.jpg",
         src2x: "/img/projects/holo-19@2x.jpg"
       },
       {
-        id: 10,
+        id: 18,
         type: "img",
         src: "/img/projects/holo-20.jpg",
         src2x: "/img/projects/holo-20@2x.jpg"
       },
       {
-        id: 11,
+        id: 19,
         type: "img",
         src: "/img/projects/holo-21.jpg",
         src2x: "/img/projects/holo-21@2x.jpg"
-      },
-
-
+      }
     ]
   },
 
@@ -192,7 +188,7 @@ const data = [
     when: '2014',
     content: [
       {
-        id: 2,
+        id: 0,
         type: "video",
         srcMp4: "/video/cnn_reel.mp4",
         srcWebM: "/video/cnn_reel.webm",
@@ -200,25 +196,25 @@ const data = [
         caption: "Here's an overview of the application."
       },
       {
-        id: 11,
+        id: 1,
         type: "img",
         src: "/img/projects/cnn-1.jpg",
         src2x: "/img/projects/cnn-1@2x.jpg"
       },
       {
-        id: 11,
+        id: 2,
         type: "img",
         src: "/img/projects/cnn-2.jpg",
         src2x: "/img/projects/cnn-2@2x.jpg"
       },
       {
-        id: 11,
+        id: 3,
         type: "img",
         src: "/img/projects/cnn-3.jpg",
         src2x: "/img/projects/cnn-3@2x.jpg"
       },
       {
-        id: 7,
+        id: 4,
         type: "section-header",
         headline: "Technical details",
         body: "<p>I used a variety of awesome techniques and tech to build the app including:</p><ul className='list f-1 mt-2'><li>Consuming political and demographic data from a CNN rest api, then using D3.js to plot map visualizations</li><li>Using Three.js to make rich WebGL data visualizations</li><li>Building SPA architecture with Backbone.js</li><li>Updating the application in realtime on election night with WebSockets</li><li>Using GSAP to give the UI natural motion with  delightful behavior</li></ul>"
@@ -226,7 +222,7 @@ const data = [
 
 
       {
-        id: 1,
+        id: 5,
         type: "video",
         srcMp4: "/video/cnn_walkthrough.mp4",
         srcWebM: "/video/cnn_walkthrough.webm",
@@ -234,13 +230,12 @@ const data = [
         caption: "Sit back, relax, and let John King give you a tour of the application."
       },
       {
-        id: 7,
+        id: 6,
         type: "section-header",
         align: "center",
         headline: "Results",
         body: "The application was launched in time for the 2014 midterms and served 12 million web requests on election night, with 600 views per minute during broadcast."
-      },
-
+      }
     ]
   },
 
@@ -283,47 +278,70 @@ const data = [
         src: "/img/projects/f8-1.jpg",
         src2x: "/img/projects/f8-1@2x.jpg"
       },
-      // {
-      //   id: 4,
-      //   type: "img",
-      //   src: "/img/projects/f8-2.jpg",
-      //   src2x: "/img/projects/f8-2@2x.jpg"
-      // },
       {
-        id: 5,
+        id: 4,
         type: "img",
         src: "/img/projects/f8-3.jpg",
         src2x: "/img/projects/f8-3@2x.jpg"
       },
       {
-        id: 6,
+        id: 5,
         type: "img",
         src: "/img/projects/f8-4.jpg",
         src2x: "/img/projects/f8-4@2x.jpg",
-        caption: "Here's the UI for one of the generative graphics tools I built. <a className='btn__link' href='/'>Take it for a spin</a>"
+        caption: "Here's the UI for one of the generative graphics tools I built. <a className='btn__link' href='/demos/curvinator'>Take it for a spin</a>"
       },
 
       {
-        id: 2,
+        id: 6,
         type: "section-header",
         headline: "Marketing website",
         body: "<p>I was responsible for front-end development of the conference website and registration system.</p><p>The site had many development challenges which included:</p><ul className='list f-1  mt-2'><li>Performant canvas animations</li><li>Single page applications</li><li>Time-to-glass optimizations</li><li>A wide gradient of browser support</li></ul>"
       },
       {
-        id: 6,
-        type: "img",
-        src: "/img/projects/f8-5.jpg",
-        src2x: "/img/projects/f8-5@2x.jpg"
+        id: 7,
+        type: "screenViewer",
+        images: [{
+          id: 1,
+          name: "Home",
+          src: "/img/projects/f8-site-1.jpg",
+          src2x: "/img/projects/f8-site-1@2x.jpg"
+        },{
+          id: 2,
+          name: "About",
+          src: "/img/projects/f8-site-2.jpg",
+          src2x: "/img/projects/f8-site-2@2x.jpg"
+        },{
+          id: 3,
+          name: "Schedule",
+          src: "/img/projects/f8-site-3.jpg",
+          src2x: "/img/projects/f8-site-3@2x.jpg"
+        },{
+          id: 4,
+          name: "Getting here",
+          src: "/img/projects/f8-site-4.jpg",
+          src2x: "/img/projects/f8-site-4@2x.jpg"
+        },{
+          id: 5 ,
+          name: "Events",
+          src: "/img/projects/f8-site-5.jpg",
+          src2x: "/img/projects/f8-site-5@2x.jpg"
+        },{
+          id: 6 ,
+          name: "Watch F8",
+          src: "/img/projects/f8-site-6.jpg",
+          src2x: "/img/projects/f8-site-6@2x.jpg"
+        }]
       },
 
       {
-        id: 2,
+        id: 8,
         type: "section-header",
         headline: "Generative animation",
         body: "I brought the brand elements to life by creating animations that were projected onto screens throughout the event environment."
       },
       {
-        id: 1,
+        id: 9,
         type: "video",
         srcMp4: "/video/f8_animation.mp4",
         srcWebM: "/video/f8_animation.webm",
@@ -331,148 +349,199 @@ const data = [
         caption: "Here's a glimpse of some of the projected animations seen in the pictures below."
       },
       {
-        id: 6,
+        id: 10,
         type: "img",
         src: "/img/projects/f8-6.jpg",
         src2x: "/img/projects/f8-6@2x.jpg"
       },
       {
-        id: 6,
+        id: 11,
         type: "img",
         src: "/img/projects/f8-7.jpg",
         src2x: "/img/projects/f8-7@2x.jpg"
       },
 
       {
-        id: 2,
+        id: 12,
         type: "section-header",
         headline: "Digital wayfinding signage",
         body: "I was responsible for developing javascript applications that automatically updated with contextual schedule information throughout the day of the event."
       },
       {
-        id: 6,
+        id: 13,
         type: "img",
         src: "/img/projects/f8-8.jpg",
         src2x: "/img/projects/f8-8@2x.jpg"
       },
       {
-        id: 6,
+        id: 14,
         type: "img",
         src: "/img/projects/f8-9.jpg",
         src2x: "/img/projects/f8-9@2x.jpg"
       },
       {
-        id: 6,
+        id: 15,
         type: "img",
         src: "/img/projects/f8-10.jpg",
         src2x: "/img/projects/f8-10@2x.jpg"
       },
       {
-        id: 6,
+        id: 16,
         type: "img",
         src: "/img/projects/f8-11.jpg",
         src2x: "/img/projects/f8-11@2x.jpg"
       },
 
       {
-        id: 2,
+        id: 17,
         type: "section-header",
         headline: "Brand applications",
-        body: "With the exceeding talents of designers Jeff Daley & Elizabeth Gilmore, the graphics tools I developed were used to create collateral for the event experience."
+        body: "By the exceeding talents of designers <a className='btn__link' href='https://dribbble.com/jeffdaley'/>Jeff Daley</a> & <a className='btn__link' href='https://dribbble.com/elizabethgilmore'/>Elizabeth Gilmore</a> the graphics tools I developed were used to create collateral for the event experience."
       },
       {
-        id: 6,
+        id: 18,
         type: "img",
         src: "/img/projects/f8-12.jpg",
         src2x: "/img/projects/f8-12@2x.jpg"
       },
       {
-        id: 6,
+        id: 19,
         type: "img",
         src: "/img/projects/f8-13.jpg",
         src2x: "/img/projects/f8-13@2x.jpg"
       },
       {
-        id: 6,
+        id: 20,
         type: "img",
         src: "/img/projects/f8-14.jpg",
         src2x: "/img/projects/f8-14@2x.jpg"
       },
       {
-        id: 6,
+        id: 21,
         type: "img",
         src: "/img/projects/f8-15.jpg",
         src2x: "/img/projects/f8-15@2x.jpg"
       },
       {
-        id: 6,
+        id: 22,
         type: "img",
         src: "/img/projects/f8-16.jpg",
         src2x: "/img/projects/f8-16@2x.jpg"
       },
       {
-        id: 6,
+        id: 23,
         type: "img",
         src: "/img/projects/f8-17.jpg",
         src2x: "/img/projects/f8-17@2x.jpg"
       },
       {
-        id: 6,
+        id: 24,
         type: "img",
         src: "/img/projects/f8-18.jpg",
         src2x: "/img/projects/f8-18@2x.jpg"
       },
       {
-        id: 6,
+        id: 25,
         type: "img",
         src: "/img/projects/f8-19.jpg",
         src2x: "/img/projects/f8-19@2x.jpg"
       },
       {
-        id: 6,
+        id: 26,
         type: "img",
         src: "/img/projects/f8-21.jpg",
         src2x: "/img/projects/f8-21@2x.jpg"
-      },
-
+      }
     ]
   },
 
 
+  // {
+  //   "id": 3,
+  //   "name": "FarmLogs",
+  //   "slug": "farmlogs",
+  //   "title": "Designed a UI system for an agriculture software startup",
+  //   "color": "#287031",
+  //   overview: [
+  //     'Google Consumer Surveys is a product that enables fast and easy market research. They asked Nelson Cash to redesign their marketing site in hopes to to better explain their product, and increase sign-up conversion.',
+  //     'My role was to design and build an interactive web animation explaining how the product worked.'
+  //   ],
+  //   roles: [
+  //     'UI Design'
+  //   ],
+  //   when: '2017'
+  // },
+
   {
     "id": 3,
-    "name": "FarmLogs",
-    "slug": "farmlogs",
-    "title": "Designed a UI system for an agriculture software startup",
-    "color": "#287031",
-    overview: [
-      'Google Consumer Surveys is a product that enables fast and easy market research. They asked Nelson Cash to redesign their marketing site in hopes to to better explain their product, and increase sign-up conversion.',
-      'My role was to design and build an interactive web animation explaining how the product worked.'
-    ],
-    roles: [
-      'UI Design'
-    ],
-    when: '2017'
-  },
-  {
-    "id": 4,
     "name": "The Search Party",
     "slug": "searchparty",
     "title": "Redesigned a web app for a recruiting platform",
     "color": "#484C5E",
     "cardForegroundImg": true,
     overview: [
-      'Isaac is an intelligent flashcard app for web and iOS that schedules a user’s study sessions for efficient memorization.',
-      'I was responsible for branding, art direction, UX & UI  and even sound design for the entire project.'
+      'The Search Party is a recruitment marketplace connecting employers, recruiters and job seekers.',
+      'I was hired to redesign their web platform. The project offered the challenges of designing around a unique data model and an opportunity to create a green field visual design system.'
     ],
     roles: [
       'UX design',
       'UI design'
     ],
-    when: '2015'
+    when: '2015',
+    content: [
+      {
+        id: 1,
+        type: "img",
+        src: "/img/projects/searchparty-1.jpg",
+        src2x: "/img/projects/searchparty-1@2x.jpg"
+      },
+      {
+        id: 2,
+        type: "section-header",
+        headline: "UI system",
+        body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+      },
+      {
+        id: 3,
+        type: "img",
+        src: "/img/projects/searchparty-2.jpg",
+        src2x: "/img/projects/searchparty-2@2x.jpg"
+      },
+      {
+        id: 4,
+        type: "section-header",
+        headline: "Application design",
+        body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+      },
+      {
+        id: 5,
+        type: "screenViewer",
+        images: [{
+          id: 1,
+          name: "Job openings",
+          src: "/img/projects/searchparty-employer-1.jpg",
+          src2x: "/img/projects/searchparty-employer-1@2x.jpg"
+        },{
+          id: 2,
+          name: "Search candidates",
+          src: "/img/projects/searchparty-employer-2.jpg",
+          src2x: "/img/projects/searchparty-employer-2@2x.jpg"
+        },{
+          id: 3,
+          name: "Candidate profile",
+          src: "/img/projects/searchparty-employer-3.jpg",
+          src2x: "/img/projects/searchparty-employer-3@2x.jpg"
+        },{
+          id: 4,
+          name: "Hiring timeline",
+          src: "/img/projects/searchparty-employer-5.jpg",
+          src2x: "/img/projects/searchparty-employer-5@2x.jpg"
+        }]
+      }
+    ]
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Googe Consumer Surveys",
     "slug": "gcs",
     "title": "Designed and developed an interactive product tour for Google",
@@ -502,7 +571,7 @@ const data = [
         id: 2,
         type: "section-header",
         headline: "Technical details",
-        body: "<p>I made vector illustrations and animated them with Adobe Flash. Then I used Swiffy to port the Flash animation into an HTML5 friendly SVG runtime.</p><p>I wrote a Javascript wrapper to allow page events to control the timeline of the Swiffy runtime.<p>"
+        body: "<p>I made vector illustrations and animated them with Adobe Flash. Then I used Swiffy to port the Flash animation into an HTML5 friendly SVG runtime.</p><p>I wrote a Javascript wrapper to allow page events to control the timeline of the Swiffy runtime.</p>"
       },
       {
         id: 3,
@@ -519,7 +588,7 @@ const data = [
     ]
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "Isaac",
     "slug": "isaac",
     "title": "Created product and brand design for a flashcard app",
@@ -536,7 +605,7 @@ const data = [
     when: '2012',
     content: [
       {
-        id: 3,
+        id: 1,
         type: "img",
         src: "/img/projects/isaac-hero.jpg",
         src2x: "/img/projects/isaac-hero@2x.jpg"
@@ -555,25 +624,25 @@ const data = [
         src2x: "/img/projects/isaac-1@2x.jpg"
       },
       {
-        id: 3,
+        id: 4,
         type: "img",
         src: "/img/projects/isaac-2.jpg",
         src2x: "/img/projects/isaac-2@2x.jpg"
       },
       {
-        id: 3,
+        id: 5,
         type: "img",
         src: "/img/projects/isaac-3.jpg",
         src2x: "/img/projects/isaac-3@2x.jpg"
       },
       {
-        id: 3,
+        id: 6,
         type: "img",
         src: "/img/projects/isaac-4.jpg",
         src2x: "/img/projects/isaac-4@2x.jpg"
       },
       {
-        id: 3,
+        id: 7,
         type: "img",
         src: "/img/projects/isaac-5.jpg",
         src2x: "/img/projects/isaac-5@2x.jpg"
@@ -581,13 +650,13 @@ const data = [
 
 
       {
-        id: 2,
+        id: 8,
         type: "section-header",
         headline: "Marketing website",
         body: "The marketing site is an entry point into both the web app as well as the iOS app."
       },
       {
-        id: 3,
+        id: 9,
         type: "screenViewer",
         images: [{
           id: 1,
@@ -599,86 +668,86 @@ const data = [
 
 
       {
-        id: 2,
+        id: 10,
         type: "section-header",
         headline: "Web app design",
         body: "The web application allows a user to create and edit large amounts of cards easily."
       },
       {
-        id: 3,
+        id: 11,
         type: "img",
         src: "/img/projects/isaac-7.jpg",
         src2x: "/img/projects/isaac-7@2x.jpg"
       },
       {
-        id: 3,
+        id: 12,
         type: "img",
         src: "/img/projects/isaac-8.jpg",
         src2x: "/img/projects/isaac-8@2x.jpg"
       },
       {
-        id: 3,
+        id: 13,
         type: "img",
         src: "/img/projects/isaac-9.jpg",
         src2x: "/img/projects/isaac-9@2x.jpg"
       },
       {
-        id: 3,
+        id: 14,
         type: "img",
         src: "/img/projects/isaac-10.jpg",
         src2x: "/img/projects/isaac-10@2x.jpg"
       },
       {
-        id: 3,
+        id: 15,
         type: "img",
         src: "/img/projects/isaac-11.jpg",
         src2x: "/img/projects/isaac-11@2x.jpg"
       },
       {
-        id: 3,
+        id: 16,
         type: "img",
         src: "/img/projects/isaac-12.jpg",
         src2x: "/img/projects/isaac-12@2x.jpg"
       },
       {
-        id: 3,
+        id: 17,
         type: "img",
         src: "/img/projects/isaac-13.jpg",
         src2x: "/img/projects/isaac-13@2x.jpg"
       },
       {
-        id: 3,
+        id: 18,
         type: "img",
         src: "/img/projects/isaac-14.jpg",
         src2x: "/img/projects/isaac-14@2x.jpg"
       },
       {
-        id: 3,
+        id: 19,
         type: "img",
         src: "/img/projects/isaac-15.jpg",
         src2x: "/img/projects/isaac-15@2x.jpg"
       },
       {
-        id: 3,
+        id: 20,
         type: "img",
         src: "/img/projects/isaac-16.jpg",
         src2x: "/img/projects/isaac-16@2x.jpg"
       },
 
       {
-        id: 2,
+        id: 21,
         type: "section-header",
         headline: "Mobile app design",
         body: "The iOS application is ideal for studying cards, although it has full feature parity with the web app."
       },
       {
-        id: 3,
+        id: 22,
         type: "img",
         src: "/img/projects/isaac-17.jpg",
         src2x: "/img/projects/isaac-17@2x.jpg"
       },
       {
-        id: 3,
+        id: 23,
         type: "img",
         src: "/img/projects/isaac-18.jpg",
         src2x: "/img/projects/isaac-18@2x.jpg"

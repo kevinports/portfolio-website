@@ -1,5 +1,6 @@
 // keeps track of UI state - window scroll, resize, raf
 import _ from 'lodash';
+import shortid from 'shortid';
 import {TweenMax} from 'gsap';
 
 class GlobalStore {
@@ -16,37 +17,25 @@ class GlobalStore {
         height: window.innerHeight
       }
     }
-
-    this.listen();
+    this.scrollRoot = null; // need to set this after subscribing components mount
   }
 
   listen () {
-    // handle raf tick
+    // add RAF handler
     TweenMax.ticker.addEventListener("tick", (e) => this.raf());
+    this.scrollRoot = document.querySelector('.transition-root');
 
-    // handle resize
-    window.addEventListener('resize', () => {
+    this.get('rafCallStack').push( () => {
+      // handle scroll
+      this.set('scroll', {
+          currentY: this.scrollRoot.scrollTop
+      });
+      // handle resize
       this.set('viewport', {
         width: window.innerWidth,
         height: window.innerHeight
-      })
-    });
-
-    // handle scroll
-    this.get('rafCallStack').push( () => {
-      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      this.set('scroll', {
-          currentY: scrollTop
       });
     });
-
-    // window.addEventListener('scroll', () => {
-    //   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    //   console.log(scrollTop)
-    //   this.set('scroll', {
-    //       currentY: scrollTop
-    //   });
-    // });
 
   }
 
@@ -55,11 +44,16 @@ class GlobalStore {
   }
 
   on(eventType, callback) {
-    this._events[eventType] = callback;
+    const id = shortid.generate();
+    this._events[id] = {
+      type: eventType,
+      callback: callback
+    };
+    return id;
   }
 
-  off(eventType) {
-    delete this._events[eventType]
+  off(id) {
+    delete this._events[id];
   }
 
   set(attr, val, silent) {
@@ -73,8 +67,9 @@ class GlobalStore {
     // trigger callback for change listeners, ignore if silent
     if (silent) return;
     for (let key in this._events) {
-      if (key === ("change:" + attr)) {
-        this._events[key].call(this, val, previous);
+      const evt = this._events[key];
+      if (evt.type === ("change:" + attr)) {
+        evt.callback.call(this, val, previous);
       }
     }
   }

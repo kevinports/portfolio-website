@@ -19,23 +19,21 @@ class ScreenViewer extends React.Component {
 
   componentDidMount () {
     // we need to make sure element is fully in view before we allow it to scroll
-    GlobalStore.on('change:scroll', (scroll) => {
+    this.scrollListenerId = GlobalStore.on('change:scroll', (scroll) => {
       const isInView = this.isInView(scroll);
       this.setState({'scrollable': isInView});
     });
   }
 
   componentWillUnmount() {
-    GlobalStore.off('change:scroll');
+    GlobalStore.off(this.scrollListenerId);
   }
 
   isInView (scroll) {
     const offset = getOffset(this.refs.El);
     const viewport = GlobalStore.get('viewport');
-    const scrollTop = scroll.currentY;
-    const scrollBottom = scrollTop + viewport.height;
     const padding = 20;
-    return (scrollTop < offset.top - padding && scrollBottom > offset.bottom + padding) ? true : false;
+    return (offset.top - padding > 0 && offset.bottom + padding < viewport.height) ? true : false;
   }
 
   componentDidUpdate (prevProps, prevState) {
@@ -80,17 +78,17 @@ class ScreenViewer extends React.Component {
     });
 
     return (
-      <div className={"screen-viewer mb-4 " + (this.state.scrollable ? "screen-viewer--scrollable" : "")} ref="El">
+      <div className={"screen-viewer mb-4 transition-stagger " + (this.state.scrollable ? "screen-viewer--scrollable" : "")} ref="El">
 
         <div className="screen-viewer__screen pa-3">
-          <div className="screenViewer__help-text" ref="helpTextEl"><span>Scroll to preview page</span></div>
+          <div className="screenViewer__help-text f-1 f-medium" ref="helpTextEl"><span>Scroll to preview page</span></div>
           <div className="screen-viewer__screen-inner" onScroll={this.handleScreenScroll} ref="screenEl">
             <img src={ src } srcSet={`${src} 1x, ${src2x} 2x`}/>
           </div>
         </div>
 
         { this.props.images.length > 1 &&
-          <ul className="screen-viewer__menu f-2 f-medium pt-2">
+          <ul className="screen-viewer__menu f-1 f-medium pt-2">
               { menuItems }
           </ul>
         }

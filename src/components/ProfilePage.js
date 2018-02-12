@@ -11,11 +11,26 @@ class ProfilePage extends React.Component {
           <Header />
         </Wrapper>
         <Wrapper name="transition-body">
-          <h1 className="transition-stagger">Profile</h1>
-          <h1 className="transition-stagger">Something</h1>
-          <h1 className="transition-stagger">Else</h1>
-          <h1 className="transition-stagger">To</h1>
-          <h1 className="transition-stagger">Say</h1>
+          <div className="flex-md flex--space-between-md">
+            <div className="measure-lg f-3 mr-3 transition-stagger">
+              <p>I’m a designer and front-end developer interested in tools, technology and workmanship.</p>
+              <p>Currently seeking my next adventure and accepting freelance design &amp; front-end development projects.</p>
+              <p>Previously I’ve led product design at an IoT startup, was a technical design lead for Facebook, and worked as a designer and developer with a variety of digital design studios in Chicago.</p>
+              <p>Spending my time in the great outdoors near Madison, WI and loving it.</p>
+            </div>
+            <div className="measure-md mt-3 mt-0-md transition-stagger">
+              <img src="/img/profile-portrait@2x.jpg" className="mb-3"/>
+              <ul className="list list--unstyled">
+                <h3 className="f-1 f-medium">Contact</h3>
+                <li><a className="btn__link" href="mailto:email@kevin.computer">Email</a></li>
+                <li><a className="btn__link" href="https://github.com/kevinports">Github</a></li>
+                <li><a className="btn__link" href="https://dribbble.com/kevin-ports">Dribbble</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="transition-stagger">
+            <p className="f-1 mt-3 t-light mb-4">This site was built with {'<3'} using React.js <a href="" className="btn__link">View source</a></p>
+          </div>
         </Wrapper>
       </TransitionRoot>
     )

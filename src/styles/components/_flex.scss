@@ -12,13 +12,13 @@
   .flex--justify-center#{$breakpoint} {
     justify-content: center;
   }
-  .flex--justify-between#{$breakpoint} {
+  .flex--space-between#{$breakpoint} {
     justify-content: space-between;
   }
-  .flex--justify-around#{$breakpoint} {
+  .flex--space-around#{$breakpoint} {
     justify-content: space-around;
   }
-  .flex--justify-evenly#{$breakpoint} {
+  .flex--space-evenly#{$breakpoint} {
     justify-content: space-evenly;
   }
 

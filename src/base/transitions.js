@@ -27,7 +27,6 @@ const transitions = {
     'onExitTo:/projects': projectTransitionExit,
     'onEnterFrom:/projects': projectTransitionEnter,
   }
-
 }
 
 function pageEnter (el) {
@@ -84,16 +83,21 @@ function pageTransitionEnter (el) {
   const header = el.querySelector('.transition-header');
   const body = el.querySelector('.transition-body');
   const staggers = Array.from(el.querySelectorAll('.transition-stagger'));
+  const horiz = el.querySelector('.transition-horiz');
 
   TweenMax.set(header, {
     alpha: 0
   });
-  TweenMax.set(body, {
-    alpha: 0,
-    y: 10
-  });
+
+  if (horiz) {
+    TweenMax.set(horiz, {
+      alpha: 0,
+      y: 10
+    });
+  }
+
   TweenMax.set(staggers, {
-    y: 5,
+    y: 10,
     alpha: 0
   })
 
@@ -101,39 +105,42 @@ function pageTransitionEnter (el) {
 
   TweenMax.to(header, 0.6, {
     alpha: 1,
-    delay: 0.3
+    delay: 0.5
   });
 
-  TweenMax.to(body, 0.6, {
-    alpha: 1,
-    y: 0,
-    ease: Expo.easeOut,
-    delay: 0.4
-  });
+  if (horiz) {
+    TweenMax.to(horiz, 0.8, {
+      alpha: 1,
+      y: 0,
+      ease: Expo.easeOut,
+      delay: 0.6
+    });
+  }
 
   if (staggers.length) {
     staggers.forEach((el, i) => {
-      TweenMax.to(el, 0.2, {
+      TweenMax.to(el, 0.5, {
         alpha: 1,
         y: 0,
-        delay: 0.5 + (i * 0.2)
+        delay: 0.6 + (i * 0.1)
       });
     })
   }
-
 }
 
 function pageTransitionExit (el) {
   const header = el.querySelector('.transition-header');
   const body = el.querySelector('.transition-body');
 
-  TweenMax.to(header, 0.3, {
+  TweenMax.to(header, 0.4, {
     alpha: 0,
+    delay: 0.1,
     y: -10,
     ease: Expo.easeIn
   });
-  TweenMax.to(body, 0.3, {
+  TweenMax.to(body, 0.4, {
     alpha: 0,
+    delay: 0.1,
     y: 10,
     ease: Expo.easeIn
   });
@@ -147,50 +154,75 @@ function zoomTransitionEnter (el) {
 
   TweenMax.set(el, {'display': 'block'});
 
-  TweenMax.to(el, 0.6, {
+  TweenMax.to(el, 0.7, {
     alpha: 1,
     scale: 1,
     ease: Expo.easeOut,
-    delay: 0.2
+    delay: 0.4
   });
 }
 
 function zoomTransitionExit (el) {
   TweenMax.to(el, 0.4, {
     alpha: 0,
-    scale: 1.02,
-    ease: Expo.easeOut
+    // scale: 1.02,
+    // ease: Expo.easeOut
   });
 }
 
 function projectTransitionEnter (el, direction) {
   const body = el.querySelector('.transition-body');
+  const horiz = el.querySelector('.transition-horiz');
+  const fade = el.querySelector('.transition-fade');
+  const staggers = Array.from(el.querySelectorAll('.transition-stagger'));
 
-  TweenMax.set(body, {
+  TweenMax.set(staggers, {
+    y: 5,
+    alpha: 0
+  })
+  TweenMax.set(horiz, {
     alpha: 0,
-    x: 10 * (direction === 'left' ? -1 : 1),
+    x: 10 * (direction === 'left' ? -1 : 1)
   });
   TweenMax.set(el, {'display': 'block'});
-  TweenMax.to(body, 0.4, {
+  TweenMax.to(horiz, 0.4, {
     alpha: 1,
-    x: 1,
+    x: 0,
     ease: Expo.easeOut,
-    delay: 0.3
+    delay: 0.4
   });
+  TweenMax.to(fade, 0.3,{
+    alpha: 1,
+    delay: 0.5
+  });
+  if (staggers.length) {
+    staggers.forEach((el, i) => {
+      TweenMax.to(el, 0.4, {
+        alpha: 1,
+        y: 0,
+        delay: 0.5 + (i * 0.2)
+      });
+    })
+  }
 }
 
 function projectTransitionExit (el, direction) {
   const header = el.querySelector('.transition-header');
   const body = el.querySelector('.transition-body');
-  
+  const horiz = el.querySelector('.transition-horiz');
+  const fades = Array.from(el.querySelectorAll('.transition-fade'));
+
   TweenMax.set(header, {
     alpha: 0
   });
 
-  TweenMax.to(body, 0.3, {
+  TweenMax.to(horiz, 0.3, {
     alpha: 0,
     x: 10 * (direction === 'left' ? 1 : -1),
     ease: Expo.easeIn
+  });
+  TweenMax.to(fades, 0.3, {
+    alpha: 0
   });
 }
 

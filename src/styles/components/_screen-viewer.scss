@@ -4,9 +4,9 @@
 
 .screen-viewer__screen {
   width: 100%;
-  background: #FFF;
-  border: 1px solid #FFF;
-  box-shadow: 0 12px 40px 0 rgba(0,0,0,0.25);
+  background: $c-white;
+  border: 1px solid $c-white;
+  box-shadow: 0 12px 40px 0 rgba($c-black, 0.25);
   border-radius: 21px;
   position: relative;
 }
@@ -14,7 +14,8 @@
 .screen-viewer__screen-inner {
   height: 500px;
   overflow-y: hidden;
-  border: 1px solid rgba(#000, 0.1);
+  border: 1px solid rgba($c-black, 0.1);
+  cursor: ns-resize;
 
   img {
     width: 100%;
@@ -34,11 +35,10 @@
   pointer-events: none;
 
   span {
-    font-size: $type-0;
     padding: $spacer-1 $spacer-2;
     border-radius: 100px;
-    background-color: #000;
-    color: #fff;
+    background-color: $c-text-dark;
+    color: $c-white;
   }
 }
 
@@ -67,17 +67,17 @@
   &:hover {
     opacity: 1;
   }
+
   &--active:before {
     content: '↑';
     margin-right: $spacer-1;
   }
 
   &--active {
-    color: #fff;
-    background-color: #000;
+    color: $c-white;
+    background-color: $c-text-dark;
     padding: $spacer-1 $spacer-2;
     border-radius: 6px;
-
   }
 
   & + .screen-viewer__menu-item {
