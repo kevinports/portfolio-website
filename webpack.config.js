@@ -1,5 +1,7 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   context: path.join(__dirname, 'src'),
@@ -34,11 +36,17 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"production"'
+    }),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin(),
     new ExtractTextPlugin({ // define where to save the file
       filename: 'bundle.css',
       allChunks: true,
       disable: process.env.NODE_ENV !== 'production'
-    })
+    }),
+    // new BundleAnalyzerPlugin()
   ],
   devServer: {
     contentBase: path.join(__dirname, "www"),

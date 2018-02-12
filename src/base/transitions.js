@@ -1,7 +1,6 @@
-import { TweenMax, TimelineMax } from 'gsap';
+import { TweenLite } from 'gsap';
 
 const transitions = {
-
   '/': {
     'enter': pageTransitionEnter,
     'onExitTo:/profile': switchTransitionExit,
@@ -30,24 +29,24 @@ const transitions = {
 }
 
 function pageEnter (el) {
-  TweenMax.set(el, {'display': 'block'})
+  TweenLite.set(el, {'display': 'block'})
 }
 
 function switchTransitionEnter(el) {
   const body = el.querySelector('.transition-body');
   const staggers = Array.from(el.querySelectorAll('.transition-stagger'));
 
-  TweenMax.set(staggers, {
+  TweenLite.set(staggers, {
     y: 5,
     alpha: 0
   })
-  TweenMax.set(body, {
+  TweenLite.set(body, {
     alpha: 0,
     y: 5
   });
-  TweenMax.set(el, {'display': 'block'})
+  TweenLite.set(el, {'display': 'block'})
 
-  TweenMax.to(body, 0.6, {
+  TweenLite.to(body, 0.6, {
     alpha: 1,
     y: 0,
     ease: Expo.easeOut,
@@ -56,7 +55,7 @@ function switchTransitionEnter(el) {
 
   if (staggers.length) {
     staggers.forEach((el, i) => {
-      TweenMax.to(el, 0.2, {
+      TweenLite.to(el, 0.2, {
         alpha: 1,
         y: 0,
         delay: 0.2 + (i * 0.2)
@@ -68,11 +67,11 @@ function switchTransitionEnter(el) {
 function switchTransitionExit(el) {
   const header = el.querySelector('.transition-header');
   const body = el.querySelector('.transition-body');
-  TweenMax.set(header, {
+  TweenLite.set(header, {
     alpha: 0
   });
-  TweenMax.set(el, {'display': 'block'})
-  TweenMax.to(body, 0.2, {
+  TweenLite.set(el, {'display': 'block'})
+  TweenLite.to(body, 0.2, {
     alpha: 0,
     y: 10,
     ease: Expo.easeIn
@@ -85,31 +84,31 @@ function pageTransitionEnter (el) {
   const staggers = Array.from(el.querySelectorAll('.transition-stagger'));
   const horiz = el.querySelector('.transition-horiz');
 
-  TweenMax.set(header, {
+  TweenLite.set(header, {
     alpha: 0
   });
 
   if (horiz) {
-    TweenMax.set(horiz, {
+    TweenLite.set(horiz, {
       alpha: 0,
       y: 10
     });
   }
 
-  TweenMax.set(staggers, {
+  TweenLite.set(staggers, {
     y: 10,
     alpha: 0
   })
 
-  TweenMax.set(el, {'display': 'block'});
+  TweenLite.set(el, {'display': 'block'});
 
-  TweenMax.to(header, 0.6, {
+  TweenLite.to(header, 0.6, {
     alpha: 1,
     delay: 0.5
   });
 
   if (horiz) {
-    TweenMax.to(horiz, 0.8, {
+    TweenLite.to(horiz, 0.8, {
       alpha: 1,
       y: 0,
       ease: Expo.easeOut,
@@ -119,7 +118,7 @@ function pageTransitionEnter (el) {
 
   if (staggers.length) {
     staggers.forEach((el, i) => {
-      TweenMax.to(el, 0.5, {
+      TweenLite.to(el, 0.5, {
         alpha: 1,
         y: 0,
         delay: 0.6 + (i * 0.1)
@@ -132,13 +131,13 @@ function pageTransitionExit (el) {
   const header = el.querySelector('.transition-header');
   const body = el.querySelector('.transition-body');
 
-  TweenMax.to(header, 0.4, {
+  TweenLite.to(header, 0.4, {
     alpha: 0,
     delay: 0.1,
     y: -10,
     ease: Expo.easeIn
   });
-  TweenMax.to(body, 0.4, {
+  TweenLite.to(body, 0.4, {
     alpha: 0,
     delay: 0.1,
     y: 10,
@@ -147,14 +146,14 @@ function pageTransitionExit (el) {
 }
 
 function zoomTransitionEnter (el) {
-  TweenMax.set(el, {
+  TweenLite.set(el, {
     alpha: 0,
     scale: 0.98,
   });
 
-  TweenMax.set(el, {'display': 'block'});
+  TweenLite.set(el, {'display': 'block'});
 
-  TweenMax.to(el, 0.7, {
+  TweenLite.to(el, 0.7, {
     alpha: 1,
     scale: 1,
     ease: Expo.easeOut,
@@ -163,7 +162,7 @@ function zoomTransitionEnter (el) {
 }
 
 function zoomTransitionExit (el) {
-  TweenMax.to(el, 0.4, {
+  TweenLite.to(el, 0.4, {
     alpha: 0,
     // scale: 1.02,
     // ease: Expo.easeOut
@@ -176,28 +175,28 @@ function projectTransitionEnter (el, direction) {
   const fade = el.querySelector('.transition-fade');
   const staggers = Array.from(el.querySelectorAll('.transition-stagger'));
 
-  TweenMax.set(staggers, {
+  TweenLite.set(staggers, {
     y: 5,
     alpha: 0
   })
-  TweenMax.set(horiz, {
+  TweenLite.set(horiz, {
     alpha: 0,
     x: 10 * (direction === 'left' ? -1 : 1)
   });
-  TweenMax.set(el, {'display': 'block'});
-  TweenMax.to(horiz, 0.4, {
+  TweenLite.set(el, {'display': 'block'});
+  TweenLite.to(horiz, 0.4, {
     alpha: 1,
     x: 0,
     ease: Expo.easeOut,
     delay: 0.4
   });
-  TweenMax.to(fade, 0.3,{
+  TweenLite.to(fade, 0.3,{
     alpha: 1,
     delay: 0.5
   });
   if (staggers.length) {
     staggers.forEach((el, i) => {
-      TweenMax.to(el, 0.4, {
+      TweenLite.to(el, 0.4, {
         alpha: 1,
         y: 0,
         delay: 0.5 + (i * 0.2)
@@ -212,16 +211,16 @@ function projectTransitionExit (el, direction) {
   const horiz = el.querySelector('.transition-horiz');
   const fades = Array.from(el.querySelectorAll('.transition-fade'));
 
-  TweenMax.set(header, {
+  TweenLite.set(header, {
     alpha: 0
   });
 
-  TweenMax.to(horiz, 0.3, {
+  TweenLite.to(horiz, 0.3, {
     alpha: 0,
     x: 10 * (direction === 'left' ? 1 : -1),
     ease: Expo.easeIn
   });
-  TweenMax.to(fades, 0.3, {
+  TweenLite.to(fades, 0.3, {
     alpha: 0
   });
 }

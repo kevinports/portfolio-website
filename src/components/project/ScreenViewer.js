@@ -1,6 +1,5 @@
 import React from 'react';
-import { TweenMax } from 'gsap';
-import _ from 'lodash';
+import { TweenLite } from 'gsap';
 import { getOffset } from '../../base/helpers';
 import GlobalStore from '../../base/GlobalStore';
 
@@ -46,18 +45,18 @@ class ScreenViewer extends React.Component {
     if (!this.state.isHelpTextShown) return;
     this.setState({ isHelpTextShown: false });
 
-    TweenMax.to(this.refs.helpTextEl, 0.3, {
+    TweenLite.to(this.refs.helpTextEl, 0.3, {
       alpha: 0
     })
   }
 
   handleMenuClick (id) {
-    TweenMax.to(this.refs.screenEl, 0.3, {
+    TweenLite.to(this.refs.screenEl, 0.3, {
       alpha: 0,
       y: 10,
       onComplete: () => {
         this.setState({'activeTabId': id});
-        TweenMax.to(this.refs.screenEl, 0.4, {
+        TweenLite.to(this.refs.screenEl, 0.4, {
           alpha: 1,
           y: 0
         })

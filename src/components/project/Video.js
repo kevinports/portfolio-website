@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import plyr from 'plyr';
-import '../../../node_modules/plyr/dist/plyr.css';
 import ContentWrapper from './ContentWrapper';
 import Caption from './Caption';
 
@@ -16,7 +14,7 @@ class Video extends React.Component {
 
   //not sure why react doesn't dispose of previous video when props change, but need to do it manually
   componentWillReceiveProps (nextProps) {
-    const { srcMp4, srcWebM, poster } = nextProps;
+    // const { srcMp4, srcWebM, poster } = nextProps;
 
     // this.player.pause();
     // this.player.source({

@@ -29,7 +29,7 @@ class ProfilePage extends React.Component {
             </div>
           </div>
           <div className="transition-stagger">
-            <p className="f-1 mt-3 t-light mb-4">This site was built with {'<3'} using React.js <a href="" className="btn__link">View source</a></p>
+            <p className="f-1 mt-3 t-light mb-4">This site was built with {'<3'} using React.js <a href="https://github.com/kevinports/portfolio-website" className="btn__link">View source</a></p>
           </div>
         </Wrapper>
       </TransitionRoot>

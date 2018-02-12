@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 import renderHTML from 'react-render-html';
 
 import Header from './common/Header';
@@ -20,7 +19,7 @@ class ProjectPage extends React.Component {
 
   render (){
     const slug = this.props.match.params.id;
-    const project = _.find(data, {'slug': slug})
+    const project = data.find((o)=> o.slug === slug)
     const nextProject = getNextProject(data, project.id).slug;
     const lastProject = getLastProject(data, project.id).slug;
 
@@ -117,7 +116,7 @@ function getLastProject(projects, id) {
   } else {
     targetId = id - 1;
   }
-  return _.find(projects, {id: targetId});
+  return projects.find((o)=> o.id === targetId);
 }
 
 function getNextProject(projects, id) {
@@ -127,5 +126,5 @@ function getNextProject(projects, id) {
   } else {
     targetId = id + 1;
   }
-  return _.find(projects, {id: targetId});
+  return projects.find((o)=> o.id === targetId);
 }

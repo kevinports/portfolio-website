@@ -499,7 +499,7 @@ const data = [
         id: 2,
         type: "section-header",
         headline: "UI system",
-        body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+        body: "<p>I defined a library of interface elements &mdash; which comprise of primitives, components and patterns the together compose the application UI.</p>"
       },
       {
         id: 3,
@@ -511,7 +511,7 @@ const data = [
         id: 4,
         type: "section-header",
         headline: "Application design",
-        body: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+        body: "<p>The application</p>"
       },
       {
         id: 5,

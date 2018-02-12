@@ -1,7 +1,5 @@
 // keeps track of UI state - window scroll, resize, raf
-import _ from 'lodash';
 import shortid from 'shortid';
-import {TweenMax} from 'gsap';
 
 class GlobalStore {
   constructor() {
@@ -22,7 +20,6 @@ class GlobalStore {
 
   listen () {
     // add RAF handler
-    TweenMax.ticker.addEventListener("tick", (e) => this.raf());
     this.scrollRoot = document.querySelector('.transition-root');
 
     this.get('rafCallStack').push( () => {
@@ -37,10 +34,13 @@ class GlobalStore {
       });
     });
 
+    this.raf();
+
   }
 
   raf () {
     this.get('rafCallStack').forEach((fn)=> fn() );
+    window.requestAnimationFrame(this.raf.bind(this));
   }
 
   on(eventType, callback) {
@@ -58,7 +58,7 @@ class GlobalStore {
 
   set(attr, val, silent) {
     //dont update if no change
-    if (_.isEqual(this._dataObj[attr], val)) return;
+    if (JSON.stringify(this._dataObj[attr]) === JSON.stringify(val)) return;
 
     //update and store prev
     const previous = this._dataObj[attr];
