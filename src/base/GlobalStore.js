@@ -11,8 +11,8 @@ class GlobalStore {
         currentY: 0
       },
       viewport: {
-        width: window.innerWidth,
-        height: window.innerHeight
+        width: 0,
+        height: 0
       }
     }
     this.scrollRoot = null; // need to set this after subscribing components mount
@@ -35,7 +35,6 @@ class GlobalStore {
     });
 
     this.raf();
-
   }
 
   raf () {

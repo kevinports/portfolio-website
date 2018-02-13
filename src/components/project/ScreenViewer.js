@@ -9,30 +9,25 @@ class ScreenViewer extends React.Component {
     this.state = {
       isHelpTextShown: true,
       activeTabId: 1,
-      scrollable: false
+      scrollable: false,
+      isMobileView: false
     }
 
-    this.handleScreenScroll = this.handleScreenScroll.bind(this);
+    this.handleViewportResize = this.handleViewportResize.bind(this);
+    this.handleViewportScroll = this.handleViewportScroll.bind(this);
+    this.handleInnerScreenScroll = this.handleInnerScreenScroll.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
+    this.handleSelectChange = this.handleSelectChange.bind(this);
   }
 
   componentDidMount () {
-    // we need to make sure element is fully in view before we allow it to scroll
-    this.scrollListenerId = GlobalStore.on('change:scroll', (scroll) => {
-      const isInView = this.isInView(scroll);
-      this.setState({'scrollable': isInView});
-    });
+    this.resizeListenerId = GlobalStore.on('change:viewport', this.handleViewportResize);
+    this.scrollListenerId = GlobalStore.on('change:scroll', this.handleViewportScroll);
   }
 
   componentWillUnmount() {
+    GlobalStore.off(this.resizeListenerId);
     GlobalStore.off(this.scrollListenerId);
-  }
-
-  isInView (scroll) {
-    const offset = getOffset(this.refs.El);
-    const viewport = GlobalStore.get('viewport');
-    const padding = 20;
-    return (offset.top - padding > 0 && offset.bottom + padding < viewport.height) ? true : false;
   }
 
   componentDidUpdate (prevProps, prevState) {
@@ -41,7 +36,23 @@ class ScreenViewer extends React.Component {
     }
   }
 
-  handleScreenScroll () {
+  handleViewportResize (viewport) {
+    if (viewport.width < 768) {
+      if (this.state.isMobileView) return;
+      this.setState({ isMobileView: true });
+    } else {
+      if (!this.state.isMobileView) return;
+      this.setState({ isMobileView: false });
+    }
+  }
+
+  handleViewportScroll (scroll) {
+    // we need to make sure element is fully in view before we allow it to scroll
+    const isInView = this.isInView(scroll);
+    this.setState({'scrollable': isInView});
+  }
+
+  handleInnerScreenScroll () {
     if (!this.state.isHelpTextShown) return;
     this.setState({ isHelpTextShown: false });
 
@@ -51,6 +62,15 @@ class ScreenViewer extends React.Component {
   }
 
   handleMenuClick (id) {
+    this.screenInnerSwitchTransition(id);
+  }
+
+  handleSelectChange (e) {
+    const id = parseInt(e.target.value);
+    this.screenInnerSwitchTransition(id)
+  }
+
+  screenInnerSwitchTransition (id) {
     TweenLite.to(this.refs.screenEl, 0.3, {
       alpha: 0,
       y: 10,
@@ -62,6 +82,13 @@ class ScreenViewer extends React.Component {
         })
       }
     });
+  }
+
+  isInView (scroll) {
+    const offset = getOffset(this.refs.El);
+    const viewport = GlobalStore.get('viewport');
+    const padding = 20;
+    return (offset.top - padding > 0 && offset.bottom + padding < viewport.height) ? true : false;
   }
 
   render () {
@@ -76,20 +103,37 @@ class ScreenViewer extends React.Component {
       }
     });
 
+    const selectItems = this.props.images.map(i => {
+      return <option value={i.id} key={i.id}>{i.name}</option>
+    });
+
+    let screenPicker;
+    if (this.state.isMobileView) {
+      screenPicker = (
+        <select className="screen-viewer__select f-2 mt-2" value={this.state.activeTabId} onChange={this.handleSelectChange}>
+          { selectItems }
+        </select>
+      )
+    } else {
+      screenPicker = (
+        <ul className="screen-viewer__menu f-1 f-medium pt-2">
+          { menuItems }
+        </ul>
+      )
+    }
+
     return (
       <div className={"screen-viewer mb-4 transition-stagger " + (this.state.scrollable ? "screen-viewer--scrollable" : "")} ref="El">
 
         <div className="screen-viewer__screen pa-2 pa-3-md">
           <div className="screenViewer__help-text f-1 f-medium" ref="helpTextEl"><span>Scroll to preview page</span></div>
-          <div className="screen-viewer__screen-inner" onScroll={this.handleScreenScroll} ref="screenEl">
+          <div className="screen-viewer__screen-inner" onScroll={this.handleInnerScreenScroll} ref="screenEl">
             <img src={ src } srcSet={`${src} 1x, ${src2x} 2x`}/>
           </div>
         </div>
 
         { this.props.images.length > 1 &&
-          <ul className="screen-viewer__menu f-1 f-medium pt-2">
-              { menuItems }
-          </ul>
+          screenPicker
         }
       </div>
     )
