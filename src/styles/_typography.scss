@@ -95,3 +95,12 @@ $sizes-list: $type-0 $type-1 $type-2 $type-3 $type-4 $type-5;
     }
   }
 }
+
+.ordered-list {
+  margin: $spacer-2 0 0;
+  padding: 0 0 0 20px;
+
+  li {
+    margin-top: $spacer-1 / 2;
+  }
+}

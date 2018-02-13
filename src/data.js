@@ -456,24 +456,120 @@ const data = [
   },
 
 
-  // {
-  //   "id": 3,
-  //   "name": "FarmLogs",
-  //   "slug": "farmlogs",
-  //   "title": "Designed a UI system for an agriculture software startup",
-  //   "color": "#287031",
-  //   overview: [
-  //     'Google Consumer Surveys is a product that enables fast and easy market research. They asked Nelson Cash to redesign their marketing site in hopes to to better explain their product, and increase sign-up conversion.',
-  //     'My role was to design and build an interactive web animation explaining how the product worked.'
-  //   ],
-  //   roles: [
-  //     'UI Design'
-  //   ],
-  //   when: '2017'
-  // },
-
   {
     "id": 3,
+    "name": "FarmLogs",
+    "slug": "farmlogs",
+    "title": "Designed a UI system for an agriculture software startup",
+    "color": "#287031",
+    overview: [
+      'FarmLogs makes farming software designed to help farmers efficiently manage operations, growing and selling of their crops.',
+      'During my time with their product design time I helped create a UI design system to help establish interface consistency and increase the design team’s workflow efficiency.'
+    ],
+    roles: [
+      'UI Design',
+      'Interaction Design'
+    ],
+    when: '2017',
+    content: [
+      {
+        id: 1,
+        type: "img",
+        src: "/img/projects/farmlogs-1.jpg",
+        src2x: "/img/projects/farmlogs-1@2x.jpg"
+      },
+      {
+        id: 2,
+        type: "section-header",
+        headline: "UI system",
+        body: (() => {
+          let str = '';
+          str += '<p>With plenty of paradigms out there to approach organizing a design system, such as Atomic design, I sought to define an approach that resonated with the product design team’s core principles. The most relevant being a need for <em>agility</em> and <em>composability</em>.</p>';
+          str += '<p>My approach was to define three levels of elements in the system:</p>';
+          str += '<ol className="ordered-list">';
+          str += '<li><b>Primitives</b> are low-level building blocks like color, type & icons, and spacing. These elements are completely immutable and are never changed or altered.</li>';
+          str += '<li><b>Components</b> are distinct interface elements built from primitives or other components. They have strictly defined behavior and usage guidelines. But they do offer flexibilty from modifiers that help describe state and properties of the elements.</li>';
+          str += '<li><b>Patterns</b> are common compositions occuring in the application. Although they’re meant for consistent re-use, a pattern is flexible and mostly suggestive.</li>';
+          str += '</ol>';
+          return str;
+        })()
+      },
+      {
+        id: 3,
+        type: "img",
+        src: "/img/projects/farmlogs-2.jpg",
+        src2x: "/img/projects/farmlogs-2@2x.jpg"
+      },
+      {
+        id: 4,
+        type: "section-header",
+        headline: "Creating the UI kit in Sketch",
+        body: "<p>The team was already using Sketch for designing mockups, so I designed and built the system using nested symbols and shared styles in a master Sketch document. We used Abstract to distribute the UI kit amongst the team.</p>"
+      },
+      {
+        id: 5,
+        type: "img",
+        src: "/img/projects/farmlogs-workflow.gif",
+        src2x: "/img/projects/farmlogs-workflow.gif",
+        bordered: true,
+        caption: "The Sketch symbols are structured to enable rapid mockups using <a className='btn__link' href='http://sketchrunner.com/'>Sketch Runner</a>"
+      },
+      {
+        id: 6,
+        type: "img",
+        src: "/img/projects/farmlogs-resize.gif",
+        src2x: "/img/projects/farmlogs-resize.gif",
+        bordered: true,
+        caption: "The Sketch symbols are built for easy responsive resizing.</a>"
+      },
+      {
+        id: 7,
+        type: "section-header",
+        headline: "Icongraphy",
+        body: "<p>There were some abstract agricultural concepts that needed to be represented as icons for the interface, so I drew a custom set for the system. The process was a fun challenge!</p>"
+      },
+      {
+        id: 8,
+        type: "img",
+        src: "/img/projects/farmlogs-3.jpg",
+        src2x: "/img/projects/farmlogs-3@2x.jpg"
+      },
+      {
+        id: 9,
+        type: "section-header",
+        headline: "Documentation",
+        body: "<p>I documented all of the elements of the system in the master Sketch file and shared with Zeplin. The docs included usage guidelines for other designers as well as implementation specifications for engineers. Here are a few example pages:</p>"
+      },
+      {
+        id: 10,
+        type: "screenViewer",
+        images: [{
+          id: 1,
+          name: "Text link",
+          src: "/img/projects/farmlogs-docs-2.jpg",
+          src2x: "/img/projects/farmlogs-docs-2@2x.jpg"
+        },{
+          id: 2,
+          name: "Chooser",
+          src: "/img/projects/farmlogs-docs-3.jpg",
+          src2x: "/img/projects/farmlogs-docs-3@2x.jpg"
+        },{
+          id: 3,
+          name: "Bulk select",
+          src: "/img/projects/farmlogs-docs-4.jpg",
+          src2x: "/img/projects/farmlogs-docs-4@2x.jpg"
+        },{
+          id: 4,
+          name: "Charts",
+          src: "/img/projects/farmlogs-docs-5.jpg",
+          src2x: "/img/projects/farmlogs-docs-5@2x.jpg"
+        }]
+      }
+    ]
+  },
+
+  {
+    "id": 4,
     "name": "The Search Party",
     "slug": "searchparty",
     "title": "Redesigned a web app for a recruiting platform",
@@ -541,7 +637,7 @@ const data = [
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Googe Consumer Surveys",
     "slug": "gcs",
     "title": "Designed and developed an interactive product tour for Google",
@@ -588,7 +684,7 @@ const data = [
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Isaac",
     "slug": "isaac",
     "title": "Created product and brand design for a flashcard app",
