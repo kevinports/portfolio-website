@@ -10,14 +10,13 @@ import Video from './project/Video';
 import Img from './project/Img';
 import ScreenViewer from './project/ScreenViewer';
 
-import data from '../data';
-
 class ProjectPage extends React.Component {
   constructor (props, context) {
     super(props, context);
   }
 
   render (){
+    const { data } = this.props;
     const slug = this.props.match.params.id;
     const project = data.find((o)=> o.slug === slug)
     const nextProject = getNextProject(data, project.id).slug;

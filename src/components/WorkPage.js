@@ -6,11 +6,9 @@ import TransitionRoot from './common/TransitionRoot';
 import Card from './common/Card';
 import Footer from './common/Footer';
 
-import data from '../data';
-
-
 class WorkPage extends React.Component {
   render() {
+    const { data } = this.props;
     return (
       <TransitionRoot>
         <Wrapper name="transition-header">

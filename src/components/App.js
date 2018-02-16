@@ -117,9 +117,20 @@ class App extends React.Component {
           onEntered={this.handleEntered}
           onExit={this.handleExit} >
               <Switch location={location}>
-                <Route path="/" exact component={WorkPage} />
-                <Route path="/profile" exact component={ProfilePage} />
-                <Route path="/projects/:id" exact component={ProjectPage} />
+                <Route path="/"
+                  exact
+                  render={(props)=>(
+                    <WorkPage data={data} {...props}/>
+                  )}/>
+                <Route
+                  path="/profile"
+                  exact
+                  component={ProfilePage} />
+                <Route path="/projects/:id"
+                  exact
+                  render={(props)=>(
+                    <ProjectPage data={data} {...props}/>
+                  )}/>
               </Switch>
           </Transition>
       </TransitionGroup>
