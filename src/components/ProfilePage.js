@@ -19,7 +19,7 @@ class ProfilePage extends React.Component {
               <p>Spending my time in the great outdoors near Madison, WI and loving it.</p>
             </div>
             <div className="measure-md mt-3 mt-0-md transition-stagger">
-              <img src="/img/profile-portrait@2x.jpg" className="mb-3"/>
+              <img src="/assets/img/profile-portrait@2x.jpg" className="mb-3"/>
               <ul className="list list--unstyled">
                 <h3 className="f-1 f-medium">Contact</h3>
                 <li><a className="btn__link" href="mailto:email@kevin.computer">Email</a></li>

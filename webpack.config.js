@@ -9,7 +9,7 @@ module.exports = {
     './index.js', './styles/index.scss'
   ],
   output: {
-    path: path.join(__dirname, 'www'),
+    path: path.join(__dirname, '/www/assets'),
     filename: 'bundle.js',
   },
   module: {

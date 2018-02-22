@@ -11,8 +11,8 @@ class Card extends React.Component {
     let footer = null;
 
     if (project.cardForegroundImg){
-      const src = `/img/${project.slug}-card-fore@2x.png`;
-      const srcSet = `/img/${project.slug}-card-fore@2x.png 1x, /img/${project.slug}-card-fore@2x.png 2x`;
+      const src = `/assets/img/${project.slug}-card-fore@2x.png`;
+      const srcSet = `/assets/img/${project.slug}-card-fore@2x.png 1x, /assets/img/${project.slug}-card-fore@2x.png 2x`;
       footer = <div className="card__footer "><img className="card__fore-img" src={src} srcSet={srcSet} /></div>
     }
 

@@ -19,8 +19,8 @@ const data = [
       {
         id: 0,
         type: "img",
-        src: "/img/projects/holo-1.jpg",
-        src2x: "/img/projects/holo-1@2x.jpg"
+        src: "/assets/img/projects/holo-1.jpg",
+        src2x: "/assets/img/projects/holo-1@2x.jpg"
       },
       {
         id: 1,
@@ -31,38 +31,38 @@ const data = [
       {
         id: 2,
         type: "img",
-        src: "/img/projects/holo-2.jpg",
-        src2x: "/img/projects/holo-2@2x.jpg"
+        src: "/assets/img/projects/holo-2.jpg",
+        src2x: "/assets/img/projects/holo-2@2x.jpg"
       },
       {
         id: 3,
         type: "img",
-        src: "/img/projects/holo-3.jpg",
-        src2x: "/img/projects/holo-3@2x.jpg"
+        src: "/assets/img/projects/holo-3.jpg",
+        src2x: "/assets/img/projects/holo-3@2x.jpg"
       },
       {
         id: 4,
         type: "img",
-        src: "/img/projects/holo-4.jpg",
-        src2x: "/img/projects/holo-4@2x.jpg"
+        src: "/assets/img/projects/holo-4.jpg",
+        src2x: "/assets/img/projects/holo-4@2x.jpg"
       },
       {
         id: 5,
         type: "img",
-        src: "/img/projects/holo-5.jpg",
-        src2x: "/img/projects/holo-5@2x.jpg"
+        src: "/assets/img/projects/holo-5.jpg",
+        src2x: "/assets/img/projects/holo-5@2x.jpg"
       },
       {
         id: 6,
         type: "img",
-        src: "/img/projects/holo-6.jpg",
-        src2x: "/img/projects/holo-6@2x.jpg"
+        src: "/assets/img/projects/holo-6.jpg",
+        src2x: "/assets/img/projects/holo-6@2x.jpg"
       },
       {
         id: 7,
         type: "img",
-        src: "/img/projects/holo-7.jpg",
-        src2x: "/img/projects/holo-7@2x.jpg"
+        src: "/assets/img/projects/holo-7.jpg",
+        src2x: "/assets/img/projects/holo-7@2x.jpg"
       },
 
 
@@ -79,36 +79,36 @@ const data = [
         images: [{
           id: 1,
           name: "Hardware",
-          src: "/img/projects/holo-9.jpg",
-          src2x: "/img/projects/holo-9@2x.jpg"
+          src: "/assets/img/projects/holo-9.jpg",
+          src2x: "/assets/img/projects/holo-9@2x.jpg"
         },{
           id: 2,
           name: "Cellular connectivity",
-          src: "/img/projects/holo-10.jpg",
-          src2x: "/img/projects/holo-10@2x.jpg"
+          src: "/assets/img/projects/holo-10.jpg",
+          src2x: "/assets/img/projects/holo-10@2x.jpg"
         },{
           id: 3,
           name: "Cloud Services",
-          src: "/img/projects/holo-11.jpg",
-          src2x: "/img/projects/holo-11@2x.jpg"
+          src: "/assets/img/projects/holo-11.jpg",
+          src2x: "/assets/img/projects/holo-11@2x.jpg"
         },{
           id: 4,
           name: "Docs",
-          src: "/img/projects/holo-12.jpg",
-          src2x: "/img/projects/holo-12@2x.jpg"
+          src: "/assets/img/projects/holo-12.jpg",
+          src2x: "/assets/img/projects/holo-12@2x.jpg"
         },{
           id: 5 ,
           name: "Store",
-          src: "/img/projects/holo-13.jpg",
-          src2x: "/img/projects/holo-13@2x.jpg"
+          src: "/assets/img/projects/holo-13.jpg",
+          src2x: "/assets/img/projects/holo-13@2x.jpg"
         }]
       },
       {
         id: 10,
         type: "video",
-        srcMp4: "/video/holo_animation.mp4",
-        srcWebM: "/video/holo_animation.webm",
-        poster: "/video/posters/holo_animation.jpg",
+        srcMp4: "/assets/video/holo_animation.mp4",
+        srcWebM: "/assets/video/holo_animation.webm",
+        poster: "/assets/video/posters/holo_animation.jpg",
         caption: "Here's a video of a HTML Canvas animation I programmed for the marketing site."
       },
 
@@ -121,50 +121,50 @@ const data = [
       {
         id: 12,
         type: "img",
-        src: "/img/projects/holo-14.jpg",
-        src2x: "/img/projects/holo-14@2x.jpg"
+        src: "/assets/img/projects/holo-14.jpg",
+        src2x: "/assets/img/projects/holo-14@2x.jpg"
       },
       {
         id: 13,
         type: "img",
-        src: "/img/projects/holo-15.jpg",
-        src2x: "/img/projects/holo-15@2x.jpg"
+        src: "/assets/img/projects/holo-15.jpg",
+        src2x: "/assets/img/projects/holo-15@2x.jpg"
       },
       {
         id: 14,
         type: "img",
-        src: "/img/projects/holo-16.jpg",
-        src2x: "/img/projects/holo-16@2x.jpg"
+        src: "/assets/img/projects/holo-16.jpg",
+        src2x: "/assets/img/projects/holo-16@2x.jpg"
       },
       {
         id: 15,
         type: "img",
-        src: "/img/projects/holo-17.jpg",
-        src2x: "/img/projects/holo-17@2x.jpg"
+        src: "/assets/img/projects/holo-17.jpg",
+        src2x: "/assets/img/projects/holo-17@2x.jpg"
       },
       {
         id: 16,
         type: "img",
-        src: "/img/projects/holo-18.jpg",
-        src2x: "/img/projects/holo-18@2x.jpg"
+        src: "/assets/img/projects/holo-18.jpg",
+        src2x: "/assets/img/projects/holo-18@2x.jpg"
       },
       {
         id: 17,
         type: "img",
-        src: "/img/projects/holo-19.jpg",
-        src2x: "/img/projects/holo-19@2x.jpg"
+        src: "/assets/img/projects/holo-19.jpg",
+        src2x: "/assets/img/projects/holo-19@2x.jpg"
       },
       {
         id: 18,
         type: "img",
-        src: "/img/projects/holo-20.jpg",
-        src2x: "/img/projects/holo-20@2x.jpg"
+        src: "/assets/img/projects/holo-20.jpg",
+        src2x: "/assets/img/projects/holo-20@2x.jpg"
       },
       {
         id: 19,
         type: "img",
-        src: "/img/projects/holo-21.jpg",
-        src2x: "/img/projects/holo-21@2x.jpg"
+        src: "/assets/img/projects/holo-21.jpg",
+        src2x: "/assets/img/projects/holo-21@2x.jpg"
       }
     ]
   },
@@ -190,28 +190,28 @@ const data = [
       {
         id: 0,
         type: "video",
-        srcMp4: "/video/cnn_reel.mp4",
-        srcWebM: "/video/cnn_reel.webm",
-        poster: "/video/posters/cnn_reel.jpg",
+        srcMp4: "/assets/video/cnn_reel.mp4",
+        srcWebM: "/assets/video/cnn_reel.webm",
+        poster: "/assets/video/posters/cnn_reel.jpg",
         caption: "Here's an overview of the application."
       },
       {
         id: 1,
         type: "img",
-        src: "/img/projects/cnn-1.jpg",
-        src2x: "/img/projects/cnn-1@2x.jpg"
+        src: "/assets/img/projects/cnn-1.jpg",
+        src2x: "/assets/img/projects/cnn-1@2x.jpg"
       },
       {
         id: 2,
         type: "img",
-        src: "/img/projects/cnn-2.jpg",
-        src2x: "/img/projects/cnn-2@2x.jpg"
+        src: "/assets/img/projects/cnn-2.jpg",
+        src2x: "/assets/img/projects/cnn-2@2x.jpg"
       },
       {
         id: 3,
         type: "img",
-        src: "/img/projects/cnn-3.jpg",
-        src2x: "/img/projects/cnn-3@2x.jpg"
+        src: "/assets/img/projects/cnn-3.jpg",
+        src2x: "/assets/img/projects/cnn-3@2x.jpg"
       },
       {
         id: 4,
@@ -224,9 +224,9 @@ const data = [
       {
         id: 5,
         type: "video",
-        srcMp4: "/video/cnn_walkthrough.mp4",
-        srcWebM: "/video/cnn_walkthrough.webm",
-        poster: "/video/posters/cnn_walkthrough.jpg",
+        srcMp4: "/assets/video/cnn_walkthrough.mp4",
+        srcWebM: "/assets/video/cnn_walkthrough.webm",
+        poster: "/assets/video/posters/cnn_walkthrough.jpg",
         caption: "Sit back, relax, and let John King give you a tour of the application."
       },
       {
@@ -260,9 +260,9 @@ const data = [
       {
         id: 1,
         type: "video",
-        srcMp4: "/video/f8_reel.mp4",
-        srcWebM: "/video/f8_reel.webm",
-        poster: "/video/posters/f8_reel.jpg",
+        srcMp4: "/assets/video/f8_reel.mp4",
+        srcWebM: "/assets/video/f8_reel.webm",
+        poster: "/assets/video/posters/f8_reel.jpg",
         caption: "Here's an overview that'll give you a feel for what the event was like."
       },
 
@@ -275,20 +275,20 @@ const data = [
       {
         id: 3,
         type: "img",
-        src: "/img/projects/f8-1.jpg",
-        src2x: "/img/projects/f8-1@2x.jpg"
+        src: "/assets/img/projects/f8-1.jpg",
+        src2x: "/assets/img/projects/f8-1@2x.jpg"
       },
       {
         id: 4,
         type: "img",
-        src: "/img/projects/f8-3.jpg",
-        src2x: "/img/projects/f8-3@2x.jpg"
+        src: "/assets/img/projects/f8-3.jpg",
+        src2x: "/assets/img/projects/f8-3@2x.jpg"
       },
       {
         id: 5,
         type: "img",
-        src: "/img/projects/f8-4.jpg",
-        src2x: "/img/projects/f8-4@2x.jpg",
+        src: "/assets/img/projects/f8-4.jpg",
+        src2x: "/assets/img/projects/f8-4@2x.jpg",
         caption: "Here's the UI for one of the generative graphics tools I built. <a className='btn__link' href='/demos/curvinator'>Take it for a spin</a>"
       },
 
@@ -304,33 +304,33 @@ const data = [
         images: [{
           id: 1,
           name: "Home",
-          src: "/img/projects/f8-site-1.jpg",
-          src2x: "/img/projects/f8-site-1@2x.jpg"
+          src: "/assets/img/projects/f8-site-1.jpg",
+          src2x: "/assets/img/projects/f8-site-1@2x.jpg"
         },{
           id: 2,
           name: "About",
-          src: "/img/projects/f8-site-2.jpg",
-          src2x: "/img/projects/f8-site-2@2x.jpg"
+          src: "/assets/img/projects/f8-site-2.jpg",
+          src2x: "/assets/img/projects/f8-site-2@2x.jpg"
         },{
           id: 3,
           name: "Schedule",
-          src: "/img/projects/f8-site-3.jpg",
-          src2x: "/img/projects/f8-site-3@2x.jpg"
+          src: "/assets/img/projects/f8-site-3.jpg",
+          src2x: "/assets/img/projects/f8-site-3@2x.jpg"
         },{
           id: 4,
           name: "Getting here",
-          src: "/img/projects/f8-site-4.jpg",
-          src2x: "/img/projects/f8-site-4@2x.jpg"
+          src: "/assets/img/projects/f8-site-4.jpg",
+          src2x: "/assets/img/projects/f8-site-4@2x.jpg"
         },{
           id: 5 ,
           name: "Events",
-          src: "/img/projects/f8-site-5.jpg",
-          src2x: "/img/projects/f8-site-5@2x.jpg"
+          src: "/assets/img/projects/f8-site-5.jpg",
+          src2x: "/assets/img/projects/f8-site-5@2x.jpg"
         },{
           id: 6 ,
           name: "Watch F8",
-          src: "/img/projects/f8-site-6.jpg",
-          src2x: "/img/projects/f8-site-6@2x.jpg"
+          src: "/assets/img/projects/f8-site-6.jpg",
+          src2x: "/assets/img/projects/f8-site-6@2x.jpg"
         }]
       },
 
@@ -343,22 +343,22 @@ const data = [
       {
         id: 9,
         type: "video",
-        srcMp4: "/video/f8_animation.mp4",
-        srcWebM: "/video/f8_animation.webm",
-        poster: "/video/posters/f8_animation.jpg",
+        srcMp4: "/assets/video/f8_animation.mp4",
+        srcWebM: "/assets/video/f8_animation.webm",
+        poster: "/assets/video/posters/f8_animation.jpg",
         caption: "Here's a glimpse of some of the projected animations seen in the pictures below."
       },
       {
         id: 10,
         type: "img",
-        src: "/img/projects/f8-6.jpg",
-        src2x: "/img/projects/f8-6@2x.jpg"
+        src: "/assets/img/projects/f8-6.jpg",
+        src2x: "/assets/img/projects/f8-6@2x.jpg"
       },
       {
         id: 11,
         type: "img",
-        src: "/img/projects/f8-7.jpg",
-        src2x: "/img/projects/f8-7@2x.jpg"
+        src: "/assets/img/projects/f8-7.jpg",
+        src2x: "/assets/img/projects/f8-7@2x.jpg"
       },
 
       {
@@ -370,26 +370,26 @@ const data = [
       {
         id: 13,
         type: "img",
-        src: "/img/projects/f8-8.jpg",
-        src2x: "/img/projects/f8-8@2x.jpg"
+        src: "/assets/img/projects/f8-8.jpg",
+        src2x: "/assets/img/projects/f8-8@2x.jpg"
       },
       {
         id: 14,
         type: "img",
-        src: "/img/projects/f8-9.jpg",
-        src2x: "/img/projects/f8-9@2x.jpg"
+        src: "/assets/img/projects/f8-9.jpg",
+        src2x: "/assets/img/projects/f8-9@2x.jpg"
       },
       {
         id: 15,
         type: "img",
-        src: "/img/projects/f8-10.jpg",
-        src2x: "/img/projects/f8-10@2x.jpg"
+        src: "/assets/img/projects/f8-10.jpg",
+        src2x: "/assets/img/projects/f8-10@2x.jpg"
       },
       {
         id: 16,
         type: "img",
-        src: "/img/projects/f8-11.jpg",
-        src2x: "/img/projects/f8-11@2x.jpg"
+        src: "/assets/img/projects/f8-11.jpg",
+        src2x: "/assets/img/projects/f8-11@2x.jpg"
       },
 
       {
@@ -401,56 +401,56 @@ const data = [
       {
         id: 18,
         type: "img",
-        src: "/img/projects/f8-12.jpg",
-        src2x: "/img/projects/f8-12@2x.jpg"
+        src: "/assets/img/projects/f8-12.jpg",
+        src2x: "/assets/img/projects/f8-12@2x.jpg"
       },
       {
         id: 19,
         type: "img",
-        src: "/img/projects/f8-13.jpg",
-        src2x: "/img/projects/f8-13@2x.jpg"
+        src: "/assets/img/projects/f8-13.jpg",
+        src2x: "/assets/img/projects/f8-13@2x.jpg"
       },
       {
         id: 20,
         type: "img",
-        src: "/img/projects/f8-14.jpg",
-        src2x: "/img/projects/f8-14@2x.jpg"
+        src: "/assets/img/projects/f8-14.jpg",
+        src2x: "/assets/img/projects/f8-14@2x.jpg"
       },
       {
         id: 21,
         type: "img",
-        src: "/img/projects/f8-15.jpg",
-        src2x: "/img/projects/f8-15@2x.jpg"
+        src: "/assets/img/projects/f8-15.jpg",
+        src2x: "/assets/img/projects/f8-15@2x.jpg"
       },
       {
         id: 22,
         type: "img",
-        src: "/img/projects/f8-16.jpg",
-        src2x: "/img/projects/f8-16@2x.jpg"
+        src: "/assets/img/projects/f8-16.jpg",
+        src2x: "/assets/img/projects/f8-16@2x.jpg"
       },
       {
         id: 23,
         type: "img",
-        src: "/img/projects/f8-17.jpg",
-        src2x: "/img/projects/f8-17@2x.jpg"
+        src: "/assets/img/projects/f8-17.jpg",
+        src2x: "/assets/img/projects/f8-17@2x.jpg"
       },
       {
         id: 24,
         type: "img",
-        src: "/img/projects/f8-18.jpg",
-        src2x: "/img/projects/f8-18@2x.jpg"
+        src: "/assets/img/projects/f8-18.jpg",
+        src2x: "/assets/img/projects/f8-18@2x.jpg"
       },
       {
         id: 25,
         type: "img",
-        src: "/img/projects/f8-19.jpg",
-        src2x: "/img/projects/f8-19@2x.jpg"
+        src: "/assets/img/projects/f8-19.jpg",
+        src2x: "/assets/img/projects/f8-19@2x.jpg"
       },
       {
         id: 26,
         type: "img",
-        src: "/img/projects/f8-21.jpg",
-        src2x: "/img/projects/f8-21@2x.jpg"
+        src: "/assets/img/projects/f8-21.jpg",
+        src2x: "/assets/img/projects/f8-21@2x.jpg"
       }
     ]
   },
@@ -475,8 +475,8 @@ const data = [
       {
         id: 1,
         type: "img",
-        src: "/img/projects/farmlogs-1.jpg",
-        src2x: "/img/projects/farmlogs-1@2x.jpg"
+        src: "/assets/img/projects/farmlogs-1.jpg",
+        src2x: "/assets/img/projects/farmlogs-1@2x.jpg"
       },
       {
         id: 2,
@@ -497,8 +497,8 @@ const data = [
       {
         id: 3,
         type: "img",
-        src: "/img/projects/farmlogs-2.jpg",
-        src2x: "/img/projects/farmlogs-2@2x.jpg"
+        src: "/assets/img/projects/farmlogs-2.jpg",
+        src2x: "/assets/img/projects/farmlogs-2@2x.jpg"
       },
       {
         id: 4,
@@ -509,16 +509,16 @@ const data = [
       {
         id: 5,
         type: "img",
-        src: "/img/projects/farmlogs-workflow.gif",
-        src2x: "/img/projects/farmlogs-workflow.gif",
+        src: "/assets/img/projects/farmlogs-workflow.gif",
+        src2x: "/assets/img/projects/farmlogs-workflow.gif",
         bordered: true,
         caption: "The Sketch symbols are structured to enable rapid mockups using <a className='btn__link' href='http://sketchrunner.com/'>Sketch Runner</a>"
       },
       {
         id: 6,
         type: "img",
-        src: "/img/projects/farmlogs-resize.gif",
-        src2x: "/img/projects/farmlogs-resize.gif",
+        src: "/assets/img/projects/farmlogs-resize.gif",
+        src2x: "/assets/img/projects/farmlogs-resize.gif",
         bordered: true,
         caption: "The Sketch symbols are built for easy responsive resizing.</a>"
       },
@@ -531,8 +531,8 @@ const data = [
       {
         id: 8,
         type: "img",
-        src: "/img/projects/farmlogs-3.jpg",
-        src2x: "/img/projects/farmlogs-3@2x.jpg"
+        src: "/assets/img/projects/farmlogs-3.jpg",
+        src2x: "/assets/img/projects/farmlogs-3@2x.jpg"
       },
       {
         id: 9,
@@ -546,18 +546,18 @@ const data = [
         images: [{
           id: 1,
           name: "Chooser",
-          src: "/img/projects/farmlogs-docs-3.jpg",
-          src2x: "/img/projects/farmlogs-docs-3@2x.jpg"
+          src: "/assets/img/projects/farmlogs-docs-3.jpg",
+          src2x: "/assets/img/projects/farmlogs-docs-3@2x.jpg"
         },{
           id: 2,
           name: "Bulk select",
-          src: "/img/projects/farmlogs-docs-4.jpg",
-          src2x: "/img/projects/farmlogs-docs-4@2x.jpg"
+          src: "/assets/img/projects/farmlogs-docs-4.jpg",
+          src2x: "/assets/img/projects/farmlogs-docs-4@2x.jpg"
         },{
           id: 3,
           name: "Charts",
-          src: "/img/projects/farmlogs-docs-5.jpg",
-          src2x: "/img/projects/farmlogs-docs-5@2x.jpg"
+          src: "/assets/img/projects/farmlogs-docs-5.jpg",
+          src2x: "/assets/img/projects/farmlogs-docs-5@2x.jpg"
         }]
       }
     ]
@@ -583,8 +583,8 @@ const data = [
       {
         id: 1,
         type: "img",
-        src: "/img/projects/searchparty-1.jpg",
-        src2x: "/img/projects/searchparty-1@2x.jpg"
+        src: "/assets/img/projects/searchparty-1.jpg",
+        src2x: "/assets/img/projects/searchparty-1@2x.jpg"
       },
       {
         id: 2,
@@ -595,8 +595,8 @@ const data = [
       {
         id: 3,
         type: "img",
-        src: "/img/projects/searchparty-2.jpg",
-        src2x: "/img/projects/searchparty-2@2x.jpg"
+        src: "/assets/img/projects/searchparty-2.jpg",
+        src2x: "/assets/img/projects/searchparty-2@2x.jpg"
       },
       {
         id: 4,
@@ -610,23 +610,23 @@ const data = [
         images: [{
           id: 1,
           name: "Job openings",
-          src: "/img/projects/searchparty-employer-1.jpg",
-          src2x: "/img/projects/searchparty-employer-1@2x.jpg"
+          src: "/assets/img/projects/searchparty-employer-1.jpg",
+          src2x: "/assets/img/projects/searchparty-employer-1@2x.jpg"
         },{
           id: 2,
           name: "Search candidates",
-          src: "/img/projects/searchparty-employer-2.jpg",
-          src2x: "/img/projects/searchparty-employer-2@2x.jpg"
+          src: "/assets/img/projects/searchparty-employer-2.jpg",
+          src2x: "/assets/img/projects/searchparty-employer-2@2x.jpg"
         },{
           id: 3,
           name: "Candidate profile",
-          src: "/img/projects/searchparty-employer-3.jpg",
-          src2x: "/img/projects/searchparty-employer-3@2x.jpg"
+          src: "/assets/img/projects/searchparty-employer-3.jpg",
+          src2x: "/assets/img/projects/searchparty-employer-3@2x.jpg"
         },{
           id: 4,
           name: "Hiring timeline",
-          src: "/img/projects/searchparty-employer-5.jpg",
-          src2x: "/img/projects/searchparty-employer-5@2x.jpg"
+          src: "/assets/img/projects/searchparty-employer-5.jpg",
+          src2x: "/assets/img/projects/searchparty-employer-5@2x.jpg"
         }]
       }
     ]
@@ -652,9 +652,9 @@ const data = [
       {
         id: 1,
         type: "video",
-        srcMp4: "/video/gcs_reel.mp4",
-        srcWebM: "/video/gcs_reel.webm",
-        poster: "/video/posters/gcs_reel.jpg",
+        srcMp4: "/assets/video/gcs_reel.mp4",
+        srcWebM: "/assets/video/gcs_reel.webm",
+        poster: "/assets/video/posters/gcs_reel.jpg",
         caption: "Here's a recording on the product tour in action.",
         chromed: true
       },
@@ -667,14 +667,14 @@ const data = [
       {
         id: 3,
         type: "img",
-        src: "/img/projects/gcs-1.jpg",
-        src2x: "/img/projects/gcs-1@2x.jpg"
+        src: "/assets/img/projects/gcs-1.jpg",
+        src2x: "/assets/img/projects/gcs-1@2x.jpg"
       },
       {
         id: 4,
         type: "img",
-        src: "/img/projects/gcs-2.jpg",
-        src2x: "/img/projects/gcs-2@2x.jpg"
+        src: "/assets/img/projects/gcs-2.jpg",
+        src2x: "/assets/img/projects/gcs-2@2x.jpg"
       }
     ]
   },
@@ -698,8 +698,8 @@ const data = [
       {
         id: 1,
         type: "img",
-        src: "/img/projects/isaac-hero.jpg",
-        src2x: "/img/projects/isaac-hero@2x.jpg"
+        src: "/assets/img/projects/isaac-hero.jpg",
+        src2x: "/assets/img/projects/isaac-hero@2x.jpg"
       },
 
       {
@@ -711,32 +711,32 @@ const data = [
       {
         id: 3,
         type: "img",
-        src: "/img/projects/isaac-1.jpg",
-        src2x: "/img/projects/isaac-1@2x.jpg"
+        src: "/assets/img/projects/isaac-1.jpg",
+        src2x: "/assets/img/projects/isaac-1@2x.jpg"
       },
       {
         id: 4,
         type: "img",
-        src: "/img/projects/isaac-2.jpg",
-        src2x: "/img/projects/isaac-2@2x.jpg"
+        src: "/assets/img/projects/isaac-2.jpg",
+        src2x: "/assets/img/projects/isaac-2@2x.jpg"
       },
       {
         id: 5,
         type: "img",
-        src: "/img/projects/isaac-3.jpg",
-        src2x: "/img/projects/isaac-3@2x.jpg"
+        src: "/assets/img/projects/isaac-3.jpg",
+        src2x: "/assets/img/projects/isaac-3@2x.jpg"
       },
       {
         id: 6,
         type: "img",
-        src: "/img/projects/isaac-4.jpg",
-        src2x: "/img/projects/isaac-4@2x.jpg"
+        src: "/assets/img/projects/isaac-4.jpg",
+        src2x: "/assets/img/projects/isaac-4@2x.jpg"
       },
       {
         id: 7,
         type: "img",
-        src: "/img/projects/isaac-5.jpg",
-        src2x: "/img/projects/isaac-5@2x.jpg"
+        src: "/assets/img/projects/isaac-5.jpg",
+        src2x: "/assets/img/projects/isaac-5@2x.jpg"
       },
 
 
@@ -752,8 +752,8 @@ const data = [
         images: [{
           id: 1,
           name: "Home page",
-          src: "/img/projects/isaac-6.jpg",
-          src2x: "/img/projects/isaac-6@2x.jpg"
+          src: "/assets/img/projects/isaac-6.jpg",
+          src2x: "/assets/img/projects/isaac-6@2x.jpg"
         }]
       },
 
@@ -767,62 +767,62 @@ const data = [
       {
         id: 11,
         type: "img",
-        src: "/img/projects/isaac-7.jpg",
-        src2x: "/img/projects/isaac-7@2x.jpg"
+        src: "/assets/img/projects/isaac-7.jpg",
+        src2x: "/assets/img/projects/isaac-7@2x.jpg"
       },
       {
         id: 12,
         type: "img",
-        src: "/img/projects/isaac-8.jpg",
-        src2x: "/img/projects/isaac-8@2x.jpg"
+        src: "/assets/img/projects/isaac-8.jpg",
+        src2x: "/assets/img/projects/isaac-8@2x.jpg"
       },
       {
         id: 13,
         type: "img",
-        src: "/img/projects/isaac-9.jpg",
-        src2x: "/img/projects/isaac-9@2x.jpg"
+        src: "/assets/img/projects/isaac-9.jpg",
+        src2x: "/assets/img/projects/isaac-9@2x.jpg"
       },
       {
         id: 14,
         type: "img",
-        src: "/img/projects/isaac-10.jpg",
-        src2x: "/img/projects/isaac-10@2x.jpg"
+        src: "/assets/img/projects/isaac-10.jpg",
+        src2x: "/assets/img/projects/isaac-10@2x.jpg"
       },
       {
         id: 15,
         type: "img",
-        src: "/img/projects/isaac-11.jpg",
-        src2x: "/img/projects/isaac-11@2x.jpg"
+        src: "/assets/img/projects/isaac-11.jpg",
+        src2x: "/assets/img/projects/isaac-11@2x.jpg"
       },
       {
         id: 16,
         type: "img",
-        src: "/img/projects/isaac-12.jpg",
-        src2x: "/img/projects/isaac-12@2x.jpg"
+        src: "/assets/img/projects/isaac-12.jpg",
+        src2x: "/assets/img/projects/isaac-12@2x.jpg"
       },
       {
         id: 17,
         type: "img",
-        src: "/img/projects/isaac-13.jpg",
-        src2x: "/img/projects/isaac-13@2x.jpg"
+        src: "/assets/img/projects/isaac-13.jpg",
+        src2x: "/assets/img/projects/isaac-13@2x.jpg"
       },
       {
         id: 18,
         type: "img",
-        src: "/img/projects/isaac-14.jpg",
-        src2x: "/img/projects/isaac-14@2x.jpg"
+        src: "/assets/img/projects/isaac-14.jpg",
+        src2x: "/assets/img/projects/isaac-14@2x.jpg"
       },
       {
         id: 19,
         type: "img",
-        src: "/img/projects/isaac-15.jpg",
-        src2x: "/img/projects/isaac-15@2x.jpg"
+        src: "/assets/img/projects/isaac-15.jpg",
+        src2x: "/assets/img/projects/isaac-15@2x.jpg"
       },
       {
         id: 20,
         type: "img",
-        src: "/img/projects/isaac-16.jpg",
-        src2x: "/img/projects/isaac-16@2x.jpg"
+        src: "/assets/img/projects/isaac-16.jpg",
+        src2x: "/assets/img/projects/isaac-16@2x.jpg"
       },
 
       {
@@ -834,14 +834,14 @@ const data = [
       {
         id: 22,
         type: "img",
-        src: "/img/projects/isaac-17.jpg",
-        src2x: "/img/projects/isaac-17@2x.jpg"
+        src: "/assets/img/projects/isaac-17.jpg",
+        src2x: "/assets/img/projects/isaac-17@2x.jpg"
       },
       {
         id: 23,
         type: "img",
-        src: "/img/projects/isaac-18.jpg",
-        src2x: "/img/projects/isaac-18@2x.jpg"
+        src: "/assets/img/projects/isaac-18.jpg",
+        src2x: "/assets/img/projects/isaac-18@2x.jpg"
       }
     ]
   }
