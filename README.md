@@ -6,6 +6,7 @@
 
 The dev server uses `www/dev.html` as it's index.
 
+
 **To get running in production:**
 Create a `.env` file in the project root with the following variables:
 ```
@@ -18,6 +19,8 @@ AWS_S3_BUCKET_NAME=<AWS S3 bucket name>
 Then run the following commands
 - `yarn deploy` to build and hash bundles and deploy to the CDN
 - `yarn prod` to run the development server
+
+The dev server uses `www/index.hbs` as it's index.
 
 The project is configured to deploy assets to an Amazon Cloudfront CDN. If you just want to serve assets from the development server set your `PROD_ASSET_PATH` .env variable to `/assets_rev/` and remove the AWS .env variables. Then instead of the `yarn deploy` command just use:
 - `yarn build` to build compressed asset bundles
