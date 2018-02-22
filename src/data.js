@@ -545,21 +545,16 @@ const data = [
         type: "screenViewer",
         images: [{
           id: 1,
-          name: "Text link",
-          src: "/img/projects/farmlogs-docs-2.jpg",
-          src2x: "/img/projects/farmlogs-docs-2@2x.jpg"
-        },{
-          id: 2,
           name: "Chooser",
           src: "/img/projects/farmlogs-docs-3.jpg",
           src2x: "/img/projects/farmlogs-docs-3@2x.jpg"
         },{
-          id: 3,
+          id: 2,
           name: "Bulk select",
           src: "/img/projects/farmlogs-docs-4.jpg",
           src2x: "/img/projects/farmlogs-docs-4@2x.jpg"
         },{
-          id: 4,
+          id: 3,
           name: "Charts",
           src: "/img/projects/farmlogs-docs-5.jpg",
           src2x: "/img/projects/farmlogs-docs-5@2x.jpg"

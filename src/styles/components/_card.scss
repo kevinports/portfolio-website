@@ -77,28 +77,43 @@
 // modifiers
 
 .card--cnn:after {
-  background-image: url('/img/cnn-card-back@2x.jpg');
+  background-image: url('/img/cnn-card-back.jpg');
+  @include retina () {
+    background-image: url('/img/cnn-card-back@2x.jpg');
+  }
   background-position: bottom right;
 }
 
 .card--facebook:after {
-  background-image: url('/img/f8-card-back@2x.jpg');
+  background-image: url('/img/f8-card-back.jpg');
+  @include retina () {
+    background-image: url('/img/f8-card-back@2x.jpg');
+  }
   background-position: top right;
   transform-origin: center right;
 }
 
 .card--farmlogs:after {
-  background-image: url('/img/farmlogs-card-back@2x.jpg');
+  background-image: url('/img/farmlogs-card-back.jpg');
+  @include retina () {
+    background-image: url('/img/farmlogs-card-back@2x.jpg');
+  }
   background-position: center right;
 }
 
 .card--gcs:after {
-  background-image: url('/img/gcs-card-back@2x.jpg');
+  background-image: url('/img/gcs-card-back.jpg');
+  @include retina () {
+    background-image: url('/img/gcs-card-back@2x.jpg');
+  }
   background-position: top right;
 }
 
 .card--isaac:after {
-  background-image: url('/img/isaac-card-back@2x.jpg');
+  background-image: url('/img/isaac-card-back.jpg');
+  @include retina () {
+    background-image: url('/img/isaac-card-back@2x.jpg');
+  }
   background-position: top right;
   transform-origin: top right;
 }
@@ -117,13 +132,19 @@
   }
 
   .card--hologram:after {
-    background-image: url('/img/hologram-card-back@2x.jpg');
+    background-image: url('/img/hologram-card-back.jpg');
+    @include retina () {
+      background-image: url('/img/hologram-card-back@2x.jpg');
+    }
     background-position: top right;
     transform-origin: top right;
   }
 
   .card--searchparty:after {
-    background-image: url('/img/searchparty-card-back@2x.jpg');
+    background-image: url('/img/searchparty-card-back.jpg');
+    @include retina () {
+      background-image: url('/img/searchparty-card-back@2x.jpg');
+    }
     background-position: right;
     transform-origin: top right;
   }
