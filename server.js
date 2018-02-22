@@ -1,17 +1,36 @@
 const express = require('express');
 const path = require('path');
 const http = require('http');
+const Handlebars = require('hbs');
+const assetManifest = require('./www/asset.manifest.json');
+
+require('dotenv').config();
 
 const port = normalizePort(process.env.PORT || '3001');
 const app = express();
 
 app.use(express.static('./www'));
-app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/www/index.html'));
+app.set('views', path.join(__dirname, './www'));
+app.set('view engine', 'hbs');
+
+Handlebars.registerHelper('provideAsset', function(context) {
+  // return `/assets_rev/${assetManifest[context]}`;
+  return process.env.PROD_ASSET_PATH + assetManifest[context];
+});
+Handlebars.registerHelper('toJSON', function(object){
+	return new Handlebars.SafeString(JSON.stringify(object));
 });
 
+app.get('*', function(req, res) {
+  res.render('index', {
+    assetManifest: assetManifest
+  });
+});
+
+
+
 const server = http.createServer(app);
-server.listen(3001);
+server.listen(9000);
 server.on('error', onError);
 server.on('listening', onListening);
 

@@ -1,4 +1,6 @@
 import React from "react";
+import assetProvider from '../../base/assetProvider';
+import GlobalStore from '../../base/GlobalStore';
 import { Link } from 'react-router-dom';
 
 class Card extends React.Component {
@@ -8,19 +10,25 @@ class Card extends React.Component {
 
   render () {
     const { project } = this.props;
+    const isRetina = GlobalStore.get('isRetina');
+    const bgImagePath = isRetina ? assetProvider(project.cardBackgroundSrc2x) : assetProvider(project.cardBackgroundSrc);
     let footer = null;
 
     if (project.cardForegroundImg){
-      const src = `/assets/img/${project.slug}-card-fore@2x.png`;
-      const srcSet = `/assets/img/${project.slug}-card-fore@2x.png 1x, /assets/img/${project.slug}-card-fore@2x.png 2x`;
-      footer = <div className="card__footer "><img className="card__fore-img" src={src} srcSet={srcSet} /></div>
+      const foregroundSrc = assetProvider(`img/${project.slug}-card-fore.png`);
+      const foregroundSrc2x = assetProvider(`img/${project.slug}-card-fore@2x.png`);
+      const foregroundSrcSet = `${foregroundSrc} 1x, ${foregroundSrc2x} 2x`;
+      footer = <div className="card__footer "><img className="card__fore-img" src={foregroundSrc} srcSet={foregroundSrcSet} /></div>
     }
 
     return (
       <Link
         to={`/projects/${project.slug}`}
         className={`card card--${project.slug} transition-stagger`}
-        style={{"backgroundColor": project.color, "borderColor": project.color}}
+        style={{
+          "backgroundColor": project.color,
+          "borderColor": project.color
+        }}
         ref={(el) => { this.el = el; }}>
 
           <div className="card__header pt-2 pl-2">
@@ -30,7 +38,7 @@ class Card extends React.Component {
             </div>
           </div>
           { footer }
-
+          <div className="card__background-img" style={{"backgroundImage": `url('${bgImagePath}')`}}></div>
       </Link>
     )
   }

@@ -1,5 +1,6 @@
 // keeps track of UI state - window scroll, resize, raf
 import shortid from 'shortid';
+import { device_pixel_ratio } from 'javascript-retina-detect';
 
 class GlobalStore {
   constructor() {
@@ -13,7 +14,8 @@ class GlobalStore {
       viewport: {
         width: 0,
         height: 0
-      }
+      },
+      isRetina: device_pixel_ratio() === 2 ? true : false
     }
     this.scrollRoot = null; // need to set this after subscribing components mount
   }

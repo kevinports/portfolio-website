@@ -1,5 +1,6 @@
 import React from 'react';
 import { TweenLite } from 'gsap';
+import assetProvider from '../../base/assetProvider';
 import { getOffset } from '../../base/helpers';
 import GlobalStore from '../../base/GlobalStore';
 
@@ -93,7 +94,9 @@ class ScreenViewer extends React.Component {
 
   render () {
     const img = this.props.images.find(o => o.id === this.state.activeTabId);
-    const { src, src2x } = img;
+    let { src, src2x } = img;
+    src = assetProvider(src);
+    src2x = assetProvider(src2x);
 
     const menuItems = this.props.images.map(i => {
       if (this.state.activeTabId === i.id) {

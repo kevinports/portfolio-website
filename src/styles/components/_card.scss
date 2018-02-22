@@ -23,20 +23,10 @@
   }
 
   &:after {
-    transition: transform 0.6s;
-    content: "";
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: 0;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+
   }
 
-  &:hover:after,
+  &:hover &__background-img,
   &:hover &__fore-img {
     backface-visibility: hidden;
     transform: scale3D(1.025, 1.025, 1);
@@ -73,47 +63,40 @@
   bottom: -4px;
 }
 
+.card__background-img {
+  transition: transform 0.6s;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
 
 // modifiers
 
-.card--cnn:after {
-  background-image: url('/assets/img/cnn-card-back.jpg');
-  @include retina () {
-    background-image: url('/assets/img/cnn-card-back@2x.jpg');
-  }
+.card--cnn .card__background-img {
   background-position: bottom right;
 }
 
-.card--facebook:after {
-  background-image: url('/assets/img/f8-card-back.jpg');
-  @include retina () {
-    background-image: url('/assets/img/f8-card-back@2x.jpg');
-  }
+.card--facebook .card__background-img {
   background-position: top right;
   transform-origin: center right;
 }
 
-.card--farmlogs:after {
-  background-image: url('/assets/img/farmlogs-card-back.jpg');
-  @include retina () {
-    background-image: url('/assets/img/farmlogs-card-back@2x.jpg');
-  }
+.card--farmlogs .card__background-img {
   background-position: center right;
 }
 
-.card--gcs:after {
-  background-image: url('/assets/img/gcs-card-back.jpg');
-  @include retina () {
-    background-image: url('/assets/img/gcs-card-back@2x.jpg');
-  }
+.card--gcs .card__background-img {
   background-position: top right;
 }
 
-.card--isaac:after {
-  background-image: url('/assets/img/isaac-card-back.jpg');
-  @include retina () {
-    background-image: url('/assets/img/isaac-card-back@2x.jpg');
-  }
+.card--isaac .card__background-img {
   background-position: top right;
   transform-origin: top right;
 }
@@ -131,27 +114,19 @@
     right: -90px;
   }
 
-  .card--hologram:after {
-    background-image: url('/assets/img/hologram-card-back.jpg');
-    @include retina () {
-      background-image: url('/assets/img/hologram-card-back@2x.jpg');
-    }
+  .card--hologram .card__background-img {
     background-position: top right;
     transform-origin: top right;
   }
 
-  .card--searchparty:after {
-    background-image: url('/assets/img/searchparty-card-back.jpg');
-    @include retina () {
-      background-image: url('/assets/img/searchparty-card-back@2x.jpg');
-    }
+  .card--searchparty .card__background-img {
     background-position: right;
     transform-origin: top right;
   }
 }
 
 @include respond-to($bp-medium){
-  .card:after {
+  .card .card__background-img {
     opacity: 1;
   }
 

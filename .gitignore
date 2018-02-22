@@ -2,4 +2,7 @@ node_modules
 .DS_Store
 www/bundle.js
 www/bundle.css
+www/assets_rev
 move.sh
+.env
+yarn-error.log

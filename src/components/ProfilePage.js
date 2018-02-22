@@ -1,11 +1,15 @@
 import React from 'react';
+import assetProvider from '../base/assetProvider';
 import Header from './common/Header';
 import Wrapper from './common/Wrapper';
 import TransitionRoot from './common/TransitionRoot';
 
 class ProfilePage extends React.Component {
   render () {
-    return(
+    const profileImg = assetProvider('img/profile-portrait.jpg');
+    const profileImg2x = assetProvider('img/profile-portrait@2x.jpg');
+
+    return (
       <TransitionRoot>
         <Wrapper name="transition-header">
           <Header />
@@ -19,7 +23,7 @@ class ProfilePage extends React.Component {
               <p>Spending my time in the great outdoors near Madison, WI and loving it.</p>
             </div>
             <div className="measure-md mt-3 mt-0-md transition-stagger">
-              <img src="/assets/img/profile-portrait@2x.jpg" className="mb-3"/>
+              <img src={ profileImg } srcSet={`${profileImg} 1x, ${profileImg2x} 2x`} className="mb-3" />
               <ul className="list list--unstyled">
                 <h3 className="f-1 f-medium">Contact</h3>
                 <li><a className="btn__link" href="mailto:email@kevin.computer">Email</a></li>

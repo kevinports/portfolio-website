@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   context: path.join(__dirname, 'src'),
@@ -46,13 +47,25 @@ module.exports = {
       allChunks: true,
       disable: process.env.NODE_ENV !== 'production'
     }),
+    new webpack.DefinePlugin({
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+    }),
+    new Dotenv({
+      path: './.env'
+    })
     // new BundleAnalyzerPlugin()
   ],
   devServer: {
     contentBase: path.join(__dirname, "www"),
+    index: 'dev.html',
     compress: true,
     port: 3001,
     inline: true,
-    historyApiFallback: true
+    historyApiFallback: {
+      rewrites: [
+        { from: /./, to: '/dev.html' }
+      ]
+    }
+
   }
 };
