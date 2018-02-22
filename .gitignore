@@ -6,3 +6,4 @@ www/assets_rev
 move.sh
 .env
 yarn-error.log
+.exclude.txt

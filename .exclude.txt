@@ -10,3 +10,7 @@ webpack.config.js
 postcss.config.js
 README.md
 .babelrc
+scripts
+www/assets
+www/assets_rev
+www/dev.html

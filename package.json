@@ -9,13 +9,15 @@
   ],
   "scripts": {
     "compile": "webpack",
+    "start": "NODE_ENV=development webpack-dev-server --config webpack.config.js --hot",
     "build": "NODE_ENV=production webpack -p --progress",
-    "rev": "nodeRev 'www/assets/**/*.+(css|js|jpg|png|mp4)' --hash -o 'www/assets_rev/' --file 'www/asset.manifest.json'",
-    "prod": "NODE_ENV=production node server",
-    "start": "NODE_ENV=development webpack-dev-server --config webpack.config.js --hot"
+    "rev": "rm -rf www/assets_rev/ && nodeRev 'www/assets/**/*.+(css|js|jpg|png|mp4|gif|webm)' --hash -o 'www/assets_rev/' --file 'www/asset.manifest.json'",
+    "deploy": "yarn build && yarn rev && node ./scripts/s3-sync",
+    "prod": "NODE_ENV=production node server"
   },
   "author": "Kevin Ports",
   "dependencies": {
+    "aws-sdk": "^2.201.0",
     "dotenv": "^5.0.0",
     "express": "^4.16.2",
     "hbs": "^4.0.1"
@@ -44,6 +46,7 @@
     "react-render-html": "^0.6.0",
     "react-router-dom": "^4.2.2",
     "react-transition-group": "^2.2.1",
+    "s3": "^4.4.0",
     "sass-loader": "^6.0.6",
     "shortid": "^2.2.8",
     "style-loader": "^0.20.1",

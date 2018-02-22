@@ -14,7 +14,6 @@ app.set('views', path.join(__dirname, './www'));
 app.set('view engine', 'hbs');
 
 Handlebars.registerHelper('provideAsset', function(context) {
-  // return `/assets_rev/${assetManifest[context]}`;
   return process.env.PROD_ASSET_PATH + assetManifest[context];
 });
 Handlebars.registerHelper('toJSON', function(object){
@@ -30,7 +29,7 @@ app.get('*', function(req, res) {
 
 
 const server = http.createServer(app);
-server.listen(9000);
+server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
