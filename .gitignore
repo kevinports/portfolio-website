@@ -3,6 +3,9 @@ node_modules
 www/bundle.js
 www/bundle.css
 www/assets_rev
+www/asset.manifest.json
+www/assets/bundle.css
+www/assets/bundle.js
 move.sh
 .env
 yarn-error.log

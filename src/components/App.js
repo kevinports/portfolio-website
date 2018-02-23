@@ -103,7 +103,7 @@ class App extends React.Component {
   render () {
     const { location } = this.props
     const currentKey = location.key;
-    const timeout = { enter: 600, exit: 0 }
+    const timeout = { enter: 600, exit: 600 }
 
     this.updateTransitionState();
 
