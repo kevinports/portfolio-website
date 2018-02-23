@@ -13,7 +13,9 @@ import data from '../data';
 import transitions from '../base/transitions';
 import GlobalStore from '../base/GlobalStore';
 
-ReactGA.initialize('UA-111120088-1');
+if (NODE_ENV === 'production') {
+  ReactGA.initialize('UA-111120088-1');
+}
 
 class App extends React.Component {
   constructor (props) {
@@ -44,7 +46,9 @@ class App extends React.Component {
     const { previous, next, direction } = this.transitionState;
     const { pathname } = this.props.location;
 
-    ReactGA.pageview(pathname);
+    if (NODE_ENV === 'production') {
+      ReactGA.pageview(pathname);
+    }
 
     if (previous === 'BOOT') {
       transitions[next.name].enter(el);
