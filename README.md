@@ -1,4 +1,4 @@
-**To get running in development:**
+### To get running in development:
 - Install Yarn for dependency management https://yarnpkg.com/en/docs/install
 - Clone this repo
 - `yarn` to install req'd dependencies
@@ -7,10 +7,10 @@
 The dev server uses `www/dev.html` as it's index.
 
 
-**To get running in production:**
+### To get running in production:
 Create a `.env` file in the project root with the following variables:
 ```
-PROD_ASSET_PATH=<Path to your hashed assets>
+PROD_ASSET_PATH=<Path to CDN root>
 AWS_KEY=<AWS account public key>
 AWS_SECRET=<AWS account secret>
 AWS_REGION=<AWS S3 bucket region>
