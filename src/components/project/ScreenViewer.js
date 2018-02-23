@@ -22,7 +22,7 @@ class ScreenViewer extends React.Component {
   }
 
   componentDidMount () {
-    this.resizeListenerId = GlobalStore.on('change:viewport', this.handleViewportResize);
+    this.resizeListenerId = GlobalStore.on('change:viewport', this.handleViewportResize, true);
     this.scrollListenerId = GlobalStore.on('change:scroll', this.handleViewportScroll);
   }
 
@@ -39,10 +39,8 @@ class ScreenViewer extends React.Component {
 
   handleViewportResize (viewport) {
     if (viewport.width < 768) {
-      if (this.state.isMobileView) return;
       this.setState({ isMobileView: true });
     } else {
-      if (!this.state.isMobileView) return;
       this.setState({ isMobileView: false });
     }
   }

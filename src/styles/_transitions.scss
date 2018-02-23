@@ -2,8 +2,8 @@ body,
 #mount,
 main {
   overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
 }
 
 main {
@@ -21,8 +21,7 @@ main.animating .transition-root {
   top: 0;
   left: 0;
   width: 100%;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   transform: translate3d(0,0,1px)

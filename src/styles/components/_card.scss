@@ -17,13 +17,8 @@
   color: $c-white;
   cursor: pointer;
 
-
   &:active {
     transform: scale3d(0.99, 0.99, 1);
-  }
-
-  &:after {
-
   }
 
   &:hover &__background-img,
@@ -32,9 +27,6 @@
     transform: scale3D(1.025, 1.025, 1);
   }
 }
-
-
-// elements
 
 .card__header {
   position: relative;
@@ -76,9 +68,6 @@
   background-size: auto 100%;
 }
 
-
-// modifiers
-
 .card--cnn .card__background-img {
   background-position: bottom right;
 }
@@ -101,8 +90,10 @@
   transform-origin: top right;
 }
 
-
-// responsive styles
+.card--hologram .card__background-img,
+.card--searchparty .card__background-img {
+  display: none;
+}
 
 @include respond-to($bp-small){
   .card__footer {
@@ -114,12 +105,9 @@
     right: -90px;
   }
 
-  .card--hologram .card__background-img {
-    background-position: top right;
-    transform-origin: top right;
-  }
-
+  .card--hologram .card__background-img,
   .card--searchparty .card__background-img {
+    display: block;
     background-position: right;
     transform-origin: top right;
   }

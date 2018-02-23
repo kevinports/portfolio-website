@@ -44,12 +44,17 @@ class GlobalStore {
     window.requestAnimationFrame(this.raf.bind(this));
   }
 
-  on(eventType, callback) {
+  on(eventType, callback, trigger) {
     const id = shortid.generate();
     this._events[id] = {
       type: eventType,
       callback: callback
     };
+    if (trigger) {
+      // trigger callback as it is set for initial values listener may need
+      const val = this.get(eventType.replace("change:", ""));
+      callback.call(this, val, val);
+    }
     return id;
   }
 

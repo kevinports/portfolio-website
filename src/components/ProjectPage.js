@@ -47,7 +47,8 @@ class ProjectPage extends React.Component {
                       bordered={content.bordered}
                       caption={content.caption}/>
           case 'screenViewer':
-            return <ScreenViewer key={i}
+            return <ScreenViewer
+                      key={i}
                       images={content.images}/>
           default:
             return '';
