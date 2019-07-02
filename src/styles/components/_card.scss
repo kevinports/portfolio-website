@@ -5,7 +5,6 @@
 }
 
 .card {
-  transition: opacity 0.3s, transform 0.2s, box-shadow 0.3s;
   position: relative;
   border-radius: 5px;
   border-style: solid;
@@ -26,6 +25,10 @@
     backface-visibility: hidden;
     transform: scale3D(1.025, 1.025, 1);
   }
+}
+
+main:not(.animating) .card { // prevent some fout on homepage load
+  transition: opacity 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
 .card__header {

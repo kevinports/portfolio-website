@@ -1,179 +1,6 @@
 const data = [
   {
     "id": 0,
-    "name": "Hologram",
-    "slug": "hologram",
-    "title": "Led product and brand design for an IoT startup",
-    "color": "#3951BA",
-    "cardForegroundImg": true,
-    "cardBackgroundSrc": "img/hologram-card-back.jpg",
-    "cardBackgroundSrc2x": "img/hologram-card-back@2x.jpg",
-    overview: [
-      "Hologram is a cellular connectivity platform that is shaping the future of an emerging IoT industry.",
-      "I joined the team at an early stage and built out a fully fledged product and brand design program."
-    ],
-    roles: [
-      "Brand design",
-      "Product design",
-    ],
-    when: "2016-2017",
-    content: [
-      {
-        id: 0,
-        type: "img",
-        src: "img/projects/holo-1.jpg",
-        src2x: "img/projects/holo-1@2x.jpg"
-      },
-      {
-        id: 1,
-        type: "section-header",
-        headline: "Branding",
-        body: "The logo itself was designed by the immensely talented Alex Sheyn. I took the concept and ran with it, building out an array of brand applications ranging from physical packaging to conference booths."
-      },
-      {
-        id: 2,
-        type: "img",
-        src: "img/projects/holo-2.jpg",
-        src2x: "img/projects/holo-2@2x.jpg"
-      },
-      {
-        id: 3,
-        type: "img",
-        src: "img/projects/holo-3.jpg",
-        src2x: "img/projects/holo-3@2x.jpg"
-      },
-      {
-        id: 4,
-        type: "img",
-        src: "img/projects/holo-4.jpg",
-        src2x: "img/projects/holo-4@2x.jpg"
-      },
-      {
-        id: 5,
-        type: "img",
-        src: "img/projects/holo-5.jpg",
-        src2x: "img/projects/holo-5@2x.jpg"
-      },
-      {
-        id: 6,
-        type: "img",
-        src: "img/projects/holo-6.jpg",
-        src2x: "img/projects/holo-6@2x.jpg"
-      },
-      {
-        id: 7,
-        type: "img",
-        src: "img/projects/holo-7.jpg",
-        src2x: "img/projects/holo-7@2x.jpg"
-      },
-
-
-
-      {
-        id: 8,
-        type: "section-header",
-        headline: "Marketing website",
-        body: "I designed and helped develop a marketing site featuring product offerings, developer documentation and an e-commerce experience."
-      },
-      {
-        id: 9,
-        type: "screenViewer",
-        images: [{
-          id: 1,
-          name: "Hardware",
-          src: "img/projects/holo-9.jpg",
-          src2x: "img/projects/holo-9@2x.jpg"
-        },{
-          id: 2,
-          name: "Cellular connectivity",
-          src: "img/projects/holo-10.jpg",
-          src2x: "img/projects/holo-10@2x.jpg"
-        },{
-          id: 3,
-          name: "Cloud Services",
-          src: "img/projects/holo-11.jpg",
-          src2x: "img/projects/holo-11@2x.jpg"
-        },{
-          id: 4,
-          name: "Docs",
-          src: "img/projects/holo-12.jpg",
-          src2x: "img/projects/holo-12@2x.jpg"
-        },{
-          id: 5 ,
-          name: "Store",
-          src: "img/projects/holo-13.jpg",
-          src2x: "img/projects/holo-13@2x.jpg"
-        }]
-      },
-      {
-        id: 10,
-        type: "video",
-        srcMp4: "video/holo_animation.mp4",
-        srcWebM: "video/holo_animation.webm",
-        poster: "video/posters/holo_animation.jpg",
-        caption: "Here's a video of a HTML Canvas animation I programmed for the marketing site."
-      },
-
-      {
-        id: 11,
-        type: "section-header",
-        headline: "Product design",
-        body: "The web app helps developers manage fleets of cellular enabled devices and build middleware to route their sensor data to other apps."
-      },
-      {
-        id: 12,
-        type: "img",
-        src: "img/projects/holo-14.jpg",
-        src2x: "img/projects/holo-14@2x.jpg"
-      },
-      {
-        id: 13,
-        type: "img",
-        src: "img/projects/holo-15.jpg",
-        src2x: "img/projects/holo-15@2x.jpg"
-      },
-      {
-        id: 14,
-        type: "img",
-        src: "img/projects/holo-16.jpg",
-        src2x: "img/projects/holo-16@2x.jpg"
-      },
-      {
-        id: 15,
-        type: "img",
-        src: "img/projects/holo-17.jpg",
-        src2x: "img/projects/holo-17@2x.jpg"
-      },
-      {
-        id: 16,
-        type: "img",
-        src: "img/projects/holo-18.jpg",
-        src2x: "img/projects/holo-18@2x.jpg"
-      },
-      {
-        id: 17,
-        type: "img",
-        src: "img/projects/holo-19.jpg",
-        src2x: "img/projects/holo-19@2x.jpg"
-      },
-      {
-        id: 18,
-        type: "img",
-        src: "img/projects/holo-20.jpg",
-        src2x: "img/projects/holo-20@2x.jpg"
-      },
-      {
-        id: 19,
-        type: "img",
-        src: "img/projects/holo-21.jpg",
-        src2x: "img/projects/holo-21@2x.jpg"
-      }
-    ]
-  },
-
-
-  {
-    "id": 1,
     "name": "CNN",
     "slug": "cnn",
     "title": "Designed and developed a web companion for the CNN Magic Wall",
@@ -243,9 +70,8 @@ const data = [
     ]
   },
 
-
   {
-    "id": 2,
+    "id": 1,
     "name": "Facebook",
     "slug": "facebook",
     "title": "Was a technical design lead for the Facebook Developer Conference",
@@ -461,6 +287,177 @@ const data = [
     ]
   },
 
+  {
+    "id": 2,
+    "name": "Hologram",
+    "slug": "hologram",
+    "title": "Led product and brand design for an IoT startup",
+    "color": "#3951BA",
+    "cardForegroundImg": true,
+    "cardBackgroundSrc": "img/hologram-card-back.jpg",
+    "cardBackgroundSrc2x": "img/hologram-card-back@2x.jpg",
+    overview: [
+      "Hologram is a cellular connectivity platform that is shaping the future of an emerging IoT industry.",
+      "I joined the team at an early stage and built out a fully fledged product and brand design program."
+    ],
+    roles: [
+      "Brand design",
+      "Product design",
+    ],
+    when: "2016-2017",
+    content: [
+      {
+        id: 0,
+        type: "img",
+        src: "img/projects/holo-1.jpg",
+        src2x: "img/projects/holo-1@2x.jpg"
+      },
+      {
+        id: 1,
+        type: "section-header",
+        headline: "Branding",
+        body: "The logo itself was designed by the immensely talented Alex Sheyn. I took the concept and ran with it, building out an array of brand applications ranging from physical packaging to conference booths."
+      },
+      {
+        id: 2,
+        type: "img",
+        src: "img/projects/holo-2.jpg",
+        src2x: "img/projects/holo-2@2x.jpg"
+      },
+      {
+        id: 3,
+        type: "img",
+        src: "img/projects/holo-3.jpg",
+        src2x: "img/projects/holo-3@2x.jpg"
+      },
+      {
+        id: 4,
+        type: "img",
+        src: "img/projects/holo-4.jpg",
+        src2x: "img/projects/holo-4@2x.jpg"
+      },
+      {
+        id: 5,
+        type: "img",
+        src: "img/projects/holo-5.jpg",
+        src2x: "img/projects/holo-5@2x.jpg"
+      },
+      {
+        id: 6,
+        type: "img",
+        src: "img/projects/holo-6.jpg",
+        src2x: "img/projects/holo-6@2x.jpg"
+      },
+      {
+        id: 7,
+        type: "img",
+        src: "img/projects/holo-7.jpg",
+        src2x: "img/projects/holo-7@2x.jpg"
+      },
+
+
+
+      {
+        id: 8,
+        type: "section-header",
+        headline: "Marketing website",
+        body: "I designed and helped develop a marketing site featuring product offerings, developer documentation and an e-commerce experience."
+      },
+      {
+        id: 9,
+        type: "screenViewer",
+        images: [{
+          id: 1,
+          name: "Hardware",
+          src: "img/projects/holo-9.jpg",
+          src2x: "img/projects/holo-9@2x.jpg"
+        },{
+          id: 2,
+          name: "Cellular connectivity",
+          src: "img/projects/holo-10.jpg",
+          src2x: "img/projects/holo-10@2x.jpg"
+        },{
+          id: 3,
+          name: "Cloud Services",
+          src: "img/projects/holo-11.jpg",
+          src2x: "img/projects/holo-11@2x.jpg"
+        },{
+          id: 4,
+          name: "Docs",
+          src: "img/projects/holo-12.jpg",
+          src2x: "img/projects/holo-12@2x.jpg"
+        },{
+          id: 5 ,
+          name: "Store",
+          src: "img/projects/holo-13.jpg",
+          src2x: "img/projects/holo-13@2x.jpg"
+        }]
+      },
+      {
+        id: 10,
+        type: "video",
+        srcMp4: "video/holo_animation.mp4",
+        srcWebM: "video/holo_animation.webm",
+        poster: "video/posters/holo_animation.jpg",
+        caption: "Here's a video of a HTML Canvas animation I programmed for the marketing site."
+      },
+
+      {
+        id: 11,
+        type: "section-header",
+        headline: "Product design",
+        body: "The web app helps developers manage fleets of cellular enabled devices and build middleware to route their sensor data to other apps."
+      },
+      {
+        id: 12,
+        type: "img",
+        src: "img/projects/holo-14.jpg",
+        src2x: "img/projects/holo-14@2x.jpg"
+      },
+      {
+        id: 13,
+        type: "img",
+        src: "img/projects/holo-15.jpg",
+        src2x: "img/projects/holo-15@2x.jpg"
+      },
+      {
+        id: 14,
+        type: "img",
+        src: "img/projects/holo-16.jpg",
+        src2x: "img/projects/holo-16@2x.jpg"
+      },
+      {
+        id: 15,
+        type: "img",
+        src: "img/projects/holo-17.jpg",
+        src2x: "img/projects/holo-17@2x.jpg"
+      },
+      {
+        id: 16,
+        type: "img",
+        src: "img/projects/holo-18.jpg",
+        src2x: "img/projects/holo-18@2x.jpg"
+      },
+      {
+        id: 17,
+        type: "img",
+        src: "img/projects/holo-19.jpg",
+        src2x: "img/projects/holo-19@2x.jpg"
+      },
+      {
+        id: 18,
+        type: "img",
+        src: "img/projects/holo-20.jpg",
+        src2x: "img/projects/holo-20@2x.jpg"
+      },
+      {
+        id: 19,
+        type: "img",
+        src: "img/projects/holo-21.jpg",
+        src2x: "img/projects/holo-21@2x.jpg"
+      }
+    ]
+  },
 
   {
     "id": 3,
