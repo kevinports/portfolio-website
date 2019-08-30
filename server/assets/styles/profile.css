@@ -1,0 +1,30 @@
+main > div {
+  margin-top: 5rem;
+  justify-content: space-between;
+}
+
+.overview {
+  max-width: 60rem;
+}
+
+aside {
+  max-width: 42rem;
+  margin-left: 6rem;
+}
+
+.colophon {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  color: rgba(0,0,0,0.5);
+  max-width: 56rem;
+}
+
+@media (max-width: 768px) {
+  aside {
+    margin-left: 0;
+    margin-top: 6rem;
+  }
+  .colophon {
+    max-width: 100%;
+  }
+}

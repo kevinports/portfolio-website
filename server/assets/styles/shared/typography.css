@@ -1,0 +1,128 @@
+html {
+  font-size: 8px;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-graphik);
+  line-height: 1.4;
+}
+
+header,
+main,
+footer {
+  font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6  {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin-top: 4rem;
+  margin-bottom: 12rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.875rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 2.5rem;
+  max-width: 60ch;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p a,
+ul:not(.unstyled) a {
+  transition: 0.2s border;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+ul:not(.unstyled) a {
+  line-height: 1;
+  display: inline-table;
+}
+
+p a:hover,
+ul:not(.unstyled) a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+p.small,
+ul:not(.unstyled) {
+  font-size: 1.875rem;
+}
+
+ul.unstyled,
+ul:not(.unstyled) {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul:not(.unstyled) {
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+ul:not(.unstyled) li {
+  display: flex;
+}
+
+ul:not(.unstyled) li + li {
+  margin-top: 1rem;
+}
+
+ul:not(.unstyled) li::before {
+  content: "\30FB";
+  margin-left: -0.75rem;
+  margin-right: 0.5rem;
+}
+
+p + p,
+p + ul:not(.unstyled) {
+  margin-top: 1.5rem;
+}
+
+p.small + p.small {
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 540px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  p {
+    font-size: 2.2rem;
+  }
+
+  p.small {
+    font-size: 1.6rem;
+  }
+}

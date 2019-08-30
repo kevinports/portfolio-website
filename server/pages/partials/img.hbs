@@ -1,0 +1,11 @@
+<img
+  src={{assetProvider data.src}}
+  srcSet="{{assetProvider data.src}} 1x, {{assetProvider data.src2x}} 2x"
+  alt="Project image"
+  {{#if data.bordered}}
+    class="img--bordered"
+  {{/if}}/>
+
+{{#if data.caption}}
+  <p class="caption">{{{data.caption}}}</p>
+{{/if}}

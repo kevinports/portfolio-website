@@ -1,0 +1,15 @@
+{{#if data.chromed}}
+  <div class="video-chrome"><span></span><span></span><span></span></div>
+{{/if}}
+
+<video class="video-player" poster={{assetProvider data.poster}} controls>
+  <source src={{assetProvider data.srcMp4}} type="video/mp4" />
+  <source src={{assetProvider data.srcWebM}} type="video/webm" />
+  <p>
+    Your browser doesn't support HTML5 video. Here isa <a href={{assetProvider data.srcMp4}}>link to the video</a> instead.
+  </p>
+</video>
+
+{{#if data.caption}}
+  <p class="caption">{{{data.caption}}}</p>
+{{/if}}

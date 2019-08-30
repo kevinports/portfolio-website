@@ -1,7 +1,8 @@
 var AWS = require('aws-sdk');
 var s3 = require('s3');
 require('dotenv').config();
-
+console.log('#########################')
+console.log(process.env.AWS_KEY)
 var client = s3.createClient({
   s3Client: new AWS.S3(),
   s3Options: {

@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    {{> meta}}
+    <link rel="stylesheet" href="/styles/home.css">
+  </head>
+
+  <body>
+    {{> header activeUrl=url}}
+    <main>
+      <h1>Kevin Ports is a front-end developer, designer and problem solver based in Madison, WI, USA</h1>
+
+      <ul class="project-list unstyled" aria-label="projects">
+        {{#each projects}}
+          <li
+            class="project-list_item project-list_item--{{this.slug}}"
+            style="background-color: {{this.color}}; border-color: {{this.color}};">
+
+            <a href="/projects/{{this.slug}}">
+              <hgroup>
+                <h2>{{this.title}}</h2>
+                <span>See case study</span>
+              </hgroup>
+
+              {{#if this.cardForegroundImg}}
+                <img
+                  class="project-list_item-fg"
+                  src="{{assetProvider (concatHash 1='img/' 2=(lookup . 'slug') 3='-card-fore.png')}}"
+                  srcSet="{{assetProvider (concatHash 1='img/' 2=(lookup . 'slug') 3='-card-fore.png')}} 1x, {{assetProvider (concatHash 1='img/' 2=(lookup . 'slug') 3='-card-fore@2x.png')}} 2x"
+                  alt="{{this.name}} item foreground"/>
+              {{/if}}
+
+              <img
+                class="project-list_item-bg"
+                src="{{assetProvider this.cardBackgroundSrc}}"
+                srcSet="{{assetProvider this.cardBackgroundSrc}} 1x, {{assetProvider this.cardBackgroundSrc2x}} 2x"
+                alt="{{this.name}} item background"/>
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </main>
+
+    <footer>
+      <p class="small">Drop me a line</p>
+      <p class="small">
+        <a href="mailto:email@kevin.computer">email@kevin.computer</a>
+      </p>
+      {{> logo}}
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<div class="screen-viewer">
+  <ul class="screen-viewer__menu unstyled" role="tablist" aria-label="Screen tabs">
+    {{#each data.images}}
+      <li>
+        <a href="#{{this.id}}-{{this.name}}" role="tab" aria-controls="panel-{{this.id}}" id="{{this.id}}" >
+          {{this.name}}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+
+  <select class="screen-viewer__menu--mobile" role="tablist" aria-label="Screen select">
+    {{#each data.images}}
+      <option value="{{this.id}}" role="tab" aria-controls="panel-{{this.id}}" id="{{this.id}}">
+        {{this.name}}
+      </option>
+    {{/each}}
+  </select>
+
+  <div class="screen-viewer__screen">
+    <div class="screen-viewer__screen--inner">
+      {{#each data.images}}
+        <div class="screen-viewer__image" id="panel-{{this.name}}" data-index="{{this.id}}" role="tabpanel" aria-labelledby="tab-{{this.id}}">
+          <img
+            src={{assetProvider this.src}}
+            srcSet="{{assetProvider this.src}} 1x, {{assetProvider this.src2x}} 2x"
+            alt="{{this.name}} page"/>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

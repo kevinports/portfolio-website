@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    {{> meta}}
+    <link rel="stylesheet" href="/styles/profile.css">
+  </head>
+  <body>
+    {{> header activeUrl=url}}
+    <main>
+      <div class="flex">
+        <div class="overview">
+          <p>
+            I’m a front-end developer and designer interested in tools, technology and workmanship.
+          </p>
+          <p>
+            Currently working at <a href="https://www.ionicframework.com">Ionic</a> as a designer and front-end developer.
+          </p>
+          <p>
+            Previously I’ve led product design at an IoT startup, was the front-end lead for the Facebook Developer Conference, and worked as a designer and developer with a variety of digital studios in Chicago.
+          </p>
+          <p>
+            Spending my time in the great outdoors near Madison, WI and loving it.
+          </p>
+        </div>
+
+        <aside>
+          <img
+            src={{assetProvider "img/profile-portrait.jpg"}}
+            srcSet="{{assetProvider "img/profile-portrait.jpg"}} 1x, {{assetProvider "img/profile-portrait@2x.jpg"}} 2x"
+            alt="Fly fishing the driftless"/>
+
+          <h3>Get in touch</h3>
+          <ul class="">
+            <li><a href="mailto:email@kevin.computer">Email</a></li>
+            <li><a href="https://github.com/kevinports">Github</a></li>
+            <li><a href="https://dribbble.com/kevin-ports">Dribbble</a></li>
+          </ul>
+
+        </aside>
+      </div>
+
+      <div class="colophon">
+        <p class="small">
+          This site was built with <3 using progressive enhancement. <a href="https://github.com/kevinports/portfolio-website">View source</a>
+        </p>
+      </div>
+
+    </main>
+  </body>
+</html>

@@ -13,13 +13,15 @@
     "build": "NODE_ENV=production webpack -p --progress",
     "rev": "rm -rf www/assets_rev/ && nodeRev 'www/assets/**/*.+(css|js|jpg|png|mp4|gif|webm)' --hash -o 'www/assets_rev/' --file 'www/asset.manifest.json'",
     "deploy": "yarn build && yarn rev && node ./scripts/s3-sync",
-    "prod": "NODE_ENV=production node server"
+    "prod": "NODE_ENV=production node server",
+    "serve": "NODE_ENV=development nodemon -e js,hbs index.js"
   },
   "author": "Kevin Ports",
   "dependencies": {
     "dotenv": "^5.0.0",
     "express": "^4.16.2",
-    "hbs": "^4.0.1"
+    "hbs": "^4.0.1",
+    "nodemon": "^1.19.1"
   },
   "devDependencies": {
     "aws-sdk": "^2.201.0",

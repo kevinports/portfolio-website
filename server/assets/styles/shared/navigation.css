@@ -1,0 +1,54 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+footer {
+  padding-bottom: 6rem;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding-bottom: 2rem;
+  }
+}
+
+nav[aria-label="Site"] a {
+  display: inline-block;
+}
+
+nav a:not([aria-label="current page"]) {
+  transition: 0.2s opacity;
+  opacity: 0.5;
+}
+
+nav a:not([aria-label="current page"]):hover {
+  opacity: 1;
+}
+
+nav ul {
+  display: inline-flex;
+  font-size: 1.875rem;
+}
+
+nav ul li + li {
+  margin-left: 2.5rem;
+}
+
+nav[aria-label="Site"] [aria-label="current page"] {
+  border-bottom: 1px solid var(--color-black);
+}
+
+nav[aria-label="Projects"] {
+  width: 100%;
+}
+
+nav[aria-label="Projects"] ul {
+  display: flex;
+}
+
+nav[aria-label="Projects"] ul li:first-child {
+  margin-right: auto;
+}

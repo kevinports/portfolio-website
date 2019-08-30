@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    {{> meta}}
+    <link rel="stylesheet" href="/styles/project.css">
+  </head>
+  <body>
+    <header>
+      {{> project-nav lastProject=(lookup . "lastProject") nextProject=(lookup . "nextProject")}}
+    </header>
+
+    <main>
+      <section role="banner" class="flex">
+        <div>
+          <h1>{{project.title}}</h1>
+        </div>
+
+        <div>
+          {{#each project.overview}}
+            <p>{{{this}}}</p>
+          {{/each}}
+
+          <div class="flex">
+            <div>
+              <h3>My role</h3>
+              <ul>
+                {{#each project.roles}}
+                  <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+
+            <div>
+              <h3>When</h3>
+              <p class="small">{{project.when}}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        {{#each project.content}}
+          {{> (lookup . "type") data=this }}
+        {{/each}}
+      </section>
+    </main>
+
+    <footer>
+      {{> project-nav lastProject=(lookup . "lastProject") nextProject=(lookup . "nextProject")}}
+    </footer>
+
+    <script type="module" src="/scripts/project.js"></script>
+  </body>
+</html>

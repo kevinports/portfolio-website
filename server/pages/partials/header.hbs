@@ -1,0 +1,16 @@
+<header>
+  <a href="/">
+    {{> logo}}
+  </a>
+
+  <nav role="navigation" aria-label="Site">
+    <ul class="unstyled">
+      <li>
+        <a href="/" {{#ifEquals activeUrl "/"}}aria-label="current page"{{/ifEquals}}>Work</a>
+      </li>
+      <li>
+        <a href="/profile" {{#ifEquals activeUrl "/profile"}}aria-label="current page"{{/ifEquals}}>Profile</a>
+      </li>
+    </ul>
+  </nav>
+</header>
