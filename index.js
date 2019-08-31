@@ -1,18 +1,16 @@
 // NEW PROGRESSIVE ENHANCEMENT SERVER
-
 const express = require('express');
 const path = require('path');
 const http = require('http');
 const Handlebars = require('hbs');
 const fs = require('fs');
 const projectCollection = require('./data.js')
-const assetManifest = require('./www/asset.manifest.json');
+const assetManifest = require('./server/asset.manifest.json');
 
 require('dotenv').config();
 
 const port = normalizePort(process.env.PORT || '3001');
 const app = express();
-
 app.use(express.static('./server/assets'));
 app.set('views', path.join(__dirname, './server'));
 app.set('view engine', 'hbs');
@@ -35,7 +33,7 @@ Handlebars.registerPartial({
 });
 
 Handlebars.registerHelper('assetProvider', (path) => {
-  if (process.env === 'production') {
+  if (process.env.NODE_ENV === 'production') {
     const revPath = assetManifest[path];
     const prodPath = process.env.PROD_ASSET_PATH;
     return prodPath + revPath;
@@ -56,7 +54,6 @@ Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
 });
 
 app.get('/', function(req, res) {
-  console.log()
   res.render('pages/index', {
     url: req.url,
     projects: projectCollection
@@ -71,7 +68,7 @@ app.get('/profile', function(req, res) {
 
 app.get('/projects/:slug', function(req, res) {
   const project = projectCollection.find((project) => project.slug === req.params.slug);
-  // console.log(project )
+
   res.render('pages/project', {
     url: req.url,
     project: project,

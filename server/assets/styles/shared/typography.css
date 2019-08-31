@@ -17,10 +17,7 @@ footer {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6  {
+h3  {
   font-weight: 500;
 }
 
@@ -53,20 +50,13 @@ a {
   text-decoration: none;
 }
 
-p a,
-ul:not(.unstyled) a {
+p a {
   transition: 0.2s border;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid var(--color-moon);
 }
 
-ul:not(.unstyled) a {
-  line-height: 1;
-  display: inline-table;
-}
-
-p a:hover,
-ul:not(.unstyled) a:hover {
-  border-bottom: 1px solid rgba(0, 0, 0, 1);
+p a:hover {
+  border-bottom: 1px solid var(--color-black);
 }
 
 p.small,
@@ -74,8 +64,7 @@ ul:not(.unstyled) {
   font-size: 1.875rem;
 }
 
-ul.unstyled,
-ul:not(.unstyled) {
+ul {
   margin: 0;
   padding: 0;
   list-style-type: none;

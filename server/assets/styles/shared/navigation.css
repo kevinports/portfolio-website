@@ -15,21 +15,21 @@ footer {
   }
 }
 
-nav[aria-label="Site"] a {
-  display: inline-block;
-}
-
 nav a:not([aria-label="current page"]) {
-  transition: 0.2s opacity;
-  opacity: 0.5;
+  transition: 0.2s color;
+  color: var(--color-gray);
 }
 
 nav a:not([aria-label="current page"]):hover {
-  opacity: 1;
+  color: var(--color-black);
+}
+
+a[aria-label="current page"] {
+  pointer-events: none;
 }
 
 nav ul {
-  display: inline-flex;
+  display: flex;
   font-size: 1.875rem;
 }
 
@@ -43,10 +43,6 @@ nav[aria-label="Site"] [aria-label="current page"] {
 
 nav[aria-label="Projects"] {
   width: 100%;
-}
-
-nav[aria-label="Projects"] ul {
-  display: flex;
 }
 
 nav[aria-label="Projects"] ul li:first-child {

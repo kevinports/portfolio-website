@@ -12,10 +12,14 @@ aside {
   margin-left: 6rem;
 }
 
+aside ul li + li {
+  margin-top: 1rem;
+}
+
 .colophon {
   margin-top: 8rem;
   margin-bottom: 2rem;
-  color: rgba(0,0,0,0.5);
+  color: var(--color-gray);
   max-width: 56rem;
 }
 
@@ -24,6 +28,7 @@ aside {
     margin-left: 0;
     margin-top: 6rem;
   }
+
   .colophon {
     max-width: 100%;
   }

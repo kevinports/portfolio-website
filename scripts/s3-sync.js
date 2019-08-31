@@ -13,7 +13,7 @@ var client = s3.createClient({
 });
 
 const params = {
-  localDir: "./www/assets_rev/",
+  localDir: "./server/assets_rev/",
   deleteRemoved: true,
   s3Params: {
     Bucket: process.env.AWS_S3_BUCKET_NAME,
