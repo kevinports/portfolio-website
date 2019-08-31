@@ -2,7 +2,7 @@
   <ul class="screen-viewer__menu unstyled" role="tablist" aria-label="Screen tabs">
     {{#each data.images}}
       <li>
-        <a href="#{{this.id}}-{{this.name}}" role="tab" aria-controls="panel-{{this.id}}" id="{{this.id}}" >
+        <a href="#panel-{{this.name}}" role="tab" aria-controls="panel-{{this.id}}" id="{{this.id}}" >
           {{this.name}}
         </a>
       </li>
