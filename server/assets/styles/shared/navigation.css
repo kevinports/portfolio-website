@@ -1,8 +1,13 @@
 header {
-  display: flex;
-  justify-content: space-between;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+@supports (display: flex) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 footer {
@@ -28,9 +33,15 @@ a[aria-label="current page"] {
   pointer-events: none;
 }
 
-nav ul {
-  display: flex;
-  font-size: 1.875rem;
+@supports (display: flex) {
+  nav ul {
+    display: flex;
+    font-size: 1.875rem;
+  }
+}
+
+nav ul li {
+  display: inline;
 }
 
 nav ul li + li {

@@ -12,19 +12,23 @@ body {
   padding: 0 2rem;
 }
 
-.flex {
-  display: flex;
-}
-
-.flex > * {
-  flex: 1;
-}
-
-@media (max-width: 768px) {
+@supports (display: flex) {
   .flex {
-    flex-direction: column;
+    display: flex;
+  }
+
+  .flex > * {
+    flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    .flex {
+      flex-direction: column;
+    }
   }
 }
+
+
 
 img {
   width: 100%;

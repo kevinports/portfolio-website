@@ -1,9 +1,3 @@
-.project-list {
-  display: grid;
-	grid-auto-rows: 1fr;
-  grid-row-gap: 2rem;
-}
-
 .project-list hgroup {
   position: relative;
   z-index: 3;
@@ -15,6 +9,10 @@
   max-height: 52rem;
   border-radius: 1rem;
   overflow: hidden;
+}
+
+.project-list_item + .project-list_item {
+  margin-top: 2rem;
 }
 
 .project-list_item a {
@@ -50,8 +48,6 @@
   bottom: -1rem;
   right: -12rem;
 }
-
-
 
 .project-list_item-bg {
   transform-origin: top center;
@@ -94,6 +90,7 @@
 
 .project-list_item h2,
 .project-list_item span {
+  color: #fff;
   color: var(--color-white);
 }
 
