@@ -1,0 +1,85 @@
+@import "./components/screen-viewer.css";
+
+[role="banner"] {
+  margin-top: 7rem;
+  margin-bottom: 8rem;
+}
+
+[role="banner"] + section > *:first-child {
+  margin-top: 0;
+}
+
+[role="banner"] + section {
+  margin-bottom: 20rem;
+}
+
+h1 {
+  margin-top: 0;
+  max-width: 20ch;
+}
+
+p {
+  width: 100%;
+  max-width: 512rem;
+}
+
+hgroup {
+  margin-top: 16rem;
+  max-width: 68rem;
+}
+
+hgroup.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+video,
+img {
+  width: 100%;
+  margin-top: 6rem;
+}
+
+img + img {
+  margin-top: 2rem;
+}
+
+.caption {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--color-gray);
+}
+
+.caption::before {
+  content: '↑';
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    margin-top: 1rem;
+  }
+
+  p,
+  ul:not(.unstyled) {
+    max-width: 60rem;
+  }
+
+  p + .flex {
+    margin-top: 2rem;
+  }
+
+  hgroup {
+    margin-top: 8rem;
+  }
+
+  video,
+  img {
+    margin-top: 4rem;
+  }
+}

@@ -1,0 +1,7 @@
+html {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #707070;
+  --color-moon: #AAAAAA;
+  --font-graphik: "Graphik", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}

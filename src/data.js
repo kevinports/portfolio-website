@@ -89,14 +89,6 @@ const data = [
     ],
     when: '2014-2016',
     content: [
-      {
-        id: 1,
-        type: "video",
-        srcMp4: "video/f8_reel.mp4",
-        srcWebM: "video/f8_reel.webm",
-        poster: "video/posters/f8_reel.jpg",
-        caption: "Here's an overview that'll give you a feel for what the event was like."
-      },
 
       {
         id: 2,
@@ -283,7 +275,21 @@ const data = [
         type: "img",
         src: "img/projects/f8-21.jpg",
         src2x: "img/projects/f8-21@2x.jpg"
-      }
+      },
+      {
+        id: 27,
+        type: "section-header",
+        headline: "Outcome",
+        body: "It was a thrill to see the whole event experience come together. The event experience merged every medium the the design team's toolkit."
+      },
+      {
+        id: 1,
+        type: "video",
+        srcMp4: "video/f8_reel.mp4",
+        srcWebM: "video/f8_reel.webm",
+        poster: "video/posters/f8_reel.jpg",
+        caption: "Here's an overview that'll give you a feel for what the event was like."
+      },
     ]
   },
 
