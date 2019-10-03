@@ -89,7 +89,12 @@ const data = [
     ],
     when: '2014-2016',
     content: [
-
+      {
+        id: 4,
+        type: "img",
+        src: "img/projects/f8-3.jpg",
+        src2x: "img/projects/f8-3@2x.jpg"
+      },
       {
         id: 2,
         type: "section-header",
@@ -102,12 +107,7 @@ const data = [
         src: "img/projects/f8-1.jpg",
         src2x: "img/projects/f8-1@2x.jpg"
       },
-      {
-        id: 4,
-        type: "img",
-        src: "img/projects/f8-3.jpg",
-        src2x: "img/projects/f8-3@2x.jpg"
-      },
+
       {
         id: 5,
         type: "img",
@@ -115,7 +115,6 @@ const data = [
         src2x: "img/projects/f8-4@2x.jpg",
         caption: "Here's the UI for one of the generative graphics tools I built. <a className='btn__link' href='/demos/curvinator'>Take it for a spin</a>"
       },
-
       {
         id: 6,
         type: "section-header",
