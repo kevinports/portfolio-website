@@ -38,7 +38,12 @@ class Card extends React.Component {
             </div>
           </div>
           { footer }
-          <div className="card__background-img" style={{"backgroundImage": `url('${bgImagePath}')`}}></div>
+          <div
+            className="card__background-img"
+            style={{"backgroundImage": `url('${bgImagePath}')`}}
+            role="img"
+            aria-label={`${project.title} illustration`}
+            ></div>
       </Link>
     )
   }

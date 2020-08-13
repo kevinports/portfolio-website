@@ -64,8 +64,7 @@ class ProjectPage extends React.Component {
             last={lastProject}/>
         </Wrapper>
         <Wrapper name="transition-body">
-          <section role="content" className="mb-5">
-
+          <section className="mb-5">
             <div className="row mb-3 transition-horiz">
               <div className="col-12 col-6-md">
                 <div className="pr-3">

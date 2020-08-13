@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="header pt-2 pb-3">
       <Logo />
-      <nav className="nav ml-3">
+      <nav className="nav ml-3" role="navigation" aria-label="Site">
         <NavLink to="/" exact className="nav__link" activeClassName="nav__link--active">Work</NavLink>
         <NavLink to="/profile" className="nav__link" activeClassName="nav__link--active">Profile</NavLink>
       </nav>

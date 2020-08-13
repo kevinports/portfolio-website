@@ -12,7 +12,7 @@ const Img = (props) => {
 
   return (
     <ContentWrapper type="img">
-      <img src={ src } srcSet={`${src} 1x, ${src2x} 2x`} className={ bordered ? "img--bordered" : ""} />
+      <img src={ src } srcSet={`${src} 1x, ${src2x} 2x`} className={ bordered ? "img--bordered" : ""} alt="Project image" />
       { captionEl }
     </ContentWrapper>
   )

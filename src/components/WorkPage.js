@@ -18,7 +18,7 @@ class WorkPage extends React.Component {
           <div className="measure-lg pb-3 pb-4-md mb-1 transition-horiz">
             <h3 className="f-4 pr-3 f-medium">Kevin Ports is a frontend developer and designer based in Madison, WI, USA</h3>
           </div>
-          <div className="card-list">
+          <div className="card-list" aria-label="projects">
             {data.map(project =>
               <Card
                 project={project}

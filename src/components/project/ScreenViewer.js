@@ -92,32 +92,69 @@ class ScreenViewer extends React.Component {
 
   render () {
     const img = this.props.images.find(o => o.id === this.state.activeTabId);
-    let { src, src2x } = img;
+    let { name, id, src, src2x } = img;
     src = assetProvider(src);
     src2x = assetProvider(src2x);
 
     const menuItems = this.props.images.map(i => {
       if (this.state.activeTabId === i.id) {
-        return <li className='screen-viewer__menu-item screen-viewer__menu-item--active' key={i.id}>{i.name}</li>
+        return (
+          <li
+            role="tab"
+            aria-selected="true"
+            aria-controls={`panel-${i.id}`}
+            id={i.id}
+            className='screen-viewer__menu-item screen-viewer__menu-item--active'
+            key={i.id}>
+            {i.name}
+          </li>
+        )
       } else {
-        return <li className='screen-viewer__menu-item' key={i.id} onClick={ this.handleMenuClick.bind(this, i.id) }>{i.name}</li>
+        return (
+          <li
+            role="tab"
+            aria-controls={`panel-${i.id}`}
+            id={i.id}
+            className='screen-viewer__menu-item'
+            key={i.id}
+            onClick={ this.handleMenuClick.bind(this, i.id) }>
+            {i.name}
+          </li>
+        )
       }
     });
 
     const selectItems = this.props.images.map(i => {
-      return <option value={i.id} key={i.id}>{i.name}</option>
+      return (
+        <option
+          role="tab"
+          value={i.id}
+          key={i.id}
+          aria-controls={`panel-${i.id}`}
+          id={i.id}>
+          {i.name}
+        </option>
+      )
     });
 
     let screenPicker;
     if (this.state.isMobileView) {
       screenPicker = (
-        <select className="screen-viewer__select f-2 mt-2" value={this.state.activeTabId} onChange={this.handleSelectChange}>
+        <select
+          className="screen-viewer__select f-2 mt-2"
+          role="tablist"
+          aria-label="Screen select"
+          value={this.state.activeTabId}
+          onChange={this.handleSelectChange}>
           { selectItems }
         </select>
       )
     } else {
       screenPicker = (
-        <ul className="screen-viewer__menu f-1 f-medium pt-2">
+        <ul
+          className="screen-viewer__menu f-1 f-medium pt-2"
+          role="tablist"
+          aria-label="Screen tabs">
           { menuItems }
         </ul>
       )
@@ -126,10 +163,14 @@ class ScreenViewer extends React.Component {
     return (
       <div className={"screen-viewer mb-4 transition-stagger " + (this.state.scrollable ? "screen-viewer--scrollable" : "")} ref="El">
 
-        <div className="screen-viewer__screen pa-2 pa-3-md">
+        <div
+          className="screen-viewer__screen pa-2 pa-3-md"
+          id={`panel-${name}`}
+          role="tabpanel"
+          aria-labelledby={`tab-${id}`}>
           <div className="screenViewer__help-text f-1 f-medium" ref="helpTextEl"><span>Scroll to preview page</span></div>
           <div className="screen-viewer__screen-inner" onScroll={this.handleInnerScreenScroll} ref="screenEl">
-            <img src={ src } srcSet={`${src} 1x, ${src2x} 2x`}/>
+            <img src={ src } srcSet={`${src} 1x, ${src2x} 2x`} alt={name}/>
           </div>
         </div>
 
