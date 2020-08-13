@@ -1,7 +1,5 @@
 import React from 'react';
 import renderHTML from 'react-render-html';
-
-import Header from './common/Header';
 import Wrapper from './common/Wrapper';
 import TransitionRoot from './common/TransitionRoot';
 import NavControl from './project/NavControl';
