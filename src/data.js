@@ -26,7 +26,7 @@ const data = [
       },
 
       {
-        id: 0,
+        id: 1,
         type: "section-header",
         headline: "Appflow",
         body: [
@@ -35,39 +35,37 @@ const data = [
         ].join('')
       },
       {
-        id: 1,
+        id: 2,
         type: "img",
         src: "img/projects/ionic-2.png",
         src2x: "img/projects/ionic-2@2x.png"
       },
       {
-        id: 1,
+        id: 3,
         type: "img",
         src: "img/projects/ionic-3.png",
         src2x: "img/projects/ionic-3@2x.png"
       },
       {
-        id: 1,
+        id: 4,
         type: "img",
         src: "img/projects/ionic-4.png",
         src2x: "img/projects/ionic-4@2x.png"
       },
       {
-        id: 1,
+        id: 5,
         type: "img",
         src: "img/projects/ionic-5.png",
         src2x: "img/projects/ionic-5@2x.png"
       },
       {
-        id: 1,
+        id: 6,
         type: "img",
         src: "img/projects/ionic-6.png",
         src2x: "img/projects/ionic-6@2x.png"
       },
-
-
       {
-        id: 0,
+        id: 7,
         type: "section-header",
         headline: "Ionicons",
         body: [
@@ -82,18 +80,15 @@ const data = [
           '</ul>'
         ].join('')
       },
-
-
       {
-        id: 1,
+        id: 8,
         type: "img",
         src: "img/projects/ionic-7.png",
         src2x: "img/projects/ionic-7@2x.png",
         caption: 'Though I drew a decent portion of them, the majority of artwork credit goes to <a className="btn__link" href="http://bensperry.com/">Ben Sperry</a>.'
       },
-
       {
-        id: 1,
+        id: 9,
         type: "img",
         src: "img/projects/ionic-8.png",
         src2x: "img/projects/ionic-8@2x.png",
@@ -101,7 +96,7 @@ const data = [
       },
 
       {
-        id: 0,
+        id: 10,
         type: "video",
         srcMp4: "video/ionicons.mp4",
         srcWebM: "video/ionicons.webm",
@@ -110,7 +105,7 @@ const data = [
       },
 
       {
-        id: 0,
+        id: 11,
         type: "section-header",
         headline: "Ionic Studio",
         body: [
@@ -120,42 +115,42 @@ const data = [
       },
 
       {
-        id: 1,
+        id: 12,
         type: "img",
         src: "img/projects/ionic-9.png",
         src2x: "img/projects/ionic-9@2x.png"
       },
 
       {
-        id: 1,
+        id: 13,
         type: "img",
         src: "img/projects/ionic-10.png",
         src2x: "img/projects/ionic-10@2x.png"
       },
 
       {
-        id: 1,
+        id: 14,
         type: "img",
         src: "img/projects/ionic-11.png",
         src2x: "img/projects/ionic-11@2x.png"
       },
 
       {
-        id: 1,
+        id: 15,
         type: "img",
         src: "img/projects/ionic-12.png",
         src2x: "img/projects/ionic-12@2x.png"
       },
 
       {
-        id: 1,
+        id: 16,
         type: "img",
         src: "img/projects/ionic-13.png",
         src2x: "img/projects/ionic-13@2x.png"
       },
 
       {
-        id: 0,
+        id: 17,
         type: "section-header",
         headline: "Ionic DS",
         body: [
@@ -171,7 +166,7 @@ const data = [
       },
 
       {
-        id: 1,
+        id: 18,
         type: "img",
         src: "img/projects/ionic-14.png",
         src2x: "img/projects/ionic-14@2x.png",
@@ -265,12 +260,12 @@ const data = [
     "id": 1,
     "name": "Facebook",
     "slug": "facebook",
-    "title": "Was a frontend lead for the Facebook Developer Conference",
+    "title": "Was a technical design lead for the Facebook Developer Conference",
     "color": "#191946",
     "cardBackgroundSrc": "img/f8-card-back.jpg",
     "cardBackgroundSrc2x": "img/f8-card-back@2x.jpg",
     overview: [
-      'Frontend development for an identity program and event experience for three consecutive Facebook developer conferences.',
+      'Development and design for an identity program and event experience for three consecutive Facebook developer conferences.',
       'There was close collaboration with a Facebook design team to develop generative design tools for the conference branding each year.'
     ],
     roles: [

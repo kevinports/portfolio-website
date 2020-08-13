@@ -19,7 +19,7 @@ class ProfilePage extends React.Component {
             <div className="measure-lg f-2 f-3-sm mr-3 transition-stagger">
               <p>I’m a frontend developer and designer interested in tools, technology and workmanship.</p>
               <p>Currently working at <a className="btn__link" href="https://ionicframework.com">Ionic</a>.</p>
-              <p>Previously I was a frontend lead for Facebook, led product design at an IoT startup, and worked as a developer and designer with a variety of digital design studios in Chicago.</p>
+              <p>Previously I was a technical design lead with Facebook, led product design at an IoT startup, and worked as a developer and designer with a variety of digital design studios in Chicago.</p>
               <p>Spending my time in the great outdoors near Madison, WI and loving it.</p>
             </div>
             <div className="measure-md mt-3 mt-0-md transition-stagger">

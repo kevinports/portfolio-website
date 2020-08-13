@@ -28,10 +28,6 @@ const transitions = {
   }
 }
 
-function pageEnter (el) {
-  TweenLite.set(el, {'display': 'block'})
-}
-
 function switchTransitionEnter(el) {
   const body = el.querySelector('.transition-body');
   const staggers = Array.from(el.querySelectorAll('.transition-stagger'));
@@ -80,7 +76,6 @@ function switchTransitionExit(el) {
 
 function pageTransitionEnter (el) {
   const header = el.querySelector('.transition-header');
-  const body = el.querySelector('.transition-body');
   const staggers = Array.from(el.querySelectorAll('.transition-stagger'));
   const horiz = el.querySelector('.transition-horiz');
 
@@ -170,7 +165,6 @@ function zoomTransitionExit (el) {
 }
 
 function projectTransitionEnter (el, direction) {
-  const body = el.querySelector('.transition-body');
   const horiz = el.querySelector('.transition-horiz');
   const fade = el.querySelector('.transition-fade');
   const staggers = Array.from(el.querySelectorAll('.transition-stagger'));
@@ -207,7 +201,6 @@ function projectTransitionEnter (el, direction) {
 
 function projectTransitionExit (el, direction) {
   const header = el.querySelector('.transition-header');
-  const body = el.querySelector('.transition-body');
   const horiz = el.querySelector('.transition-horiz');
   const fades = Array.from(el.querySelectorAll('.transition-fade'));
 
