@@ -1,5 +1,188 @@
 const data = [
   {
+    "id": 7,
+    "name": "Ionic",
+    "slug": "ionic",
+    "title": "Designing and developing for the Ionic team",
+    "color": "#3880FF",
+    "cardForegroundImg": true,
+    "cardBackgroundSrc": "img/ionic-card-back.png",
+    "cardBackgroundSrc2x": "img/ionic-card-back@2x.png",
+    overview: [
+      'Ionic builds products and open-source tools that help developers create apps using web technologies.',
+      'I currently work as a designer and developer across a variety of projects and frontend stacks.'
+    ],
+    roles: [
+      'Product design',
+      'Frontend development'
+    ],
+    when: '2018-Present',
+    content: [
+      {
+        id: 0,
+        type: "img",
+        src: "img/projects/ionic-1.png",
+        src2x: "img/projects/ionic-1@2x.png"
+      },
+
+      {
+        id: 0,
+        type: "section-header",
+        headline: "Appflow",
+        body: [
+          '<p>Appflow is a CI/CD tool that allows developers using Capacitor and Cordova to build and deploy hybrid native apps in the cloud.</p>',
+          '<p>My role on the Appflow team is product designer, as well as helping build and improve the UI layer of the codebase using React / Typescript and Styled Components.</p>',
+        ].join('')
+      },
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-2.png",
+        src2x: "img/projects/ionic-2@2x.png"
+      },
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-3.png",
+        src2x: "img/projects/ionic-3@2x.png"
+      },
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-4.png",
+        src2x: "img/projects/ionic-4@2x.png"
+      },
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-5.png",
+        src2x: "img/projects/ionic-5@2x.png"
+      },
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-6.png",
+        src2x: "img/projects/ionic-6@2x.png"
+      },
+
+
+      {
+        id: 0,
+        type: "section-header",
+        headline: "Ionicons",
+        body: [
+          '<p>Ionicons is a popular open-source icon library built for Ionic Framework. I helped give Ionicons a major overhaul for its recent v5 release.</p>',
+          '<p>My contributions for the release included:</p>',
+          '<ul className="list f-1 mt-2">',
+          '<li>Collaborating on a new design direction and drawing icons</li>',
+          '<li>Helping improve the v5 component api</li>',
+          '<li>Contributing to the build scripts for the <a className="btn__link" href="https://github.com/ionic-team/ionicons/commits?author=kevinports">Ionicons package</a></li>',
+          '<li>Designing and building <a className="btn__link" href="https://ionicons.com/">ionicons.com</a> (built with Stencil / Typescript)</li>',
+          '<li>Building an <a className="btn__link" href="https://github.com/kevinports/ionicons-figma-plugin">Ionicons Figma plugin</a> (built with React / Typescript)</li>',
+          '</ul>'
+        ].join('')
+      },
+
+
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-7.png",
+        src2x: "img/projects/ionic-7@2x.png",
+        caption: 'Though I drew a decent portion of them, the majority of artwork credit goes to <a className="btn__link" href="http://bensperry.com/">Ben Sperry</a>.'
+      },
+
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-8.png",
+        src2x: "img/projects/ionic-8@2x.png",
+        caption: 'I coded the foundation of the current Ionicons website. Here\'s the <a className="btn__link" href="https://github.com/ionic-team/ionicons-site">Github repo</a>.'
+      },
+
+      {
+        id: 0,
+        type: "video",
+        srcMp4: "video/ionicons.mp4",
+        srcWebM: "video/ionicons.webm",
+        poster: "video/posters/ionicons.jpg",
+        caption: `Here's my Ionicons Figma plugin in action. Checkout the <a className="btn__link" href="https://github.com/kevinports/ionicons-figma-plugin">source code</a>.`
+      },
+
+      {
+        id: 0,
+        type: "section-header",
+        headline: "Ionic Studio",
+        body: [
+          '<p>Studio (R.I.P.) was a visual app building tool for low-coders to build Ionic apps.</p>',
+          '<p>My role on the Studio team was product designer, as well as helping build and improve the UI layer of the codebase using Stencil / Typescript and SCSS.</p>',
+        ].join('')
+      },
+
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-9.png",
+        src2x: "img/projects/ionic-9@2x.png"
+      },
+
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-10.png",
+        src2x: "img/projects/ionic-10@2x.png"
+      },
+
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-11.png",
+        src2x: "img/projects/ionic-11@2x.png"
+      },
+
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-12.png",
+        src2x: "img/projects/ionic-12@2x.png"
+      },
+
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-13.png",
+        src2x: "img/projects/ionic-13@2x.png"
+      },
+
+      {
+        id: 0,
+        type: "section-header",
+        headline: "Ionic DS",
+        body: [
+          '<p>As an ongoing initiative to re-architect the aforementioned marketing site properties to be built with Stencil SSR, I\'m leadinf the charge to codify the Ionic visual language into a new design system.</p>',
+          '<p>My initiatives on the project include:</p>',
+          '<ul className="list f-1 mt-2">',
+          '<li>Working with the design team to define tokens, components and patterns in the system</li>',
+          '<li>Modeling the system in Figma with shared libraries for the design team to use</li>',
+          '<li>Working with the engineering team to build components (in Stencil / Typescript and CSS) that have parity with the design tooling</li>',
+          '<li>Helping engineer ways our design tokens are generated and packaged</li>',
+          '</ul>'
+        ].join('')
+      },
+
+      {
+        id: 1,
+        type: "img",
+        src: "img/projects/ionic-14.png",
+        src2x: "img/projects/ionic-14@2x.png",
+        caption: "The DS is currently under construction. Here's a little sneak peak!"
+      }
+
+
+    ]
+  },
+
+  {
     "id": 0,
     "name": "CNN",
     "slug": "cnn",
@@ -14,7 +197,7 @@ const data = [
     roles: [
       'UI design',
       'Prototyping',
-      'Front-end development'
+      'Frontend development'
     ],
     when: '2014',
     content: [
@@ -48,7 +231,15 @@ const data = [
         id: 4,
         type: "section-header",
         headline: "Technical details",
-        body: "<p>I used a variety of awesome techniques and tech to build the app including:</p><ul className='list f-1 mt-2'><li>Consuming political and demographic data from a CNN rest api, then using D3.js to plot map visualizations</li><li>Using Three.js to make rich WebGL data visualizations</li><li>Building SPA architecture with Backbone.js</li><li>Updating the application in realtime on election night with WebSockets</li><li>Using GSAP to give the UI natural motion with  delightful behavior</li></ul>"
+        body: [
+          '<p>I used a variety of awesome techniques and tech to build the app including:</p>',
+          '<ul className="list f-1 mt-2">',
+          '<li>Consuming political and demographic data from a CNN rest api, then using D3.js to plot map visualizations</li>',
+          '<li>Using Three.js to make rich WebGL data visualizations</li><li>Building SPA architecture with Backbone.js</li>',
+          '<li>Updating the application in realtime on election night with WebSockets</li>',
+          '<li>Using GSAP to give the UI natural motion with  delightful behavior</li>',
+          '</ul>'
+        ].join('')
       },
 
 
@@ -74,16 +265,16 @@ const data = [
     "id": 1,
     "name": "Facebook",
     "slug": "facebook",
-    "title": "Was a technical design lead for the Facebook Developer Conference",
+    "title": "Was a frontend lead for the Facebook Developer Conference",
     "color": "#191946",
     "cardBackgroundSrc": "img/f8-card-back.jpg",
     "cardBackgroundSrc2x": "img/f8-card-back@2x.jpg",
     overview: [
-      'Design and development for an identity program and event experience for three consecutive Facebook developer conferences.',
+      'Frontend development for an identity program and event experience for three consecutive Facebook developer conferences.',
       'There was close collaboration with a Facebook design team to develop generative design tools for the conference branding each year.'
     ],
     roles: [
-      'Front-end development',
+      'Frontend development',
       'Creative coding',
       'Visual design'
     ],
@@ -119,7 +310,7 @@ const data = [
         id: 6,
         type: "section-header",
         headline: "Marketing website",
-        body: "<p>I was responsible for front-end development of the conference website and registration system.</p><p>The site had many development challenges which included:</p><ul className='list f-1  mt-2'><li>Performant canvas animations</li><li>Single page applications</li><li>Time-to-glass optimizations</li><li>A wide gradient of browser support</li></ul>"
+        body: "<p>I was responsible for frontend development of the conference website and registration system.</p><p>The site had many development challenges which included:</p><ul className='list f-1  mt-2'><li>Performant canvas animations</li><li>Single page applications</li><li>Time-to-glass optimizations</li><li>A wide gradient of browser support</li></ul>"
       },
       {
         id: 7,
@@ -289,6 +480,59 @@ const data = [
         poster: "video/posters/f8_reel.jpg",
         caption: "Here's an overview that'll give you a feel for what the event was like."
       },
+    ]
+  },
+
+  {
+    "id": 5,
+    "name": "Googe Consumer Surveys",
+    "slug": "gcs",
+    "title": "Designed and developed an interactive product tour for Google",
+    "color": "#869899",
+    "cardBackgroundSrc": "img/gcs-card-back.jpg",
+    "cardBackgroundSrc2x": "img/gcs-card-back@2x.jpg",
+    overview: [
+      'Google Consumer Surveys is a product that enables fast and easy market research. They asked Nelson Cash to redesign their marketing site in hopes to to better explain their product, and increase sign-up conversion.',
+      'My role was to design and build an interactive web animation explaining how the product worked.'
+    ],
+    roles: [
+      'Visual design',
+      'Illustration',
+      'Animation',
+      'Frontend development'
+    ],
+    when: '2013',
+    content: [
+      {
+        id: 1,
+        type: "video",
+        srcMp4: "video/gcs_reel.mp4",
+        srcWebM: "video/gcs_reel.webm",
+        poster: "video/posters/gcs_reel.jpg",
+        caption: "Here's a recording on the product tour in action.",
+        chromed: true
+      },
+      {
+        id: 2,
+        type: "section-header",
+        headline: "Technical details",
+        body: [
+          '<p>I made vector illustrations and animated them with Adobe Flash. Then I used Swiffy to port the Flash animation into an HTML5 friendly SVG runtime.</p>',
+          '<p>I wrote a Javascript wrapper to allow page events to control the timeline of the Swiffy runtime.</p>'
+        ].join('')
+      },
+      {
+        id: 3,
+        type: "img",
+        src: "img/projects/gcs-1.jpg",
+        src2x: "img/projects/gcs-1@2x.jpg"
+      },
+      {
+        id: 4,
+        type: "img",
+        src: "img/projects/gcs-2.jpg",
+        src2x: "img/projects/gcs-2@2x.jpg"
+      }
     ]
   },
 
@@ -492,17 +736,15 @@ const data = [
         id: 2,
         type: "section-header",
         headline: "UI system",
-        body: (() => {
-          let str = '';
-          str += '<p>With plenty of paradigms out there to approach organizing a design system, such as Atomic design, I sought to define an approach that resonated with the product design team’s core principles. The most relevant being a need for <em>agility</em> and <em>composability</em>.</p>';
-          str += '<p>My approach was to define three levels of elements in the system:</p>';
-          str += '<ol className="ordered-list">';
-          str += '<li><b>Primitives</b> are low-level building blocks like color, type & icons, and spacing. These elements are completely immutable and are never changed or altered.</li>';
-          str += '<li><b>Components</b> are distinct interface elements built from primitives or other components. They have strictly defined behavior and usage guidelines. But they do offer flexibilty from modifiers that help describe state and properties of the elements.</li>';
-          str += '<li><b>Patterns</b> are common compositions occuring in the application. Although they’re meant for consistent re-use, a pattern is flexible and mostly suggestive.</li>';
-          str += '</ol>';
-          return str;
-        })()
+        body: [
+          '<p>With plenty of paradigms out there to approach organizing a design system, such as Atomic design, I sought to define an approach that resonated with the product design team’s core principles. The most relevant being a need for <em>agility</em> and <em>composability</em>.</p>',
+          '<p>My approach was to define three levels of elements in the system:</p>',
+          '<ol className="ordered-list">',
+          '<li><b>Primitives</b> are low-level building blocks like color, type & icons, and spacing. These elements are completely immutable and are never changed or altered.</li>',
+          '<li><b>Components</b> are distinct interface elements built from primitives or other components. They have strictly defined behavior and usage guidelines. But they do offer flexibilty from modifiers that help describe state and properties of the elements.</li>',
+          '<li><b>Patterns</b> are common compositions occuring in the application. Although they’re meant for consistent re-use, a pattern is flexible and mostly suggestive.</li>',
+          '</ol>'
+        ].join('')
       },
       {
         id: 3,
@@ -640,55 +882,6 @@ const data = [
           src: "img/projects/searchparty-employer-5.jpg",
           src2x: "img/projects/searchparty-employer-5@2x.jpg"
         }]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Googe Consumer Surveys",
-    "slug": "gcs",
-    "title": "Designed and developed an interactive product tour for Google",
-    "color": "#869899",
-    "cardBackgroundSrc": "img/gcs-card-back.jpg",
-    "cardBackgroundSrc2x": "img/gcs-card-back@2x.jpg",
-    overview: [
-      'Google Consumer Surveys is a product that enables fast and easy market research. They asked Nelson Cash to redesign their marketing site in hopes to to better explain their product, and increase sign-up conversion.',
-      'My role was to design and build an interactive web animation explaining how the product worked.'
-    ],
-    roles: [
-      'Visual design',
-      'Illustration',
-      'Animation',
-      'Front-end development'
-    ],
-    when: '2013',
-    content: [
-      {
-        id: 1,
-        type: "video",
-        srcMp4: "video/gcs_reel.mp4",
-        srcWebM: "video/gcs_reel.webm",
-        poster: "video/posters/gcs_reel.jpg",
-        caption: "Here's a recording on the product tour in action.",
-        chromed: true
-      },
-      {
-        id: 2,
-        type: "section-header",
-        headline: "Technical details",
-        body: "<p>I made vector illustrations and animated them with Adobe Flash. Then I used Swiffy to port the Flash animation into an HTML5 friendly SVG runtime.</p><p>I wrote a Javascript wrapper to allow page events to control the timeline of the Swiffy runtime.</p>"
-      },
-      {
-        id: 3,
-        type: "img",
-        src: "img/projects/gcs-1.jpg",
-        src2x: "img/projects/gcs-1@2x.jpg"
-      },
-      {
-        id: 4,
-        type: "img",
-        src: "img/projects/gcs-2.jpg",
-        src2x: "img/projects/gcs-2@2x.jpg"
       }
     ]
   },

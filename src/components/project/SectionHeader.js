@@ -1,6 +1,5 @@
 import React from 'react';
 import renderHTML from 'react-render-html';
-import ContentWrapper from './ContentWrapper';
 
 const SectionHeader = (props) => {
   const { headline, body, align } = props;

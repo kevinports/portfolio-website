@@ -6,7 +6,7 @@
 
 .card {
   position: relative;
-  border-radius: 5px;
+  border-radius: 8px;
   border-style: solid;
   border-width: 1px;
   position: relative;
@@ -88,7 +88,8 @@ main:not(.animating) .card { // prevent some fout on homepage load
   background-position: top right;
 }
 
-.card--isaac .card__background-img {
+.card--isaac .card__background-img,
+.card--ionic .card__background-img {
   background-position: top right;
   transform-origin: top right;
 }

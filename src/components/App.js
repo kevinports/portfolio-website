@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom'
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom'
+import { TransitionGroup } from "react-transition-group";
 import Transition from "react-transition-group/Transition";
-import { TweenLite } from 'gsap';
 import ReactGA from 'react-ga';
 
 import WorkPage from './WorkPage';
@@ -16,6 +15,8 @@ import GlobalStore from '../base/GlobalStore';
 if (NODE_ENV === 'production') {
   ReactGA.initialize('UA-111120088-1');
 }
+
+console.log(data)
 
 class App extends React.Component {
   constructor (props) {
