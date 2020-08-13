@@ -1,4 +1,5 @@
-import { TweenLite } from 'gsap';
+import { TweenLite, CSSPlugin, Expo } from 'gsap/all';
+const plugins = [ CSSPlugin ];
 
 const transitions = {
   '/': {

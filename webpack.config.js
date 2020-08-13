@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
@@ -37,11 +37,7 @@ module.exports = {
     ],
   },
   plugins: [
-    // new webpack.DefinePlugin({
-    //   'process.env.NODE_ENV': '"production"'
-    // }),
-    // new webpack.optimize.UglifyJsPlugin(),
-    // new webpack.optimize.AggressiveMergingPlugin(),
+    new TerserPlugin(),
     new ExtractTextPlugin({ // define where to save the file
       filename: 'bundle.css',
       allChunks: true,
@@ -53,8 +49,8 @@ module.exports = {
     new Dotenv({
       path: './.env'
     })
-    // new BundleAnalyzerPlugin()
   ],
+  devtool: 'source-map',
   devServer: {
     contentBase: path.join(__dirname, "www"),
     index: 'dev.html',

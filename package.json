@@ -12,18 +12,20 @@
     "start": "NODE_ENV=development webpack-dev-server --config webpack.config.js --hot",
     "build": "NODE_ENV=production webpack -p --progress",
     "rev": "rm -rf www/assets_rev/ && nodeRev 'www/assets/**/*.+(css|js|jpg|png|mp4|gif|webm)' --hash -o 'www/assets_rev/' --file 'www/asset.manifest.json'",
-    "deploy": "yarn build && yarn rev && node ./scripts/s3-sync",
-    "prod": "NODE_ENV=production node server"
+    "deploy": "npm run build && npm run rev && node ./scripts/s3-sync",
+    "prod": "NODE_ENV=production node server",
+    "analyze": "source-map-explorer 'www/assets/bundle.js'"
   },
   "author": "Kevin Ports",
   "dependencies": {
     "dotenv": "^5.0.0",
     "express": "^4.16.2",
-    "hbs": "^4.0.1"
+    "hbs": "^4.0.1",
+    "source-map-explorer": "^2.4.2"
   },
   "devDependencies": {
-    "aws-sdk": "^2.201.0",
     "autoprefixer": "^7.2.5",
+    "aws-sdk": "^2.201.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
@@ -32,8 +34,8 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.28.9",
     "dotenv-webpack": "^1.5.4",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "gsap": "^1.20.3",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "gsap": "^3.4.2",
     "javascript-retina-detect": "^0.1.4",
     "lodash": "^4.17.5",
     "node-rev": "^1.3.0",
@@ -50,8 +52,9 @@
     "sass-loader": "^6.0.6",
     "shortid": "^2.2.8",
     "style-loader": "^0.20.1",
-    "webpack": "^3.10.0",
-    "webpack-bundle-analyzer": "^2.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }

@@ -16,8 +16,6 @@ if (NODE_ENV === 'production') {
   ReactGA.initialize('UA-111120088-1');
 }
 
-console.log(data)
-
 class App extends React.Component {
   constructor (props) {
     super(props);
