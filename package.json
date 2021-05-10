@@ -37,7 +37,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "gsap": "^3.4.2",
     "javascript-retina-detect": "^0.1.4",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.21",
     "node-rev": "^1.3.0",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.1.0",
